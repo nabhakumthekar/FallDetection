@@ -16,7 +16,8 @@ jQuery(document).ready(function () {
                 startheight: 550,
                 hideThumbs: 10,
                 fullWidth: "on",
-                forceFullWidth: "on"
+                forceFullWidth: "on",
+                navigationStyle: "round-old"
             });
 
 });	//ready

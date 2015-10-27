@@ -1,7 +1,7 @@
 /*Theme    : assan
  * Author  : Design_mylife
  * Version : V1.8
- * 
+ *
  */
 
  $( window ).resize(function() {
@@ -194,19 +194,19 @@ $(document).ready(function () {
     });
 });
 
- //Search         
+ //Search
     (function () {
 
         $('.top-search').on('click', function() {
             $('.search').fadeIn(500, function() {
               $(this).toggleClass('search-toggle');
-            });     
+            });
         });
 
         $('.search-close').on('click', function() {
             $('.search').fadeOut(500, function() {
                 $(this).removeClass('search-toggle');
-            }); 
+            });
         });
 
     }());
@@ -224,5 +224,3 @@ $(document).ready(function () {
             $(this).closest('.panel-heading').addClass('active');
         }
     });
-    
- 
