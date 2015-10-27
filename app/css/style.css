@@ -1,4 +1,4 @@
-/* 
+/*
     Document   : assan
     Author     : Design_mylife
     Description:assan multi-page for Multipurpose use
@@ -159,12 +159,22 @@ h3.heading:after {
   border-bottom: 1px solid #eee;
 }
 
+h3.text-padding {
+  padding-left: 60px;
+  font-weight: 300;
+}
+
 h4 {
   font-size: 1.4em;
   font-weight: 700;
   letter-spacing: normal;
   line-height: 27px;
   margin: 0 0 14px 0;
+}
+
+h4.text-padding {
+  padding: 0px 60px;
+  font-weight: 300;
 }
 
 h5 {
@@ -1043,11 +1053,30 @@ TOP BARS
 /************************************************* css for footers****************************************/
 /**footet dark**/
 #footer {
-  background: #111;
+  background: #5C5C5C;
   font-size: 0.9em;
-  padding: 80px 0 0;
+  padding: 30px 0 0;
   position: relative;
-  clear: both;
+}
+
+.footer-contact {
+  padding-left: 80px;
+  padding-right: 80px;
+  background: #FFF;
+  position: relative;
+}
+
+.footer-contact h3 {
+  color: #000;
+  font-size: 25px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.footer-col {
+  padding-bottom: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .footer-col h3 {
@@ -1114,7 +1143,7 @@ TOP BARS
 .footer-btm {
   margin-top: 30px;
   padding: 20px;
-  background-color: #0c0c0c;
+  background-color: #fff;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
@@ -6795,4 +6824,62 @@ body.coming-soon-full {
 }
 .font-box > div {
   padding-bottom: 50px;
+}
+
+/**Customized css**/
+.home-img {
+  width: 100%;
+  position: relative;
+}
+
+.home-img img {
+  max-width: 100%;
+}
+
+.home-img .img1 {
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 40px;
+  text-align: left;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.home-img .img2{
+  position: absolute;
+  right: 50px;
+  top: 80px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 40px;
+  text-align: left;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.home-img .img3{
+  position: absolute;
+  left: 80px;
+  top: 180px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 40px;
+  text-align: left;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+storyboard {
+  position: relative;
+  padding: 10px;
+}
+
+.storyboard img {
+  width: 100%;
 }
