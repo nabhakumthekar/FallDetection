@@ -20,18 +20,26 @@ module.exports = function (grunt) {
                 src: ['bootstrap/fonts/**', 'font-awesome/fonts/**'],
                 dest: 'dist/fonts/'
             },
-            images: {
+            assets: {
                 expand: true,
                 flatten: true,
                 filter: 'isFile',
                 cwd: 'app',
                 src: ['rs-plugin/assets/**'],
                 dest: 'dist/assets/'
+            },
+            html: {
+                expand: true,
+                cwd: '.tmp',
+                src: ['**/*.html'],
+                dest: 'dist/'
             }
         },
 
         useminPrepare: {
-            html: 'app/index.html',
+            html: {
+                src: ['app/*.html']
+            },
             options: {
                 dest: 'dist'
             }
@@ -51,7 +59,9 @@ module.exports = function (grunt) {
         },
 
         usemin: {
-            html: ['dist/index.html'],
+            html: {
+                src: ['dist/*.html']
+            },
             options: {
                 assetDirs: ['dist', 'dist/css', 'dist/js', 'css', 'js']
             }
@@ -63,9 +73,12 @@ module.exports = function (grunt) {
                     removeComments: true,
                     collapseWhitespace: true
                 },
-                files: {
-                    'dist/index.html': 'dist/index.html'
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'dist',
+                    src: '**/*.html',
+                    dest: '.tmp/'
+                }]
             }
         }
     });
@@ -82,14 +95,17 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean',
-        'copy',
+        'copy:main',
+        'copy:fonts',
+        'copy:assets',
         'useminPrepare',
         'concat',
         'uglify',
         'cssmin',
         'filerev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'copy:html'
     ]);
 
     // Tell Grunt what to do when we type "grunt" into the terminal
