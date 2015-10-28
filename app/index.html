@@ -406,15 +406,18 @@
               <p>
                 Sign up for email updates on our launch
               </p>
-              <form class="subscribe-form col-sm-6" action="">
+              <form class="subscribe-form col-sm-6" onsubmit="signUp(); return false;">
                 <div class="input-group">
-                  <input type="email" class="form-control" id="signUp-input" name="email" max-length="128" placeholder="e.g. example@smith.com">
+                  <input type="email" class="form-control" id="signUp-input" name="email" max-length="128" placeholder="e.g. example@smith.com"/>
                   <span class="input-group-btn">
                     <input type="button" id="signUp-button" class="btn btn-theme-dark btn-lg" value="Sign up"/>
                   </span>
                 </div>
               </form>
             </div>
+          </div>
+          <div class="row">
+            <div id="signUp-result" class="col-sm-12" style="width:100%;"></div>
           </div>
           <div class="row footer-contact">
             <!--footer col-->

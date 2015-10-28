@@ -226,8 +226,46 @@ $('.panel-ico a[data-toggle="collapse"]').on('click', function () {
 });
 
 //Sign-up function
-$('input#signUp-button').click(function(){
-  $.post('/api/v1/subscribers', {"email": $('#signUp-input').serialize()}, function(data){
-    console.log('email submitted.');
+$('input#signUp-button').on('click', function(){
+  $.ajax({
+    url: "/api/v1/subscribers",
+    type: "POST",
+    data: JSON.stringify({'email': $('#signUp-input').serialize()}),
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    success: function(result){
+      $('#signUp-result').html("<div class='alert alert-info'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Thank you for subscribing. We'll get you updated soon.</div>");
+      $('#signUp-input').val("");
+    },
+    error: function(result){
+      if(result.status == 409){
+        $('#signUp-result').html("<div class='alert alert-danger'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>You have already signed up. We'll get you updated soon.</div>");
+      }else{
+        $('#signUp-result').html("<div class='alert alert-danger'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>An internal error has occurred, please try again later.</div>");
+      }
+      $('#signUp-input').val("");
+    }
   });
 });
+
+function signUp(){
+  $.ajax({
+    url: "/api/v1/subscribers",
+    type: "POST",
+    data: JSON.stringify({'email': $('#signUp-input').serialize()}),
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    success: function(result){
+      $('#signUp-result').html("<div class='alert alert-info'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Thank you for subscribing. We'll get you updated soon.</div>");
+      $('#signUp-input').val("");
+    },
+    error: function(result){
+      if(result.status == 409){
+        $('#signUp-result').html("<div class='alert alert-danger'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>You have already signed up. We'll get you updated soon.</div>");
+      }else{
+        $('#signUp-result').html("<div class='alert alert-danger'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>An internal error has occurred, please try again later.</div>");
+      }
+      $('#signUp-input').val("");
+    }
+  });
+}
