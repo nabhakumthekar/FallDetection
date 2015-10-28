@@ -161,7 +161,7 @@
                     <div class="blog-post">
                         
                             <div class="item-img-wrap">
-                                <img src="img/blog/hardware.jpg" class="img-responsive" alt="workimg">
+                                <img src="img/blog/wearables.jpg" class="img-responsive" alt="workimg">
                                 
                             </div>                       
                         <!--work link-->
@@ -171,34 +171,53 @@
                             <li><i class="fa fa-tag"></i> <a href="#">Sports</a></li>
                             <li><i class="fa fa-comment"></i> <a href="#">6 Comments</a></li>
                         </ul>
-                        <h2>Choosing hardware for an Alzheimer's-friendly personal rescue beacon</h2>
-<p>In building FindMe, we started with the assumption  that locating the person who was wandering was the only concern, and we decided  by build a GPS locator that had a much longer battery life than what we could  find on the market. The reason for placing such an emphasis on battery life,  was straightforward for us: the adult children of parents with Alzheimer's were  not always living with that parent, and oftentimes they could visit only on  weekends.  This meant that the GPS  locator we needed to build had to have at least seven days of battery life,  compared to the one or two days that were say reported in consumer reviews of  existing GPS locators.</p>
-                          <p>The other key focus we had was on not using a wristband, or  an amulet, because we learned from research at Assisted Care and Memory Care  facilities that amulets were very quickly removed by the residents of  professionally run facilities, and that wristbands were either quickly removed,  or chafed at endlessly.</p>
-                          <p>Design was also an important consideration.  Studies done by AARP found that wearing or  carrying devices that looked "medical" were resisted by everyone, because such  designs tended to make the wearer feels stigmatized and shunned. Regardless of  one's age and cognitive deficits, one always wanted to look at their best and  most capable.</p>
-                          <p>So, within those constraints, we proceeded to select a  hardware chipset that could accommodate those goals, and focused on then  keeping the costs down to the most affordable level we could. That meant, in  that early stage, opting for a 2G network, a GSM modem because of its small  size and low cost, and making the assumption that we could use the 2G/GSM  combination with the T-Mobile network until 2017—when T-Mobile would begin  deprecating that network (ATT already had started taking down their 2G  network). That T-Mobile 2G network ran in the 1700 mhz range, which would  become important for us as we began development.</p>
-                          <p>We selected the chipset we would use, the accelerometers,  and GPS chip, and the Modem and Microprocessor, and began to build "spikes" to  prove out concept and the end to end functionality we needed.</p>
-                          <blockquote class="custom-quote"> <p>It wasn't enough to know the location of someone, <em>it was just as important to know whether or  not they were in trouble</em></p></blockquote>
-                          <p>And, it was at about that time that we learned two new  things: First, it wasn't enough to know the location of someone, <em>it was just as important to know whether or  not they were in trouble</em> – which could be completely independent of  location. Witness the recent tragedy from the recent Northeast blizzard, Juno,  where an 83 year old man froze to death in his backyard during that storm.  A GPS locator would have never shown that he  was in trouble, because it would have looked like – on a map – he was safe at  home (GPS locators won't reliably show when you are inside, or outside, your  back door.</p>
-                          <p>This meant further research into what the actual causes of  injury were, related to wandering and Alzheimer's.  While research was thin on the topic of what  actually causes the serious injuries for people who have gone wandering, we  found that there were three key areas of vulnerability:</p>
-                          <p>(1) Injury from  hypothermia and heat exhaustion/stroke, <br>
-                          (2) Traffic incidents, both while  driving and walking, and <br>
-                          (3) Drowning. </p>
-                          <p>Falling was also found to be a  significant risk factor, however it was independent of wandering behavior.</p>
-                          <p>After much time, we determined that we could address two of  the four causes of injury: Hypothermia/Heat Stroke, and Falling. We committed  to using a temperature sensor to detect significant changes in the external  environment, and an accelerometer to detect falling. Guarding against traffic  danger and drowning risk would require a great deal more research, which would  have to be delayed for the product's first release. </p>
-                          <p>The second thing we learned was that using a high-frequency  1700mgz network was going to lead to occasional failures in getting a signal  out from indoor spaces. This became clear to us when we researched the reviews  of existing generic GPS locators for children, where the users complained that  the system was not showing when they were in their school buildings or other  indoor environments.</p>
-                          <p>After much hand-wringing, and even more research, we  determined that the best way to solved the problem getting access to a  relatively low frequency network was to switch from the low-cost GSM modem to  the more expensive, and large, CDMA modem that would run on the Verizon  network. </p>
-                          <p>While this solved the problem for the United States, it did  not yet address the issue for the EU and Asia. Mostly, GSM was the standard on  both those continents, and fortunately 2G networks would still be in use for  many years to come, in the 900 mgz range.</p>
-                          <p>This left only one more issue: how to get a GPS fix when the  individual was within a windowless environment, where there was no way to get a  satellite fix. For that issue, we needed to use trilateration, where the modem  that pings the cell tower(s) can use information gathered from signal strength  and relative position to approximate the location of the FindMe device.  Presently, that's our approach to getting an approximate fix on the device  location, enabled by the location-based servers provided by Verizon and our  chip manufacturers as well. However, its approximation has an standard  deviation that approaches 100 meters, so we'll be researching way to  significantly improve on that approximation in the near future.</p>
-                          <p>For the present, then, we've been able to address to a  meaningful degree a variety of hazards that befall individuals living with  Alzheimer's: becoming lost or wandering both indoors and outdoors, injury from extreme  weather, and rescue from falling. And, we've addressed the issue of long  battery life, extending the battery life of FindMe to an order of  magnitude greater than generic locators through heuristic algorithms.</p><p>
-Our goal is to make the persons living with  Alzheimer's much safer than they had been, previously, and to allow their  caregivers the opportunity to breathe more easily when there is a job dominated  by stress and pressure.</p>
+                        <h2>Why aren't generic IoT wearables suitable for people living with Alzheimer's?</h2>
+<p>Sometimes we're asked &quot;What's different about FindMe, a  Personal Rescue Beacon that protects people from the dangers of hypothermia,  heat stroke, hard falls, getting lost, and traffic and water risk, compared to  generic GPS/geofence trackers on the market right now?&quot;</p>
+                            <p>This question is  usually posed an individual who has just started to experience the mixed  blessings of being a caregiver.</p>
+                            <p>So, to explain why generic IoT wearable solutions are often  incompatible with the needs of people living with dementia, and their  caregivers, it's important to review important facts about individuals  living with Alzheimer's:</p>
+                            <p>First, the person living with Alzheimer's (depending on the stage  they are in):</p>
+                            <ul class="custom-list-style">
+                              <li>Does not have a reliable short-term memory. </li>
+                              <ul>
+                                <li>This means that if you give them a new device  that requires them to operate it, they probably won't be able to. They may  likely not recognize it, even if taken from their own pocket or purse (ie. A  help button or walkie-talkie feature may go unused).</li>
+                              </ul>
+                            <li>Has behaviors governed by long-term habits, and  not new learning</li>
+                            <li>Does not carry a smart-phone, needed for  wearables that require a blue-tooth connection</li>
+                            <li>Will likely &quot;wander&quot; —  which is to say they will embark on a particular direction away from  their home, and sometimes just keep going.</li>
+                            <li>May want to remained undiscovered (hide) when  they wander</li>
+                            <li>Will likely remove a new piece of jewelry (a GPS  amulet or a wristwatch) by the end of the day (they will have no idea who it  belongs to—only that it is not theirs—or that it's  unattractive, or "medical"  looking that makes them feel ashamed and stigmatized).</li>
+                            <li>May chafe repeatedly at a locked-on piece of  jewelry. (One case study noted a caregiver explaining that her uncle would try  to chew a wrist-worn device off)</li>
+                            <li>May spend much of their time indoors, sometimes  in rooms without windows like bathrooms</li>
+                            </ul>
+                            <p>Wandering alone is not necessarily dangerous, but what happens  during a wandering event can  be—hypothermia, heat stroke, traffic accidents, and drowning  are the most common causes of serious injury and death from wandering.</p>
+                            <p>Wandering can be done in the front yard—aimlessly going  back and forth, and deadly if it's snowing outside, or a very hot summer day  from dehydration.</p>
+                            <p>So, with this in mind, consider the generic GPS/geofence  solutions, which are not built for people living with dementia or their  caregivers, and see how they work.</p>
+                            <h3>The Generic  Tracker:</h3>
+                            <p>This has a built-in modem, a gps chip, and let's you set a timer  on how often it will ping your cell phone. It also uses a standard GSM modem,  and a 2G network.</p>
+                          <p><strong>Wearability</strong>:</p>
+                            <p><em>If it's worn around the  neck, like an amulet.</em></p>
+                            <p><strong>Results</strong>: Often, it's  taken off by the end of the day. If the caregiver rebukes the person living  with Alzheimer's for taking off the amulet, that person will generally have no  idea what the caregiver is talking about. On a case by case basis, for some  individuals who have a well worn habit of wearing a necklace, and who don't  reject an unfamiliar one, an amulet may work. To test for this, buy a plain  plastic amulet at the store for $3, which weighs about 50g, and see if your  loved one is wearing it at the end of the week. Careful observation will be  needed.</p>
+                            <p><em>It's worn on the wrist,  like a wristwatch.</em></p>
+                            <p><strong>Results</strong>: Generally,  it's taken off by the end of the day, and put away somewhere, unless it's  locked on. The person living with Alzheimer's will experience the watch as an  oddity, and remove it (just like you would if you suddenly found some else's  watch on your wrist). If locked on, it may cause chafing and fixation, and  consequently damage the paper-thin skin that some seniors have. Also, unless  it's presented with pleasing aesthetics, studies by the AARP have found that it  will be felt as stigmatizing and cause resentment. Like the amulet, it's a case  by case situation, requiring careful observation over a period of time. </p>
+                            <p>Just like the amulet, test it out. Buy a $3, bulky knock-off  watch and place it on them, and check to see if they are wearing it at the end  of a week.</p>
+                            <p>Basically and importantly, new wearables that are intrusive will  be abandoned.</p>
+                            <h3>Our Solution:</h3>
+                            <p>We visited over 30 Assisted Care and Memory Care units,  interviewed the staff nurses, the caregivers, and the executive directors of  the facilities, as well as directors of group homes and caregivers who were the  adult children of parents with Alzheimer's, and the Medical  doctors at Banners Alzheimer's Institute (because we're  caregivers ourselves).</p>
+                            <p>We learned that for those residents that had carried keys with  them through their adult life continued to carry their keys wherever they went,  and were careful not to leave their home without their keys. </p>
+                            <p><strong>It was a life long habit.</strong></p>
+                            <p>By observation, this life-long habits of carrying keys remained  until the later part of mid-stage dementia.</p>
+                            <p>Therefore, we designed FindMe to be an unobtrusive key fob, which  attached to the key ring that person living with Alzheimer's typical used.  We observed that changing the nature of the  key ring, such as the use of a simple, plastic covered coil in many residential  care facilities, had no effect on whether the residents always carrying their  keys with them.</p>
+                            <p>Our answer was to build on long-term habits that required no new  learning, and no foreign intrusions.</p>
+                            <p>Thus, at the end of the day, if your generic tracker is either an  amulet or a wristwatch, it may be removed, and careful observation over time is  best. And, this is why we designed FindMe as a key fob, for use by individuals  who have carried keys for their adult life.</p>
+                      
                                                 
                         
                     </div><!--blog post-->
                     
 
                     <ul class="pager">
-                        <li class="previous"><a href="why-does-battery-life-matter-for-a-personal-rescue-beacon.html">&larr; Newer</a></li>
-                        <li class="next"><a href="why-arent-generic-iot-wearables-suitable-for-alzheimer.html">Older &rarr;</a></li>
+                        <li class="previous"><a href="what-family-caregivers-may-face-not-going-home-anymore.html">&larr; Newer</a></li>
+                        <li class="next"><a href="choosing-hardware-for-an-alzheimers-friendly-personal-rescue-beacon.html">Older &rarr;</a></li>
                     </ul><!-- pager-->
 
                     

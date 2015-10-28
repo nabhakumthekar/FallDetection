@@ -161,7 +161,7 @@
                     <div class="blog-post">
                         
                             <div class="item-img-wrap">
-                                <img src="img/blog/hardware.jpg" class="img-responsive" alt="workimg">
+                                <img src="img/blog/not-going-home.jpg" class="img-responsive" alt="workimg">
                                 
                             </div>                       
                         <!--work link-->
@@ -171,34 +171,34 @@
                             <li><i class="fa fa-tag"></i> <a href="#">Sports</a></li>
                             <li><i class="fa fa-comment"></i> <a href="#">6 Comments</a></li>
                         </ul>
-                        <h2>Choosing hardware for an Alzheimer's-friendly personal rescue beacon</h2>
-<p>In building FindMe, we started with the assumption  that locating the person who was wandering was the only concern, and we decided  by build a GPS locator that had a much longer battery life than what we could  find on the market. The reason for placing such an emphasis on battery life,  was straightforward for us: the adult children of parents with Alzheimer's were  not always living with that parent, and oftentimes they could visit only on  weekends.  This meant that the GPS  locator we needed to build had to have at least seven days of battery life,  compared to the one or two days that were say reported in consumer reviews of  existing GPS locators.</p>
-                          <p>The other key focus we had was on not using a wristband, or  an amulet, because we learned from research at Assisted Care and Memory Care  facilities that amulets were very quickly removed by the residents of  professionally run facilities, and that wristbands were either quickly removed,  or chafed at endlessly.</p>
-                          <p>Design was also an important consideration.  Studies done by AARP found that wearing or  carrying devices that looked "medical" were resisted by everyone, because such  designs tended to make the wearer feels stigmatized and shunned. Regardless of  one's age and cognitive deficits, one always wanted to look at their best and  most capable.</p>
-                          <p>So, within those constraints, we proceeded to select a  hardware chipset that could accommodate those goals, and focused on then  keeping the costs down to the most affordable level we could. That meant, in  that early stage, opting for a 2G network, a GSM modem because of its small  size and low cost, and making the assumption that we could use the 2G/GSM  combination with the T-Mobile network until 2017—when T-Mobile would begin  deprecating that network (ATT already had started taking down their 2G  network). That T-Mobile 2G network ran in the 1700 mhz range, which would  become important for us as we began development.</p>
-                          <p>We selected the chipset we would use, the accelerometers,  and GPS chip, and the Modem and Microprocessor, and began to build "spikes" to  prove out concept and the end to end functionality we needed.</p>
-                          <blockquote class="custom-quote"> <p>It wasn't enough to know the location of someone, <em>it was just as important to know whether or  not they were in trouble</em></p></blockquote>
-                          <p>And, it was at about that time that we learned two new  things: First, it wasn't enough to know the location of someone, <em>it was just as important to know whether or  not they were in trouble</em> – which could be completely independent of  location. Witness the recent tragedy from the recent Northeast blizzard, Juno,  where an 83 year old man froze to death in his backyard during that storm.  A GPS locator would have never shown that he  was in trouble, because it would have looked like – on a map – he was safe at  home (GPS locators won't reliably show when you are inside, or outside, your  back door.</p>
-                          <p>This meant further research into what the actual causes of  injury were, related to wandering and Alzheimer's.  While research was thin on the topic of what  actually causes the serious injuries for people who have gone wandering, we  found that there were three key areas of vulnerability:</p>
-                          <p>(1) Injury from  hypothermia and heat exhaustion/stroke, <br>
-                          (2) Traffic incidents, both while  driving and walking, and <br>
-                          (3) Drowning. </p>
-                          <p>Falling was also found to be a  significant risk factor, however it was independent of wandering behavior.</p>
-                          <p>After much time, we determined that we could address two of  the four causes of injury: Hypothermia/Heat Stroke, and Falling. We committed  to using a temperature sensor to detect significant changes in the external  environment, and an accelerometer to detect falling. Guarding against traffic  danger and drowning risk would require a great deal more research, which would  have to be delayed for the product's first release. </p>
-                          <p>The second thing we learned was that using a high-frequency  1700mgz network was going to lead to occasional failures in getting a signal  out from indoor spaces. This became clear to us when we researched the reviews  of existing generic GPS locators for children, where the users complained that  the system was not showing when they were in their school buildings or other  indoor environments.</p>
-                          <p>After much hand-wringing, and even more research, we  determined that the best way to solved the problem getting access to a  relatively low frequency network was to switch from the low-cost GSM modem to  the more expensive, and large, CDMA modem that would run on the Verizon  network. </p>
-                          <p>While this solved the problem for the United States, it did  not yet address the issue for the EU and Asia. Mostly, GSM was the standard on  both those continents, and fortunately 2G networks would still be in use for  many years to come, in the 900 mgz range.</p>
-                          <p>This left only one more issue: how to get a GPS fix when the  individual was within a windowless environment, where there was no way to get a  satellite fix. For that issue, we needed to use trilateration, where the modem  that pings the cell tower(s) can use information gathered from signal strength  and relative position to approximate the location of the FindMe device.  Presently, that's our approach to getting an approximate fix on the device  location, enabled by the location-based servers provided by Verizon and our  chip manufacturers as well. However, its approximation has an standard  deviation that approaches 100 meters, so we'll be researching way to  significantly improve on that approximation in the near future.</p>
-                          <p>For the present, then, we've been able to address to a  meaningful degree a variety of hazards that befall individuals living with  Alzheimer's: becoming lost or wandering both indoors and outdoors, injury from extreme  weather, and rescue from falling. And, we've addressed the issue of long  battery life, extending the battery life of FindMe to an order of  magnitude greater than generic locators through heuristic algorithms.</p><p>
-Our goal is to make the persons living with  Alzheimer's much safer than they had been, previously, and to allow their  caregivers the opportunity to breathe more easily when there is a job dominated  by stress and pressure.</p>
+                        <h2>What family caregivers may face – not going home anymore</h2>
+<p>Over 15  million Americans provide unpaid care for a person with Alzheimer's disease or  other dementias. And in 2013, 15.5 million caregivers provided an estimated  17.7 billion hours of unpaid care valued at more than&nbsp;<a href="https://www.alz.org/alzheimers_disease_facts_and_figures.asp">$220 billion</a>.</p>
+                            <p>The costs for those without assistance is startling -  out-of-pocket spending for individuals with Alzheimer's and other dementias is  estimated at $36 billion.</p>
+                            <p>For the Caregiver industry, reports from the U.S. Bureau of  Labor Statistics predict an increase in the personal and home care aide job  category, forecasting this category to be the second fastest-growing job group  in the nation over the next decade, rising up 49% by&nbsp;<a href="http://www.bls.gov/ooh/fastest-growing.htm">2022</a>.</p>
+                            <p>Demographic trends predict a sharp increase in part-time and  in-home, due to cost increases resulting from personnel shortages. In the early  stages of Alzheimer's Disease or dementia, patients are not cared for 24 hours  a day.&nbsp; Caregivers (professionals as well as the adult children of people  with Alzheimer's Disease) will look to mitigate the rising cost of assisted  care through extended at-home stay.</p>
+                          <p>Overall, there will be&nbsp;<a href="http://aspe.hhs.gov/daltcp/reports/ltcwork.htm">more informal and part-time care&nbsp;</a>being given.&nbsp;</p>
+                          <p>Nearly  60 percent of Alzheimer's and dementia caregivers rate the emotional stress of  Caregiving as high or very high, and more than one-third report symptoms of  depression. This physical and emotional responsibility they take on have added  an additional $9.3 billion in their own health care costs.</p><p><img src="img/blog/caregiver-effect-graph.png"></p>
+                          <p>Overall, caregivers of individuals diagnosed with  Alzheimer's face extreme levels income loss, career damage, an increased  likelihood of getting dementia themselves, loss of social contacts, a shortened  life span, and much more.</p>
+                          <p>Heightening the stress of Caregivers is the harrowing problem of  wandering. Of every 100 that go lost, roughly seven percent won't survive if  not found within 12 hours. If the time rolls to 24 hours, one half face serious  injury or worse…&nbsp; 72 hours: Eighty percent don't survive.&nbsp;</p>
+                          <p>Prior to a wandering episode Caregivers know that these  individuals might just be walking out to get a bite to eat or to run an errand.  However one cannot predict when wandering episode will begin; it is often  motivated by an unmet need, like being hungry or thirsty.</p>
+                          <p>But the numbers about the hardships facing caregivers don't  really tell the story.</p>
+                          <p class="video-container"><iframe width="640" height="360" src="https://www.youtube.com/embed/9hpv8fbafRo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></p>
+                          <p>The aspect of taking on the task of becoming a caregiver is  well presented in this video clip, where Karen Garner explains in a panel  discussion at the  Living with Alzheimer's "A Journey of Caring Roundtable Event," that  her 48 year old husband has early Alzheimer's and at minute 4:15 expresses her  anguish, saying </p>
+                          <blockquote class="custom-quote">
+                                <p><i class="fa fa-quote-left"></i>I know what's coming. I am in a porcelain sink, grasping at  sides with nothing to hold on to…knowing I am going down into that  drain…financially, emotionally, and physically…I know what happens to  caregivers. I know what happens to people when they can't handle it. But I have  to…</p>
+                                <p class="source"><span class="name">Karen Garner</span><br><span class="title">"A Journey of Caring Roundtable Event"</span></p>
+                            </blockquote>
+                          <p>Overall, caregivers  face serious challenges. And at FindMe, we focused on reducing those  difficulties while helping to maintain the freedom and independence that helps  their loved ones age in place.             </p>
+
+                        
                                                 
                         
                     </div><!--blog post-->
                     
 
                     <ul class="pager">
-                        <li class="previous"><a href="why-does-battery-life-matter-for-a-personal-rescue-beacon.html">&larr; Newer</a></li>
-                        <li class="next"><a href="why-arent-generic-iot-wearables-suitable-for-alzheimer.html">Older &rarr;</a></li>
+                        <li class="previous"><a href="why-arent-generic-iot-wearables-suitable-for-alzheimer.html">&larr; Newer</a></li>
+                        <li class="next hidden"><a href="#">Older &rarr;</a></li>
                     </ul><!-- pager-->
 
                     
