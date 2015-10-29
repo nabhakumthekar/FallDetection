@@ -255,21 +255,22 @@
         <footer id="footer">
           <div class="row footer-col">
             <div class="col-sm-12">
-              <div>
-                <h3>Want to be part of bringing this dream to frutition?</h3>
-                <p>
-                  Sign up for email updates on our launch
-                </p>
-                <form role="form" class="subscribe-form col-sm-6">
-                  <div class="input-group">
-                    <input type="email" class="form-control" name="email" max-length="128" placeholder="e.g. example@smith.com">
-                    <span class="input-group-btn">
-                      <button class="btn btn-theme-dark btn-lg" type="submit">Sign up</button>
-                    </span>
-                  </div>
-                </form>
-              </div>
+              <h3>Want to be part of bringing this dream to frutition?</h3>
+              <p>
+                Sign up for email updates on our launch
+              </p>
+              <form class="subscribe-form col-sm-6" onsubmit="signUp(); return false;">
+                <div class="input-group">
+                  <input type="email" class="form-control" id="signUp-input" name="email" max-length="128" placeholder="e.g. example@smith.com"/>
+                  <span class="input-group-btn">
+                    <input type="button" id="signUp-button" class="btn btn-theme-dark btn-lg" value="Sign up"/>
+                  </span>
+                </div>
+              </form>
             </div>
+          </div>
+          <div class="row">
+            <div id="signUp-result" class="col-sm-12" style="width:100%;"></div>
           </div>
           <div class="row footer-contact">
             <!--footer col-->

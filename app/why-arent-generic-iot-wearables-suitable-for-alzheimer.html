@@ -159,11 +159,11 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="blog-post">
-                        
+
                             <div class="item-img-wrap">
                                 <img src="img/blog/wearables.jpg" class="img-responsive" alt="workimg">
-                                
-                            </div>                       
+
+                            </div>
                         <!--work link-->
                         <ul class="list-inline post-detail hidden">
                             <li>by <a href="#">assan</a></li>
@@ -209,18 +209,18 @@
                             <p>Therefore, we designed FindMe to be an unobtrusive key fob, which  attached to the key ring that person living with Alzheimer's typical used.  We observed that changing the nature of the  key ring, such as the use of a simple, plastic covered coil in many residential  care facilities, had no effect on whether the residents always carrying their  keys with them.</p>
                             <p>Our answer was to build on long-term habits that required no new  learning, and no foreign intrusions.</p>
                             <p>Thus, at the end of the day, if your generic tracker is either an  amulet or a wristwatch, it may be removed, and careful observation over time is  best. And, this is why we designed FindMe as a key fob, for use by individuals  who have carried keys for their adult life.</p>
-                      
-                                                
-                        
+
+
+
                     </div><!--blog post-->
-                    
+
 
                     <ul class="pager">
                         <li class="previous"><a href="what-family-caregivers-may-face-not-going-home-anymore.html">&larr; Newer</a></li>
                         <li class="next"><a href="choosing-hardware-for-an-alzheimers-friendly-personal-rescue-beacon.html">Older &rarr;</a></li>
                     </ul><!-- pager-->
 
-                    
+
                 </div><!--col-->
             </div><!--row for blog post-->
         </div><!--blog full main container-->
@@ -228,21 +228,22 @@
   <footer id="footer">
     <div class="row footer-col">
       <div class="col-sm-12">
-        <div>
-          <h3>Want to be part of bringing this dream to frutition?</h3>
-          <p>
-            Sign up for email updates on our launch
-          </p>
-          <form role="form" class="subscribe-form col-sm-6">
-            <div class="input-group">
-              <input type="email" class="form-control" name="email" max-length="128" placeholder="e.g. example@smith.com">
-              <span class="input-group-btn">
-                <button class="btn btn-theme-dark btn-lg" type="submit">Sign up</button>
-              </span>
-            </div>
-          </form>
-        </div>
+        <h3>Want to be part of bringing this dream to frutition?</h3>
+        <p>
+          Sign up for email updates on our launch
+        </p>
+        <form class="subscribe-form col-sm-6" onsubmit="signUp(); return false;">
+          <div class="input-group">
+            <input type="email" class="form-control" id="signUp-input" name="email" max-length="128" placeholder="e.g. example@smith.com"/>
+            <span class="input-group-btn">
+              <input type="button" id="signUp-button" class="btn btn-theme-dark btn-lg" value="Sign up"/>
+            </span>
+          </div>
+        </form>
       </div>
+    </div>
+    <div class="row">
+      <div id="signUp-result" class="col-sm-12" style="width:100%;"></div>
     </div>
     <div class="row footer-contact">
       <!--footer col-->
