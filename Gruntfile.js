@@ -6,10 +6,10 @@ module.exports = function (grunt) {
         clean: ['dist', '.tmp'],
 
         copy: {
-            main: {
+            html: {
                 expand: true,
                 cwd: 'app/',
-                src: ['**/*.html', 'favicon.icon', 'img/**', '!js/**', '!css/**', '!scss/**', 'img/**'],
+                src: ['**/*.html', 'favicon.icon'],
                 dest: 'dist/'
             },
             fonts: {
@@ -17,18 +17,16 @@ module.exports = function (grunt) {
                 flatten: true,
                 filter: 'isFile',
                 cwd: 'app',
-                src: ['bootstrap/fonts/**', 'font-awesome/fonts/**'],
-                dest: 'dist/fonts/'
+                src: ['assets/plugins/bootstrap/fonts/**', 'assets/plugins/font-awesome/fonts/**'],
+                dest: 'dist/assets/fonts/'
             },
-            assets: {
+            images: {
                 expand: true,
-                flatten: true,
-                filter: 'isFile',
                 cwd: 'app',
-                src: ['rs-plugin/assets/**'],
-                dest: 'dist/assets/'
+                src: ['assets/images/**'],
+                dest: 'dist/'
             },
-            html: {
+            htmlmin: {
                 expand: true,
                 cwd: '.tmp',
                 src: ['**/*.html'],
@@ -54,7 +52,7 @@ module.exports = function (grunt) {
 
         filerev: {
             files: {
-                src: ['dist/**/*.{js,css}']
+                src: ['dist/assets/**/*.{js,css}']
             }
         },
 
@@ -63,7 +61,7 @@ module.exports = function (grunt) {
                 src: ['dist/*.html']
             },
             options: {
-                assetDirs: ['dist', 'dist/css', 'dist/js', 'css', 'js']
+                assetDirs: ['dist', 'dist/assets/css', 'dist/assets/js']
             }
         },
 
@@ -95,9 +93,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean',
-        'copy:main',
+        'copy:html',
         'copy:fonts',
-        'copy:assets',
+        'copy:images',
         'useminPrepare',
         'concat',
         'uglify',
@@ -105,7 +103,7 @@ module.exports = function (grunt) {
         'filerev',
         'usemin',
         'htmlmin',
-        'copy:html'
+        'copy:htmlmin'
     ]);
 
     // Tell Grunt what to do when we type "grunt" into the terminal

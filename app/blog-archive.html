@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
-    <!-- build:css assets/css/blog.min.css -->
+    <!-- build:css css/min/blog-archive.min.css -->
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Plugins CSS -->    
@@ -29,7 +29,7 @@
     <![endif]-->
 </head> 
 
-<body class="blog-page">
+<body class="blog-page blog-archive-page">
     <div class="wrapper">
         <!-- ******HEADER****** --> 
         <header class="header header-blog">  
@@ -72,7 +72,7 @@
                         <div class="searchbox-container">
                             <form class="searchbox">
                                 <label class="sr-only" for="search-form">Search</label>
-                                <input id="search-form" class="form-control searchbox-input" placeholder="Search the blog..." type="search" value="" name="search-form">
+                                <input id="search-form" class="form-control searchbox-input" onkeyup="buttonUp();" placeholder="Search the blog..." type="search" value="" name="search-form">
                                 <input class="searchbox-submit" type="submit" value="GO">
                                 <i class="fa fa-search searchbox-icon"></i>
                             </form>
@@ -83,276 +83,137 @@
             </div><!--//container-->
         </header><!--//header-->         
         
-        <section class="featured-blog-posts section">       
-       
-            <div class="flexslider blog-slider">
-                <ul class="slides">
-                    <li class="slide slide-1">
-                        <div class="flex-caption container">
-                            <h3 class="title"><a href="#">Ideas are easy, execution is hard</a></h3>
-                            <div class="meta">16th Oct, 2014</div>
-                            <a class="more-link" href="blog-single.html">Read more &rarr;</a>
-                        </div><!--//flex-caption-->
-                    </li>
-                    <li class="slide slide-2">
-                        <div class="flex-caption container">
-                            <h3 class="title"><a href="#">Done is better than perfect</a></h3>
-                            <div class="meta">23rd Sep, 2014</div>
-                            <a class="more-link" href="blog-single.html">Read more &rarr;</a>
-                        </div><!--//flex-caption-->
-                    </li>
-                    <li class="slide slide-3">
-                        <div class="flex-caption container">
-                            <h3 class="title"><a href="#">The value of an idea lies in the using of it</a></h3>
-                            <div class="meta">18th Aug, 2014</div>
-                            <a class="more-link" href="blog-single.html">Read more &rarr;</a>
-                        </div><!--//flex-caption-->
-                    </li>
-                    <li class="slide slide-4">
-                        <div class="flex-caption container">
-                            <h3 class="title"><a href="#">Good design is good business</a></h3>
-                            <div class="meta">5th Aug, 2014</div>
-                            <a class="more-link" href="blog-single.html">Read more &rarr;</a>
-                        </div><!--//flex-caption-->
-                    </li>
-                </ul><!--//slides-->
-            </div><!--//flexslider-->
-                    
-        </section><!--//featured-blog-posts-->
-        
         <!-- ******BLOG LIST****** --> 
-        <div class="blog container">
+        <div class="blog blog-category blog-archive container">
+            <h2 class="page-title text-center"><i class="fa fa-archive"></i> Archive: Sep 2014</h2>
             <div class="row">
-                <div id="blog-mansonry" class="blog-list">
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                <div class="blog-list blog-category-list">
+                    
+                    <article class="post col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
                         <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/post-1-thumb.jpg" alt="" /></a>                                
-                            </figure><!--//post-thumb-->
                             <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">Ideas are easy, execution is hard</a></h3>
-                                <div class="post-entry">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis mattis erat, dictum facilisis magna posuere ac. Curabitur consectetur magna mauris, et aliquam lectus ornare nec.</p>
-                                    <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
+                                <div class="date-label">
+                                    <span class="month">SEP</span>
+                                    <span class="date-number">28</span>
                                 </div>
+                                <h3 class="post-title"><a href="blog-single.html">Phasellus accumsan</a></h3>
                                 <div class="meta">
                                     <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">16th Oct, 2014</li>
                                     	<li class="post-author"> by <a href="#">James Lee</a></li>
                                     	<li class="post-comments-link">
-                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>8</a>
+                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>7</a>
                                 	    </li>
                                 	</ul><!--//meta-list-->                           	
-                                </div><!--meta-->
+                                </div><!--meta-->                               
+                                <div class="post-entry">
+                                    <p>Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit.</p>
+                                    <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
+                                </div>                                
                             </div><!--//content-->
                         </div><!--//post-inner-->
                     </article><!--//post-->
                     
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                    <article class="post col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
                         <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/post-2-thumb.jpg" alt="" /></a>
-                            </figure><!--//post-thumb-->
                             <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">Done is better than perfect</a></h3>
-                                <div class="post-entry">
-                                    <p>Aenean interdum ligula sed sollicitudin scelerisque. Morbi sed purus erat. Quisque adipiscing, dolor vitae porttitor egestas, orci elit feugiat libero, id pellentesque libero nulla quis tortor. Nulla sodales erat eu aliquam sollicitudin. Proin hendrerit porta lorem, ultricies blandit tortor mollis ut. Suspendisse potenti.</p>
-                                    <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
+                                <div class="date-label">
+                                    <span class="month">SEP</span>
+                                    <span class="date-number">23</span>
                                 </div>
+                                <h3 class="post-title"><a href="blog-single.html">Phasellus accumsan</a></h3>
                                 <div class="meta">
                                     <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">23rd Sep, 2014</li>
-                                    	<li class="post-author"> by <a href="#">James Lee</a></li>
+                                    	<li class="post-author"> by <a href="#">Alex White</a></li>
                                     	<li class="post-comments-link">
                                 	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>3</a>
                                 	    </li>
                                 	</ul><!--//meta-list-->                           	
-                                </div><!--meta-->
+                                </div><!--meta-->                                
+                                <div class="post-entry">
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                                    <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
+                                </div>                                
                             </div><!--//content-->
                         </div><!--//post-inner-->
                     </article><!--//post-->
                     
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                    <article class="post col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
                         <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/post-3-thumb.jpg" alt="" /></a>
-                            </figure><!--//post-thumb-->
                             <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">The value of an idea lies in the using of it</a></h3>
-                                <div class="post-entry">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis mattis erat, dictum facilisis magna posuere ac. Curabitur consectetur magna mauris, et aliquam lectus ornare nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris quis tellus magna.</p>
-                                    <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
-                                </div>
+                               <div class="date-label">
+                                    <span class="month">SEP</span>
+                                    <span class="date-number">18</span>
+                                </div>                                
+                                <h3 class="post-title"><a href="blog-single.html">Molestias Excepturi Sint</a></h3>
                                 <div class="meta">
                                     <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">18th Aug, 2014</li>
-                                    	<li class="post-author"> by <a href="#">Jeremy Green</a></li>
+                                    	<li class="post-author"> by <a href="#">Sarah Wise</a></li>
                                     	<li class="post-comments-link">
-                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>2</a>
+                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>12</a>
                                 	    </li>
                                 	</ul><!--//meta-list-->                           	
                                 </div><!--meta-->
+                                
+                                <div class="post-entry">
+                                    <p>Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
+                                    <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
+                                </div>                                
                             </div><!--//content-->
                         </div><!--//post-inner-->
                     </article><!--//post-->
                     
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                    <article class="post col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
                         <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/post-4-thumb.jpg" alt="" /></a>
-                            </figure><!--//post-thumb-->
                             <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">Good design is good business</a></h3>                                
-                                <div class="post-entry">
-                                    <p>Praesent congue eros at vestibulum luctus. Integer faucibus eros ac mauris aliquam vehicula. Nulla vel purus quis libero viverra aliquet. Praesent consequat varius augue, et euismod lorem hendrerit ac. Duis eget lacus nisi. Sed sed erat velit.</p>
-                                    <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
+                                <div class="date-label">
+                                    <span class="month">SEP</span>
+                                    <span class="date-number">12</span>
                                 </div>
+                                <h3 class="post-title"><a href="blog-single.html">Similique sunt in culpa</a></h3>
                                 <div class="meta">
-                                    <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">12th April, 2014</li>
+                                    <ul class="meta-list list-inline">
                                     	<li class="post-author"> by <a href="#">James Lee</a></li>
                                     	<li class="post-comments-link">
-                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>4</a>
+                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>24</a>
                                 	    </li>
-                                	</ul><!--//meta-list-->                     	
+                                	</ul><!--//meta-list-->                           	
                                 </div><!--meta-->
-                            </div><!--//content-->
-                        </div><!--//post-inner-->
-                    </article><!--//post-->
-                    
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
-                        <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/post-5-thumb.jpg" alt="" /></a>
-                            </figure><!--//post-thumb-->
-                            <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">Hackathon brainstorming</a></h3>                                
+                                
                                 <div class="post-entry">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis mattis erat, dictum facilisis magna posuere ac. Curabitur consectetur magna mauris, et aliquam lectus ornare nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris quis tellus magna.</p>
+                                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
                                     <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="meta">
-                                    <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">3th April, 2014</li>
-                                    	<li class="post-author"> by <a href="#">James Lee</a></li>
-                                    	<li class="post-comments-link">
-                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>1</a>
-                                	    </li>
-                                	</ul><!--//meta-list-->                           	
-                                </div><!--meta-->
+                                </div>                                
                             </div><!--//content-->
                         </div><!--//post-inner-->
                     </article><!--//post-->
                     
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                    <article class="post col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
                         <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/post-6-thumb.jpg" alt="" /></a>
-                            </figure><!--//post-thumb-->
                             <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">You can do big things with a small team</a></h3>
-                                <div class="post-entry">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis mattis erat, dictum facilisis magna posuere ac. Curabitur consectetur magna mauris, et aliquam lectus ornare nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris quis tellus magna.</p>
-                                <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
-                                </div>
+                               <div class="date-label">
+                                    <span class="month">SEP</span>
+                                    <span class="date-number">05</span>
+                                </div>                                
+                                <h3 class="post-title"><a href="blog-single.html">Itaque earum rerum</a></h3>
                                 <div class="meta">
                                     <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">3th April, 2014</li>
-                                    	<li class="post-author"> by <a href="#">James Lee</a></li>
+                                    	<li class="post-author"> by <a href="#">Helen Carson</a></li>
                                     	<li class="post-comments-link">
-                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>5</a>
+                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>9</a>
                                 	    </li>
                                 	</ul><!--//meta-list-->                           	
                                 </div><!--meta-->
-                            </div><!--//content-->
-                        </div><!--//post-inner-->
-                    </article><!--//post-->
-                    
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
-                        <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/post-7-thumb.jpg" alt="" /></a>
-                            </figure><!--//post-thumb-->
-                            <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">Nothing works better than just improving your product.</a></h3>
+                                
                                 <div class="post-entry">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis mattis erat, dictum facilisis magna posuere ac. Curabitur consectetur magna mauris, et aliquam lectus ornare nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris quis tellus magna.</p>
+                                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
                                     <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="meta">
-                                    <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">3th April, 2014</li>
-                                    	<li class="post-author"> by <a href="#">Alex Morgan</a></li>
-                                    	<li class="post-comments-link">
-                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>1</a>
-                                	    </li>
-                                	</ul><!--//meta-list-->                           	
-                                </div><!--meta-->
+                                </div>                                
                             </div><!--//content-->
                         </div><!--//post-inner-->
                     </article><!--//post-->
-                    
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
-                        <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/post-8-thumb.jpg" alt="" /></a>
-                            </figure><!--//post-thumb-->
-                            <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">Don't try to be original, just try to be good</a></h3>
-                                <div class="post-entry">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis mattis erat, dictum facilisis magna posuere ac. Curabitur consectetur magna mauris, et aliquam lectus ornare nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris quis tellus magna.</p>
-                                    <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="meta">
-                                    <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">3th April, 2014</li>
-                                    	<li class="post-author"> by <a href="#">James Lee</a></li>
-                                    	<li class="post-comments-link">
-                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>28</a>
-                                	    </li>
-                                	</ul><!--//meta-list-->                           	
-                                </div><!--meta-->
-                            </div><!--//content-->
-                        </div><!--//post-inner-->
-                    </article><!--//post-->
-                    
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
-                        <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="assets/images/blog/post-9-thumb.jpg" alt="" /></a>
-                            </figure><!--//post-thumb-->
-                            <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">It's not about ideas. It's about making ideas happen</a></h3>
-                                <div class="post-entry">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis mattis erat, dictum facilisis magna posuere ac. Curabitur consectetur magna mauris, et aliquam lectus ornare nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris quis tellus magna.</p>
-                                    <a class="read-more" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="meta">
-                                    <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">3th April, 2014</li>
-                                    	<li class="post-author"> by <a href="#">Jo Bailey</a></li>
-                                    	<li class="post-comments-link">
-                                	        <a href="blog-single.html#comment-area"><i class="fa fa-comments"></i>110</a>
-                                	    </li>
-                                	</ul><!--//meta-list-->                           	
-                                </div><!--meta-->
-                             </div><!--//content-->
-                        </div><!--//post-inner-->
-                    </article><!--//post-->
-                    
+                                        
                 </div><!--//blog-list-->  
             </div><!--//row-->
-            <div class="pagination-container text-center">
-                <ul class="pagination">
-                    <li class="disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul><!--//pagination-->
-            </div><!--//pagination-container-->
         </div><!--//blog-->        
     </div><!--//wrapper-->
     
@@ -496,7 +357,7 @@
         </div><!--//config-wrapper-inner-->
     </div><!--//config-wrapper-->
  
-    <!-- build:js assets/js/blog.min.js -->
+    <!-- build:js assets/js/blog-archive.min.js -->
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
@@ -506,15 +367,15 @@
     <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
     <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
     <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script> 
-            
-    <!-- blog page specific js starts --> 
+             
+    <!-- blog specific js starts -->
     <script type="text/javascript" src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>     
     <script type="text/javascript" src="assets/plugins/masonry.pkgd.min.js"></script> 
     <script type="text/javascript" src="assets/js/blog.js"></script>
-    <!-- blog page specific js ends -->   
-     
+    <!-- blog specific js ends -->    
+    
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <!--endbuild -->
+    <!-- endbuild -->
 
             
 </body>
