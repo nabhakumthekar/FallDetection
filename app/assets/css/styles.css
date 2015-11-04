@@ -776,6 +776,8 @@ select {
   -webkit-opacity: 0.6;
   -moz-opacity: 0.6;
   opacity: 0.6;
+  margin-left: auto;
+  margin-right: auto;
 }
 .press .press-list li:hover img {
   -webkit-opacity: 1;
