@@ -2139,7 +2139,7 @@ select {
 .story-section .team {
   max-width: 900px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 0 30px;
   text-align: center;
 }
 .story-section .team .title {
