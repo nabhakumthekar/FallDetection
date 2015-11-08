@@ -257,11 +257,11 @@
                             </ul>
                             <div class="form-container">
                                 <p class="intro">Stay up to date with the latest news and offers from FindMe</p>
-                                <form class="signup-form navbar-form">
+                                <form class="signup-form navbar-form" action="javascript:void(0);">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter your email address">
+                                        <input type="email" id="email" class="form-control" placeholder="Enter your email address">
                                     </div>
-                                    <button type="submit" class="btn btn-cta btn-cta-primary">Subscribe Now</button>
+                                    <button type="submit" id="subscribe" class="btn btn-cta btn-cta-primary">Subscribe Now</button>
                                 </form>
                             </div><!--//subscription-form-->
                         </div><!--//footer-col-inner-->
@@ -306,6 +306,15 @@
         </div><!--//bottom-bar-->
     </footer><!--//footer-->
 
+    <!-- Subscribe Modal -->
+    <div class="modal fade" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p id="subscribeModalLabel" class="modal-title"></p>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div><!--//modal-content-->
+        </div><!--//modal-dialog-->
+    </div><!--//modal-->
     <!-- build:js assets/js/blog-generic-wearables.min.js -->
     <!-- Javascript -->
     <script type="text/javascript" src="assets/plugins/jquery-1.11.2.min.js"></script>

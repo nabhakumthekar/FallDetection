@@ -1,34 +1,34 @@
 $(document).ready(function() {
 
-    /* ======= Twitter Bootstrap hover dropdown ======= */   
-    /* Ref: https://github.com/CWSpear/bootstrap-hover-dropdown */ 
+    /* ======= Twitter Bootstrap hover dropdown ======= */
+    /* Ref: https://github.com/CWSpear/bootstrap-hover-dropdown */
     /* apply dropdownHover to all elements with the data-hover="dropdown" attribute */
-    
+
     $('[data-hover="dropdown"]').dropdownHover();
-    
-    /* ======= Fixed header when scrolled ======= */    
+
+    /* ======= Fixed header when scrolled ======= */
     $(window).on('scroll load', function() {
-         
+
          if ($(window).scrollTop() > 0) {
              $('#header').addClass('scrolled');
          }
          else {
              $('#header').removeClass('scrolled');
-             
+
          }
     });
-    
-    
+
+
     /* ======= jQuery Placeholder ======= */
     /* Ref: https://github.com/mathiasbynens/jquery-placeholder */
-    
-    $('input, textarea').placeholder();    
-    
+
+    $('input, textarea').placeholder();
+
     /* ======= jQuery FitVids - Responsive Video ======= */
     /* Ref: https://github.com/davatron5000/FitVids.js/blob/master/README.md */
-    
+
     $(".video-container").fitVids();
-    
+
     /* ======= FAQ accordion ======= */
     function toggleIcon(e) {
     $(e.target)
@@ -39,61 +39,89 @@ $(document).ready(function() {
         .toggleClass('fa-plus-square fa-minus-square');
     }
     $('.panel').on('hidden.bs.collapse', toggleIcon);
-    $('.panel').on('shown.bs.collapse', toggleIcon);    
-    
-    
-    /* ======= Header Background Slideshow - Flexslider ======= */    
+    $('.panel').on('shown.bs.collapse', toggleIcon);
+
+
+    /* ======= Header Background Slideshow - Flexslider ======= */
     /* Ref: https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties */
-    
+
     $('.bg-slider').flexslider({
         animation: "fade",
         directionNav: false, //remove the default direction-nav - https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
         controlNav: false, //remove the default control-nav
         slideshowSpeed: 8000
     });
-	
+
 	/* ======= Stop Video Playing When Close the Modal Window ====== */
     $("#modal-video .close").on("click", function() {
-        $("#modal-video iframe").attr("src", $("#modal-video iframe").attr("src"));        
+        $("#modal-video iframe").attr("src", $("#modal-video iframe").attr("src"));
     });
-     
-    
+
+
      /* ======= Testimonial Bootstrap Carousel ======= */
      /* Ref: http://getbootstrap.com/javascript/#carousel */
     $('#testimonials-carousel').carousel({
-      interval: 8000 
+      interval: 8000
     });
-    
-    
-    /* ======= Style Switcher ======= */    
+
+
+    /* ======= Style Switcher ======= */
     $('#config-trigger').on('click', function(e) {
         var $panel = $('#config-panel');
         var panelVisible = $('#config-panel').is(':visible');
         if (panelVisible) {
-            $panel.hide();          
+            $panel.hide();
         } else {
             $panel.show();
         }
         e.preventDefault();
     });
-    
+
     $('#config-close').on('click', function(e) {
         e.preventDefault();
         $('#config-panel').hide();
     });
-    
-    
-    $('#color-options a').on('click', function(e) { 
+
+
+    $('#color-options a').on('click', function(e) {
         var $styleSheet = $(this).attr('data-style');
-		$('#theme-style').attr('href', $styleSheet);	
-				
+		$('#theme-style').attr('href', $styleSheet);
+
 		var $listItem = $(this).closest('li');
 		$listItem.addClass('active');
 		$listItem.siblings().removeClass('active');
-		
+
 		e.preventDefault();
-		
+
 	});
 
+    $('button#subscribe').on('click', function(){
+    $.ajax({
+      url: "/api/v1/subscribers",
+      type: "POST",
+      data: JSON.stringify({'email': $('input#email').val()}),
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      success: function(result){
+        $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
+        $('#modal-subscribe').modal('show');
+        $('#email').val('');
+      },
+      error: function(result){
+        if(result.status == 409){
+          $('p#subscribeModalLabel').text('You have already signed up. Please stay tuned for our launch.');
+          $('#modal-subscribe').modal('show');
+        }else{
+          $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
+          $('#modal-subscribe').modal('show');
+        }
+        $('#email').val('');
+      }
+    });
+  });
 
+    $('#modal-subscribe').on('show.bs.modal', function(event){
+      var modal = $(this);
+      modal.find('.modal-header h4').val('Thank you!');
+  });
 });

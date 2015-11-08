@@ -2273,6 +2273,37 @@ select {
   -moz-opacity: 0.9;
   opacity: 0.9;
 }
+#modal-subscribe .modal-dialog {
+  width: 760px;
+  margin-top: 90px;
+}
+#modal-subscribe .modal-content{
+  background-color: #939393;
+  color: #ffffff;
+  height: 50px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+#modal-subscribe button.close {
+  font-size: 20px;
+  font-weight: 300;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  color: #ffffff;
+  position: absolute;
+  right: 3px;
+  top: 0;
+}
+#modal-subscribe button.close:hover {
+  color: #000000;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  text-shadow: none;
+}
 /* ======= Login Page ======= */
 .has-full-screen-bg .upper-wrapper {
   background: #253340 url('../images/background/bg-screen-1.jpg') no-repeat 50% top;
