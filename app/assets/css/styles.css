@@ -208,14 +208,18 @@ select {
   font-size: 15px;
   float: left;
 }
+.header h1.logo img {
+  height: 30px;
+  float: left;
+}
 .header h1.logo a {
   color: #fff;
-  padding: 15px 30px;
+  padding: 25px 20px;
   display: inline-block;
   text-align: center;
   line-height: 1.4;
   max-width: 155px;
-  background: #28a5a8;
+  background: none;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 4px;
   -webkit-border-bottom-left-radius: 4px;
@@ -869,6 +873,8 @@ select {
 }
 .features-tabbed .tab-content {
   padding: 60px 30px;
+  display: flex;
+  align-items: center;
 }
 .features-tabbed .tab-content .title {
   font-size: 16px;
@@ -979,7 +985,7 @@ select {
   background-clip: padding-box;
   margin-right: 0px;
   color: #999999;
-  padding: 15px 30px;
+  padding: 15px 15px;
   font-size: 14px;
   background: #fafafa;
   border: none;
@@ -1268,6 +1274,8 @@ select {
 .apps-section {
   min-height: 900px;
   padding-top: 160px;
+  display: flex;
+  align-items: center;
 }
 .apps-section .title {
   font-size: 36px;
@@ -3197,10 +3205,13 @@ select {
     height: inherit;
   }
   .header.scrolled {
-    height: auto;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+    background: #fff;
+    z-index: 1000;
+    height: 80px;
+    top: 0;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
   .header.scrolled .main-nav .nav .nav-item a {
     color: #fff;
@@ -3344,7 +3355,7 @@ select {
     background-clip: padding-box;
     color: #28a5a8;
     background: #fff;
-    padding-left: 0;
+    padding-left: 20px;
     padding-top: 25px;
   }
   .header.scrolled .main-nav .nav .nav-item a {
