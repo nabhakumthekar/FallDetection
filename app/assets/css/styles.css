@@ -1288,6 +1288,12 @@ select {
   text-align: left;
   margin-bottom: 60px;
 }
+.apps-section .phone-holder-wrapper .screenshot{
+  width: 480px;
+  height: 480px;
+  display: block;
+  position: relative;
+}
 .apps-section .phone-holder {
   width: 324px;
   height: 651px;
