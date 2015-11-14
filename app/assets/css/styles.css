@@ -1288,17 +1288,15 @@ select {
   text-align: left;
   margin-bottom: 60px;
 }
-.apps-section .phone-holder-wrapper .screenshot{
-  width: 480px;
-  height: 480px;
-  display: block;
-  position: relative;
+.apps-section .screenshot {
+  max-width: 100%;
+  height: auto;
 }
 .apps-section .phone-holder {
   width: 324px;
   height: 651px;
   display: block;
-  background: url('../images/mobile/iphone.png') no-repeat left top;
+  background: url('../images/mobile/iPhone-coming-soon.png') no-repeat left top;
   position: relative;
 }
 .apps-section .phone-holder .screenshot {
@@ -3325,6 +3323,13 @@ select {
   .contact-section {
     padding-top: 45px;
   }
+  .footer .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -3512,6 +3517,9 @@ select {
   }
   .bg-slider-wrapper {
     position: fixed;
+  }
+  .footer .container {
+    width: 970px;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
