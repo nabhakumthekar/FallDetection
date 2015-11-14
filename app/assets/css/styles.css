@@ -613,6 +613,11 @@ select {
   padding: 0;
   margin-bottom: 10px;
 }
+.why .item .quote .source-name {
+  color: #000000;
+  font-size: 13px;
+  margin-bottom: 0;
+}
 .why .item .quote .source {
   color: #999999;
   font-size: 13px;
