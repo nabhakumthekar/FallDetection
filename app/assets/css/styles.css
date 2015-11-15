@@ -450,7 +450,7 @@ select {
   top: 0;
   left: 0;
   height: 500px;
-  background: #253340 url('../images/background/bg-header-small-1.jpg') no-repeat 50% top;
+  background: #253340 url('../images/background/bg-header-small-1.png') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -799,7 +799,7 @@ select {
 }
 /* ======= cta-section ======= */
 .cta-section {
-  background: #253340 url('../images/background/bg-footer-1.jpg') no-repeat left top;
+  background: #253340 url('../images/background/bg-footer-1.png') no-repeat left top;
   background-size: cover;
   min-height: 420px;
   color: #fff;
