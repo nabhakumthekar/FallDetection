@@ -205,20 +205,22 @@ select {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   float: left;
 }
 .header h1.logo img {
-  height: 30px;
+  height: 40px;
   float: left;
 }
 .header h1.logo a {
   color: #fff;
-  padding: 25px 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: inline-block;
   text-align: center;
   line-height: 1.4;
-  max-width: 155px;
+  max-width: 200px;
   background: none;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 4px;
@@ -240,7 +242,7 @@ select {
   -ms-transition: color 0.4s ease-in-out;
   -o-transition: color 0.4s ease-in-out;
   position: relative;
-  font-size: 20px;
+  font-size: 25px;
 }
 .header h1.logo a:hover {
   text-decoration: none;
@@ -3373,7 +3375,6 @@ select {
     color: #28a5a8;
     background: #fff;
     padding-left: 20px;
-    padding-top: 25px;
   }
   .header.scrolled .main-nav .nav .nav-item a {
     color: #666666;
