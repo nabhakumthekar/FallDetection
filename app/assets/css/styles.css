@@ -3214,32 +3214,45 @@ select {
     display: none;
   }
   .header {
-    height: inherit;
+    height: 130px;
   }
   .header.scrolled {
     background: #fff;
     z-index: 1000;
-    height: 80px;
+    height: 130px;
     top: 0;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
   .header.scrolled .main-nav .nav .nav-item a {
-    color: #fff;
+    color: #666666;
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1;
   }
   .header.scrolled .main-nav .nav .nav-item.nav-item-cta a.btn-cta-secondary {
-    background: inherit;
-    border-color: inherit;
+    background: #28a5a8;
+    border-color: #28a5a8;
   }
   .header.scrolled .main-nav .nav .dropdown-menu a {
     color: #fff;
   }
+  .header.scrolled h1.logo a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #28a5a8;
+    background: #fff;
+    padding-left: 20px;
+  }
   .header.navbar-fixed-top {
-    position: relative;
+    position: fixed;
   }
   .blog-slider {
     margin-top: 0;
@@ -3280,7 +3293,7 @@ select {
   }
   .promo {
     height: 420px;
-    padding-top: 80px;
+    padding-top: 180px;
   }
   .promo.section .intro {
     margin-bottom: 30px;
@@ -3320,12 +3333,6 @@ select {
   .access-page .navbar-collapse.collapse .navbar-nav {
     display: none;
   }
-  .features-video {
-    padding-top: 90px;
-  }
-  .pricing {
-    padding-top: 90px;
-  }
   .apps-section {
     padding-top: 80px;
   }
@@ -3333,7 +3340,7 @@ select {
     padding-top: 90px;
   }
   .contact-section {
-    padding-top: 45px;
+    padding-top: 170px;
   }
   .footer .container {
     padding-left: 15px;
