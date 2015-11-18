@@ -131,8 +131,6 @@ a.btn-ghost .text,
 .text-highlight {
   color: #0b2c2c;
 }
-input[type="text"],
-input[type="email"],
 input[type="password"],
 input[type="submit"],
 input[type="button"],
@@ -1273,6 +1271,27 @@ select {
 }
 .pricing .item .feature-list li.disabled .fa {
   color: #999999;
+}
+.white-popup-block .error {
+  color: #28a5a8;
+  font-family: arial, sans-serif;
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 300;
+}
+.white-popup-block select {
+  width: 100%;
+}
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
 }
 /* ======= Download Apps ======= */
 .download-page .headline-bg {
@@ -3222,7 +3241,7 @@ select {
   .white-popup-block ul {
     list-style-type: none;
   }
-  .white-popup-block label {
+  .white-popup-block label.label-title {
     margin-top: 15px;
   }
   .white-popup-block input {
@@ -3395,7 +3414,7 @@ select {
   .white-popup-block ul {
     list-style-type: none;
   }
-  .white-popup-block label {
+  .white-popup-block label.label-title {
     margin-top: 15px;
   }
   .white-popup-block input {
@@ -3612,7 +3631,7 @@ select {
   .white-popup-block ul {
     list-style-type: none;
   }
-  .white-popup-block label {
+  .white-popup-block label.label-title {
     margin-top: 15px;
   }
   .white-popup-block input {

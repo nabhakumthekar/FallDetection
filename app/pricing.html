@@ -137,50 +137,50 @@
         </div><!--//container-->
     </section><!--//pricing-->
 
-    <form id="preorder-form" class="white-popup-block mfp-hide fade in">
+    <form role="form" id="preorder-form" class="white-popup-block mfp-hide" action="javascript:void(0);">
       <h1>Pre-Order</h1>
       <fieldset style="border:0;">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-    				  <label for="name">Name *</label>
+    				  <label class="label-title" for="name">Name *</label>
               <div class="row preorder-name">
                 <div class="col-sm-6">
-                  <input id="firstName" name="name" placeholder="First Name" required="">
+                  <input id="firstName" name="firstName" placeholder="First Name" required>
                   <p>First</p>
                 </div>
                 <div class="col-sm-6">
-                  <input id="lastName" name="name" placeholder="Last Name" required="">
+                  <input id="lastName" name="lastName" placeholder="Last Name" required>
                   <p>Last</p>
                 </div>
               </div>
     			  </div>
             <div class="col-sm-12">
-              <label for="DoB">Date of Birth *</label>
+              <label class="label-title" for="DoB">Date of Birth *</label>
               <div class="row">
                 <div class="col-sm-6">
-                  <input id="DoB" name="dateOfBirth" placeholder="01/01/19xx" required="">
+                  <input id="DoB" name="dateOfBirth" type="date" placeholder="01/01/19xx" required>
                 </div>
               </div>
             </div>
       			<div class="col-sm-12">
-      				<label for="email">Email *</label>
+      				<label class="label-title" for="email">Email *</label>
               <div class="row">
                 <div class="col-sm-6">
-      				    <input id="email" name="email" placeholder="example@domain.com" required="">
+      				    <input id="email" name="email" type="email" placeholder="example@domain.com" required>
                 </div>
               </div>
       			</div>
       			<div class="col-sm-12">
-      				<label for="phone">Phone *</label>
+      				<label class="label-title" for="phone">Phone *</label>
               <div class="row">
                 <div class="col-sm-6">
-                  <input id="phone" name="phone" type="tel" placeholder="Eg. +447500000000" required="">
+                  <input id="phone" name="phone" type="tel" placeholder="Eg. +44751234567" required>
                 </div>
               </div>
       			</div>
       			<div class="col-sm-12">
-              <label for="address">Address *</label>
+              <label class="label-title" for="address">Address *</label>
               <div class="row">
                 <div class="col-sm-12">
                   <input id="addr1" name="address" type="address" placeholder="" required="">
@@ -191,25 +191,27 @@
                   <p>Street Address 2</p>
                 </div>
                 <div class="col-sm-6">
-                  <input id="city" name="address" type="address" placeholder="" required="">
+                  <input id="city" name="city" type="text" placeholder="" required>
                   <p>City</p>
                 </div>
                 <div class="col-sm-6">
-                  <input id="state" name="address" type="address" placeholder="" required="">
+                  <input id="state" name="state" type="text" placeholder="" required>
                   <p>State / Province / Region</p>
                 </div>
                 <div class="col-sm-6">
-                    <input id="zip" name="address" type="address" placeholder="" required="">
+                    <input id="zip" name="zip" type="text" placeholder="" required>
                   <p>ZIP / Postal Code</p>
                 </div>
                 <div class="col-sm-6">
-                  <input id="country" name="address" type="address" placeholder="" required="">
+                  <select id="country" name="country" required>
+                    <option selected="selected">Choose a Country</option>
+                  </select>
                   <p>Country</p>
                 </div>
               </div>
       			</div>
             <div class="col-sm-12">
-              <a class="btn btn-cta btn-cta-primary preorder-popup-dismiss">Submit</a>
+              <button type="submit" class="btn btn-cta btn-cta-primary preorder-popup-dismiss">Submit</button>
       			</div>
           </div>
     		</div>
