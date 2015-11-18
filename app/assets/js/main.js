@@ -94,4 +94,6 @@ $(document).ready(function() {
       var modal = $(this);
       modal.find('.modal-header h4').val('Thank you!');
   });
+
+    //$('.signup-form').validate();
 });
