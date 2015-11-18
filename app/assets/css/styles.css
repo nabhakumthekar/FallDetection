@@ -3207,6 +3207,27 @@ select {
   .story-section .team {
     padding: 0;
   }
+  .white-popup-block {
+    background: #FFF;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 900px;
+    width: 80%;
+    margin: 40px auto;
+    position: relative;
+  }
+  .white-popup-block .container {
+    width: 100%;
+  }
+  .white-popup-block ul {
+    list-style-type: none;
+  }
+  .white-popup-block label {
+    margin-top: 15px;
+  }
+  .white-popup-block input {
+    width: 100%;
+  }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -3358,6 +3379,27 @@ select {
     margin-left: auto;
     margin-right: auto;
     width: auto;
+  }
+  .white-popup-block {
+    background: #FFF;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 900px;
+    width: 80%;
+    margin: 40px auto;
+    position: relative;
+  }
+  .white-popup-block .container {
+    width: 100%;
+  }
+  .white-popup-block ul {
+    list-style-type: none;
+  }
+  .white-popup-block label {
+    margin-top: 15px;
+  }
+  .white-popup-block input {
+    width: 100%;
   }
 }
 /* Medium devices (desktops, 992px and up) */
@@ -3554,6 +3596,27 @@ select {
   }
   .footer .container {
     width: 970px;
+  }
+  .white-popup-block {
+    background: #FFF;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 900px;
+    width: 50%;
+    margin: 40px auto;
+    position: relative;
+  }
+  .white-popup-block .container {
+    width: 100%;
+  }
+  .white-popup-block ul {
+    list-style-type: none;
+  }
+  .white-popup-block label {
+    margin-top: 15px;
+  }
+  .white-popup-block input {
+    width: 100%;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
