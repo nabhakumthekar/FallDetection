@@ -65,7 +65,7 @@ $(document).ready(function() {
     });
 
     /* ======== Subscription Function ======== */
-    $('button#subscribe').on('click', function(){
+    /*$('button#subscribe').on('click', function(){
     $.ajax({
       url: "/api/v1/subscribers",
       type: "POST",
@@ -88,12 +88,42 @@ $(document).ready(function() {
         $('#email').val('');
       }
     });
-  });
+  });*/
 
     $('#modal-subscribe').on('show.bs.modal', function(event){
       var modal = $(this);
       modal.find('.modal-header h4').val('Thank you!');
   });
 
-    //$('.signup-form').validate();
+    $('.signup-form').validate({
+      submitHandler: function() {
+        $.ajax({
+          url: "/api/v1/subscribers",
+          type: "POST",
+          data: JSON.stringify({'email': $('input#cemail').val()}),
+          dataType: "json",
+          contentType: "application/json; charset=utf-8",
+          success: function(result){
+            $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
+            $('#modal-subscribe').modal('show');
+            $('#email').val('');
+          },
+          error: function(result){
+            if(result.status == 409){
+              $('p#subscribeModalLabel').text('You have already signed up. Please stay tuned for our launch.');
+              $('#modal-subscribe').modal('show');
+            }else{
+              $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
+              $('#modal-subscribe').modal('show');
+            }
+            $('#email').val('');
+          }
+        });
+      },
+      messages: {
+  			email: {
+  				required: 'Please enter your email'
+  			}
+  		}
+    });
 });

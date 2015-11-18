@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>FindMe - Join the Virtual Dementia Village</title>
+    <title>FindMe - Blog</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -191,11 +191,15 @@
                             </ul>
                             <div class="form-container">
                                 <p class="intro">Stay up to date with the latest news and offers from FindMe</p>
-                                <form class="signup-form navbar-form" action="javascript:void(0);">
-                                    <div class="form-group">
-                                        <input type="email" id="email" class="form-control" placeholder="Enter your email address">
+                                <form role="form" class="signup-form navbar-form" action="javascript:void(0);">
+                                  <div class="row">
+                                    <div class="email form-group col-md-8 col-sm-7">
+                                        <input type="email" id="cemail" name="email" class="form-control" placeholder="Enter your email address" required>
                                     </div>
-                                    <button type="submit" id="subscribe" class="btn btn-cta btn-cta-primary">Subscribe Now</button>
+                                    <div class="submit form-group col-md-4 col-sm-5">
+                                      <button type="submit" id="subscribe" class="btn btn-cta btn-cta-primary">Subscribe Now</button>
+                                    </div>
+                                  </div>
                                 </form>
                             </div><!--//subscription-form-->
                         </div><!--//footer-col-inner-->
@@ -259,6 +263,7 @@
     <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
     <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
     <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery.validate.min.js"></script>
 
     <!-- blog specific js starts -->
     <script type="text/javascript" src="assets/plugins/rrssb/js/rrssb.min.js"></script>

@@ -3325,6 +3325,16 @@ select {
   .footer-col {
     margin-bottom: 30px;
   }
+  .navbar-form .email {
+    padding-right: 0;
+  }
+  .navbar-form .submit {
+    padding-left: 0;
+  }
+  .navbar-form .form-control {
+    width: 100%;
+    padding-right: 0;
+  }
   .modal.modal-video .modal-dialog {
     width: auto;
     padding-left: 15px;
@@ -3399,8 +3409,14 @@ select {
   .main-nav {
     float: right !important;
   }
+  .navbar-form .email {
+    padding-right: 0;
+  }
+  .navbar-form .submit {
+    padding-left: 0;
+  }
   .navbar-form .form-control {
-    width: 280px;
+    width: 300px;
   }
   .header h1.logo {
     float: left;
