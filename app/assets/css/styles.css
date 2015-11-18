@@ -1279,6 +1279,7 @@ select {
   font-size: 14px;
   text-align: left;
   font-weight: 300;
+  margin-bottom: 0;
 }
 .white-popup-block select {
   width: 100%;
