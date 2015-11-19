@@ -23,13 +23,13 @@ $(document).ready(function() {
 	});
 
   $('.plan1').on('click', function(){
-    $plan = '1';
+    $('#plan').val('1');
   });
   $('.plan2').on('click', function(){
-    $plan = '2';
+    $('#plan').val('2');
   });
   $('.plan3').on('click', function(){
-    $plan = '3';
+    $('#plan').val('3');
   });
 
   $('#preorder-form').validate({
@@ -48,7 +48,7 @@ $(document).ready(function() {
                               'stateProvince': $('input#state').val(),
                               'postalCode': $('input#zip').val(),
                               'country': $('select#country').val(),
-                              'plan': $plan
+                              'plan': $('select#plan').val()
                             }),
         dataType: "json",
         contentType: "application/json; charset=utf-8",
