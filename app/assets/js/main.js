@@ -76,7 +76,7 @@ $(document).ready(function() {
         $.ajax({
           url: "/api/v1/subscribers",
           type: "POST",
-          data: JSON.stringify({'email': $('input#cemail').val()}),
+          data: JSON.stringify({'email': $('.signup-form input#cemail').val()}),
           dataType: "json",
           contentType: "application/json; charset=utf-8",
           success: function(result){
