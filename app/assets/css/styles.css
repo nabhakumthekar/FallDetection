@@ -2190,7 +2190,7 @@ select {
   margin-bottom: 30px;
 }
 .story-section .team .member .member-inner {
-  background: #253340;
+  background: #fff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -2218,8 +2218,8 @@ select {
   visibility: visible;
 }
 .story-section .team .member .profile {
-  background: #253340;
-  color: #fff;
+  background: #fff;
+  color: #000;
   text-align: center;
 }
 .story-section .team .member .profile .info {
@@ -2232,7 +2232,7 @@ select {
   font-size: 18px;
 }
 .story-section .team .member .profile .job-title {
-  color: #fff;
+  color: #000;
   font-size: 14px;
 }
 .story-section .team .member .social {
