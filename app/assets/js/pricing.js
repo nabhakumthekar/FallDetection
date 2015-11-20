@@ -53,11 +53,18 @@ $(document).ready(function() {
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: function(result){
+          $('p#preOrderModalLabel').text("We received your order. Thank you and we'll get you update.");
+          $('#modal-preorder').modal('show');
           console.log("Success.");
         },
         error: function(result){
           if(result.status == 409){
+            $('p#preOrderModalLabel').text("We found an order with the same email address in our system. This order has been cancelled.");
+            $('#modal-preorder').modal('show');
             console.log("Conflict.");
+          }else{
+            $('p#preOrderModalLabel').text("Some problem has occurred. Please try again later.");
+            $('#modal-preorder').modal('show');
           }
         }
       });
@@ -75,4 +82,10 @@ $(document).ready(function() {
       },
     }
   });
+
+  $('#modal-preorder').on('show.bs.modal', function(event){
+    var modal = $(this);
+    modal.find('.modal-header h4').val('Thank you!');
+  });
+
 });
