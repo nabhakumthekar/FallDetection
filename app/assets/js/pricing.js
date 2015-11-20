@@ -53,7 +53,7 @@ $(document).ready(function() {
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: function(result){
-          $('p#preOrderModalLabel').text("We received your order. Thank you and we'll get you update.");
+          $('p#preOrderModalLabel').text("We received your order. Thank you and we'll keep you updated.");
           $('#modal-preorder').modal('show');
           console.log("Success.");
         },
