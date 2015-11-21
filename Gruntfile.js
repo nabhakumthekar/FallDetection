@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             html: {
                 expand: true,
                 cwd: 'app/',
-                src: ['**/*.html', 'favicon.icon'],
+                src: ['**/*.html', 'favicon.ico'],
                 dest: 'dist/'
             },
             fonts: {
