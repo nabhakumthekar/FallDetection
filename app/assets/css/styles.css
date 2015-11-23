@@ -1301,6 +1301,11 @@ select {
   max-width: 100%;
   height: auto;
 }
+.apps-section .situation {
+  max-width: 70%;
+  height: auto;
+  padding-bottom: 30px;
+}
 .apps-section .phone-holder {
   width: 324px;
   height: 651px;
