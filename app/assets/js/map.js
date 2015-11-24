@@ -11,7 +11,7 @@ jQuery(document).ready(function(){
         lng: -122.197141,
         title: 'Address',
         infoWindow: {
-            content: '<h5 class="title">FindMe</h5><p><span class="region">Address line goes here</span><br><span class="postal-code">Postcode</span><br><span class="country-name">Country</span></p>'
+            content: '<h5 class="title">FindMe</h5><p><span class="address">325 Sharon Park Dr, Ste. 456</span><br><span class="region">Menlo Park, CA</span><br><span class="postal-code">94025</span></p>'
         }
 
     });
