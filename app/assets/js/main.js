@@ -52,12 +52,6 @@ $(document).ready(function() {
         slideshowSpeed: 8000
     });
 
-	/* ======= Stop Video Playing When Close the Modal Window ====== */
-    $("#modal-video .close").on("click", function() {
-        $("#modal-video iframe").attr("src", $("#modal-video iframe").attr("src"));
-    });
-
-
      /* ======= Testimonial Bootstrap Carousel ======= */
      /* Ref: http://getbootstrap.com/javascript/#carousel */
     $('#testimonials-carousel').carousel({
