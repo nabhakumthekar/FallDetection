@@ -96,7 +96,6 @@ $(document).ready(function() {
           }
         }
       });
-  		$.magnificPopup.close();
     },
     messages: {
       email: {
