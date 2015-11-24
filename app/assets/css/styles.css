@@ -173,6 +173,15 @@ select {
 .video-container iframe {
   max-width: 100%;
 }
+#circle {
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: black;
+  margin: 0 auto;
+}
 /* ======= Header ======= */
 .header {
   color: #fff;
@@ -1217,6 +1226,26 @@ select {
 }
 .pricing .item .feature-list li.disabled .fa {
   color: #999999;
+}
+.preOrder-form {
+  margin-bottom: 30px;
+  display: none;
+}
+.preOrder-form .device-preview {
+  width: 80%;
+  height: 500px;
+}
+.preOrder-form .color-options button{
+  width: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.preOrder-form .color-options {
+  margin: auto;
+  position: relative;
 }
 .white-popup-block .error {
   color: #28a5a8;
@@ -2762,8 +2791,7 @@ select {
     padding: 20px 30px;
     text-align: left;
     max-width: 900px;
-    width: 80%;
-    margin: 40px auto;
+    margin: auto;
     position: relative;
   }
   .white-popup-block .container {
@@ -2941,11 +2969,9 @@ select {
   }
   .white-popup-block {
     background: #FFF;
-    padding: 20px 30px;
     text-align: left;
     max-width: 900px;
-    width: 80%;
-    margin: 40px auto;
+    margin: auto;
     position: relative;
   }
   .white-popup-block .container {
@@ -3158,11 +3184,9 @@ select {
   }
   .white-popup-block {
     background: #FFF;
-    padding: 20px 30px;
     text-align: left;
     max-width: 900px;
-    width: 50%;
-    margin: 40px auto;
+    margin: auto;
     position: relative;
   }
   .white-popup-block .container {

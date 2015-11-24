@@ -1,36 +1,64 @@
 $(document).ready(function() {
-  $('.popup-form').magnificPopup({
-		type: 'inline',
-		preloader: false,
-		focus: '#name',
-    mainClass: 'mfp-fade',
-    callbacks: {
-      open: function(){
-        $.ajax({
-          url: "/api/v1/data/countries",
-          type: "GET",
-          dataType: "json",
-          success: function(data){
-            var countries = [];
-            $.each( data, function() {
-              countries.push( "<option value='" + this.countryCode + "'>" + this.countryName + "</option>" );
-            });
-            $('#country').append(countries + "</select>");
-          }
-        });
-      }
+  $.ajax({
+    url: "/api/v1/data/countries",
+    type: "GET",
+    dataType: "json",
+    success: function(data){
+      var countries = [];
+      $.each( data, function() {
+        countries.push( "<option value='" + this.countryCode + "'>" + this.countryName + "</option>" );
+      });
+      $('#country').append(countries + "</select>");
     }
-	});
+  });
 
   $('.plan1').on('click', function(){
     $('#plan').val('1');
+    $('.preOrder-form').fadeIn('slow');
+    $('html,body').animate({
+      scrollTop: $(".preOrder-form").offset().top - $('#header').height()
+    });
   });
   $('.plan2').on('click', function(){
     $('#plan').val('2');
+    $('.preOrder-form').fadeIn('slow');
+    $('html,body').animate({
+      scrollTop: $(".preOrder-form").offset().top - $('#header').height()
+    });
   });
   $('.plan3').on('click', function(){
     $('#plan').val('3');
+    $('.preOrder-form').fadeIn('slow');
+    $('html,body').animate({
+      scrollTop: $(".preOrder-form").offset().top - $('#header').height()
+    });
   });
+
+  $('.zinc-color').hover(
+    function(){
+      $('.device-preview').css('background-color', '#bac4c8');
+    }
+  );
+  $('.titanium-color').hover(
+    function(){
+      $('.device-preview').css('background-color', '#6a696f');
+    }
+  );
+  $('.black-color').hover(
+    function(){
+      $('.device-preview').css('background-color', '#000000');
+    }
+  );
+  $('.rose-gold').hover(
+    function(){
+      $('.device-preview').css('background-color', '#b76e79');
+    }
+  );
+  $('.silver-color').hover(
+    function(){
+      $('.device-preview').css('background-color', '#cccccc');
+    }
+  );
 
   $('#preorder-form').validate({
     submitHandler: function() {
