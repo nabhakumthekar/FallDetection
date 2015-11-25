@@ -2749,6 +2749,9 @@ select {
   .nav-tabs > li > a {
     padding: 10px 5px;
   }
+  .apps-section {
+    display: block;
+  }
   .apps-section .phone-holder {
     -webkit-background-size: 280px auto;
     -moz-background-size: 280px auto;
@@ -2758,6 +2761,9 @@ select {
   .apps-section .phone-holder .screenshot {
     width: 242px;
     top: 66px;
+  }
+  .apps-section div {
+    padding: 20px 15px;
   }
   .searchbox-container .searchbox {
     width: 100%;
