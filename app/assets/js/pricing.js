@@ -157,7 +157,11 @@ $(document).ready(function() {
           if(result.status == 409){
             $('p#preOrderModalLabel').text("We found an order with the same email address in our system. This order has been cancelled.");
             $('#modal-preorder').modal('show');
-          }else{
+          }else if (result.status == 400) {
+            $('p#preOrderModalLabel').text("The promotion code is invalid. Please make sure you have the right code.");
+            $('#modal-preorder').modal('show');
+          }
+          else{
             $('p#preOrderModalLabel').text("Some problem has occurred. Please try again later.");
             $('#modal-preorder').modal('show');
           }

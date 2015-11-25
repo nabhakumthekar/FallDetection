@@ -80,7 +80,7 @@ $(document).ready(function() {
           },
           error: function(result){
             if(result.status == 409){
-              $('p#subscribeModalLabel').text('You have already signed up. Please stay tuned for our launch.');
+              $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
               $('#modal-subscribe').modal('show');
             }else{
               $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
