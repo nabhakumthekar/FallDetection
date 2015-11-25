@@ -1261,6 +1261,11 @@ select {
 .white-popup-block select {
   width: 100%;
 }
+.white-popup-block p {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
 .mfp-fade.mfp-bg {
   opacity: 0;
   -webkit-transition: all 0.15s ease-out;

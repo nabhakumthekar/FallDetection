@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  var color_selected = "gunmetal";
+
+  /* Get countries list when loading the page */
   $.ajax({
     url: "/api/v1/data/countries",
     type: "GET",
@@ -12,6 +15,7 @@ $(document).ready(function() {
     }
   });
 
+  /* Preload the colors images to prevent delay when choosing colors */
   $.preloadImages = function() {
     for (var i = 0; i < arguments.length; i++) {
       $("<img />").attr("src", arguments[i]);
@@ -20,6 +24,7 @@ $(document).ready(function() {
 
   $.preloadImages("assets/images/figures/titanium.jpg","assets/images/figures/black_chrome.jpg", "assets/images/figures/rose_gold.jpg", "assets/images/figures/silver.jpg");
 
+  /* Determined which plan people choose by the 'Pre-order now' button */
   $('.plan1').on('click', function(){
     $('#plan').val('1');
     $('.preOrder-form').fadeIn('slow');
@@ -42,6 +47,7 @@ $(document).ready(function() {
     });
   });
 
+  /* Change preview image to the desired color when mouse over that button */
   $('.gunmetal-color').hover(
     function(){
       $('.preview-img').attr('src', 'assets/images/figures/gunmetal.jpg');
@@ -68,6 +74,59 @@ $(document).ready(function() {
     }
   );
 
+  /* Change button state when clicked */
+  $('.gunmetal-color').click(
+    function(){
+      $(this).addClass('active');
+      $('.titanium-color').removeClass('active');
+      $('.black-chrome').removeClass('active');
+      $('.rose-gold').removeClass('active');
+      $('.silver-color').removeClass('active');
+      color_selected = "gunmetal";
+    }
+  );
+  $('.titanium-color').click(
+    function(){
+      $(this).addClass('active');
+      $('.gunmetal-color').removeClass('active');
+      $('.black-chrome').removeClass('active');
+      $('.rose-gold').removeClass('active');
+      $('.silver-color').removeClass('active');
+      color_selected = "titanium";
+    }
+  );
+  $('.black-chrome').click(
+    function(){
+      $(this).addClass('active');
+      $('.gunmetal-color').removeClass('active');
+      $('.titanium-color').removeClass('active');
+      $('.rose-gold').removeClass('active');
+      $('.silver-color').removeClass('active');
+      color_selected = "black_chrome";
+    }
+  );
+  $('.rose-gold').click(
+    function(){
+      $(this).addClass('active');
+      $('.gunmetal-color').removeClass('active');
+      $('.black-chrome').removeClass('active');
+      $('.titanium-color').removeClass('active');
+      $('.silver-color').removeClass('active');
+      color_selected = "rose_gold";
+    }
+  );
+  $('.silver-color').click(
+    function(){
+      $(this).addClass('active');
+      $('.gunmetal-color').removeClass('active');
+      $('.black-chrome').removeClass('active');
+      $('.rose-gold').removeClass('active');
+      $('.titanium-color').removeClass('active');
+      color_selected = "silver";
+    }
+  );
+
+  /* Form validation */
   $('#preorder-form').validate({
     submitHandler: function() {
       $.ajax({
@@ -84,20 +143,20 @@ $(document).ready(function() {
                               'stateProvince': $('input#state').val(),
                               'postalCode': $('input#zip').val(),
                               'country': $('select#country').val(),
-                              'plan': $('select#plan').val()
+                              'plan': $('select#plan').val(),
+                              'color': color_selected,
+                              'promoCode': $('input#promoCode').val()
                             }),
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: function(result){
           $('p#preOrderModalLabel').text("We received your order. Thank you and we'll keep you updated.");
           $('#modal-preorder').modal('show');
-          console.log("Success.");
         },
         error: function(result){
           if(result.status == 409){
             $('p#preOrderModalLabel').text("We found an order with the same email address in our system. This order has been cancelled.");
             $('#modal-preorder').modal('show');
-            console.log("Conflict.");
           }else{
             $('p#preOrderModalLabel').text("Some problem has occurred. Please try again later.");
             $('#modal-preorder').modal('show');
