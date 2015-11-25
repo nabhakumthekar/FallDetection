@@ -12,6 +12,14 @@ $(document).ready(function() {
     }
   });
 
+  $.preloadImages = function() {
+    for (var i = 0; i < arguments.length; i++) {
+      $("<img />").attr("src", arguments[i]);
+    }
+  }
+
+  $.preloadImages("assets/images/figures/titanium.jpg","assets/images/figures/black_chrome.jpg", "assets/images/figures/rose_gold.jpg", "assets/images/figures/silver.jpg");
+
   $('.plan1').on('click', function(){
     $('#plan').val('1');
     $('.preOrder-form').fadeIn('slow');
