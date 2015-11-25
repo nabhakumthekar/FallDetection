@@ -34,29 +34,29 @@ $(document).ready(function() {
     });
   });
 
-  $('.zinc-color').hover(
+  $('.gunmetal-color').hover(
     function(){
-      $('.device-preview').css('background-color', '#bac4c8');
+      $('.preview-img').attr('src', 'assets/images/figures/gunmetal.jpg');
     }
   );
   $('.titanium-color').hover(
     function(){
-      $('.device-preview').css('background-color', '#6a696f');
+      $('.preview-img').attr('src', 'assets/images/figures/titanium.jpg');
     }
   );
-  $('.black-color').hover(
+  $('.black-chrome').hover(
     function(){
-      $('.device-preview').css('background-color', '#000000');
+      $('.preview-img').attr('src', 'assets/images/figures/black_chrome.jpg');
     }
   );
   $('.rose-gold').hover(
     function(){
-      $('.device-preview').css('background-color', '#b76e79');
+      $('.preview-img').attr('src', 'assets/images/figures/rose_gold.jpg');
     }
   );
   $('.silver-color').hover(
     function(){
-      $('.device-preview').css('background-color', '#cccccc');
+      $('.preview-img').attr('src', 'assets/images/figures/silver.jpg');
     }
   );
 

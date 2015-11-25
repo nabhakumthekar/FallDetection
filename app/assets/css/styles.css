@@ -1151,7 +1151,6 @@ select {
 }
 .pricing .item .price-figure .number {
   font-size: 42px;
-  font-weight: bold;
 }
 .pricing .item .price-figure .number sup {
   vertical-align: super;
@@ -1226,6 +1225,10 @@ select {
 }
 .pricing .item .feature-list li.disabled .fa {
   color: #999999;
+}
+.pricing .all-colors {
+  width: 80%;
+  margin: auto;
 }
 .preOrder-form {
   margin-bottom: 30px;
