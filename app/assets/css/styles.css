@@ -200,10 +200,6 @@ select {
   -moz-opacity: 1;
   opacity: 1;
 }
-.header.scrolled .main-nav .nav .nav-item.nav-item-cta a.btn-cta-secondary {
-  background: #28a5a8;
-  border-color: #28a5a8;
-}
 .header.scrolled .main-nav .nav .dropdown-menu a {
   color: #fff;
 }
@@ -289,17 +285,6 @@ select {
   color: #28a5a8;
   background: none;
   font-weight: bold;
-}
-.header .main-nav .nav .nav-item.nav-item-cta a.btn-cta-secondary {
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 8px 10px;
-  margin-top: 5px;
-  font-size: 13px;
-}
-.header .main-nav .nav .nav-item.nav-item-cta a.btn-cta-secondary:hover {
-  border: 1px solid #28a5a8;
-  background: #28a5a8;
 }
 .header .main-nav .nav .nav-item a {
   color: #fff;
@@ -642,18 +627,6 @@ select {
   position: relative;
   text-align: center;
 }
-.why .figure .figure-caption {
-  color: #b3b3b3;
-  font-size: 13px;
-  margin-top: 10px;
-  text-align: center;
-}
-.why .figure .figure-caption a {
-  color: #b3b3b3;
-}
-.why .figure .figure-caption a:hover {
-  color: #28a5a8;
-}
 .why .figure img {
   margin-left: auto;
   margin-right: auto;
@@ -783,9 +756,6 @@ select {
   margin-bottom: 15px;
   text-align: center;
 }
-.press .press-list.last {
-  margin-bottom: 60px;
-}
 .press .press-list li {
   display: block;
   height: 80px;
@@ -801,10 +771,6 @@ select {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
-}
-.press .press-lead .title {
-  font-size: 18px;
-  margin-bottom: 15px;
 }
 /* ======= cta-section ======= */
 .cta-section {
@@ -896,35 +862,6 @@ select {
   font-weight: bold;
   margin-bottom: 30px;
 }
-.features-tabbed .tab-content .desc {
-  margin-bottom: 30px;
-  color: #666666;
-}
-.features-tabbed .tab-content .desc ul {
-  padding-left: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-.features-tabbed .tab-content .desc ul li {
-  margin-bottom: 10px;
-}
-.features-tabbed .tab-content .desc ul .fa {
-  color: #28a5a8;
-  margin-right: 5px;
-}
-.features-tabbed .tab-content .desc blockquote {
-  font-style: italic;
-  color: #808080;
-}
-.features-tabbed .tab-content .desc .table {
-  font-size: 14px;
-  padding: 15px 0;
-}
-.features-tabbed .tab-content .desc .box {
-  background: #f5f5f5;
-  padding: 30px;
-  font-size: 14px;
-}
 .features-tabbed .tab-content .figure {
   margin-bottom: 60px;
 }
@@ -933,18 +870,6 @@ select {
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-}
-.features-tabbed .tab-content .figure .figure-caption {
-  color: #b3b3b3;
-  font-size: 13px;
-  margin-top: 10px;
-  text-align: center;
-}
-.features-tabbed .tab-content .figure .figure-caption a {
-  color: #b3b3b3;
-}
-.features-tabbed .tab-content .figure .figure-caption a:hover {
-  color: #28a5a8;
 }
 .nav-tabs {
   border: none;
@@ -1156,10 +1081,6 @@ select {
   vertical-align: super;
   font-size: 16px;
   font-weight: 300;
-}
-.pricing .item .price-figure .unit {
-  font-weight: 400;
-  color: #b3b3b3;
 }
 .pricing .item .price-figure .currency {
   top: -12px;
@@ -1419,9 +1340,6 @@ select {
   font-size: 36px;
   font-weight: 300;
   margin-top: 0;
-  margin-bottom: 60px;
-}
-.contact-section .intro {
   margin-bottom: 60px;
 }
 .contact-section .contact-form .contact-form-inner {
@@ -1937,17 +1855,6 @@ select {
 }
 .blog-entry-wrapper .blog-entry .blog-entry-content .figure {
   margin-bottom: 30px;
-}
-.blog-entry-wrapper .blog-entry .blog-entry-content .figure .figure-caption {
-  font-size: 16px;
-  color: #999999;
-  margin-top: 10px;
-}
-.blog-entry-wrapper .blog-entry .blog-entry-content .figure .figure-caption a {
-  color: #999999;
-}
-.blog-entry-wrapper .blog-entry .blog-entry-content .figure .figure-caption a:hover {
-  color: #28a5a8;
 }
 .blog-entry-wrapper .blog-entry .blog-entry-content .custom-list-style {
   margin-bottom: 30px;
@@ -2945,10 +2852,6 @@ select {
     -moz-opacity: 1;
     opacity: 1;
   }
-  .header.scrolled .main-nav .nav .nav-item.nav-item-cta a.btn-cta-secondary {
-    background: #28a5a8;
-    border-color: #28a5a8;
-  }
   .header.scrolled .main-nav .nav .dropdown-menu a {
     color: #fff;
   }
@@ -3137,10 +3040,6 @@ select {
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1;
-  }
-  .header.scrolled .main-nav .nav .nav-item.nav-item-cta a.btn-cta-secondary {
-    background: #28a5a8;
-    border-color: #28a5a8;
   }
   .header.scrolled .main-nav .nav .dropdown-menu a {
     color: #fff;
