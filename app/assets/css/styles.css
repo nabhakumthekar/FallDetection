@@ -1001,6 +1001,9 @@ select {
 .pricing .item.price-3 {
   background: #e6e6e6;
 }
+.pricing .item.price-4 {
+  background: #e6e6e6;
+}
 .pricing .item.best-buy {
   top: -15px;
   z-index: 11;
@@ -1081,6 +1084,9 @@ select {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   margin: 0 auto;
+}
+.pricing .item .price-figure .text {
+  font-size: 34px;
 }
 .pricing .item .price-figure .number {
   font-size: 42px;
