@@ -992,6 +992,18 @@ select {
   box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
   margin-bottom: 30px;
 }
+.pricing .item.price-1 {
+  background: #fff;
+}
+.pricing .item.price-2 {
+  background: #e6e6e6;
+}
+.pricing .item.price-3 {
+  background: #e6e6e6;
+}
+.pricing .item.price-4 {
+  background: #e6e6e6;
+}
 .pricing .item.best-buy {
   top: -15px;
   z-index: 11;
@@ -1010,11 +1022,23 @@ select {
 .pricing .item.best-buy .heading {
   padding-top: 45px;
 }
+.pricing .item.best-buy .heading h3.title {
+  font-family: "Roboto Slab", arial, sans-serif;
+  color: #28a5a8;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 20px;
+  margin: auto;
+  width: 120px;
+}
+.pricing .item.best-buy .heading h3.title img {
+  height: 35px;
+}
 .pricing .item.best-buy .content {
   padding-bottom: 45px;
 }
 .pricing .item .item-inner {
-  background: #fff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -1148,12 +1172,6 @@ select {
 .pricing .item .feature-list li .fa {
   margin-right: 5px;
   color: #4a6781;
-}
-.pricing .item .feature-list li.disabled {
-  color: #999999;
-}
-.pricing .item .feature-list li.disabled .fa {
-  color: #999999;
 }
 .pricing .all-colors {
   width: 80%;
