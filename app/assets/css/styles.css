@@ -992,18 +992,6 @@ select {
   box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
   margin-bottom: 30px;
 }
-.pricing .item.price-1 {
-  background: #e6e6e6;
-}
-.pricing .item.price-2 {
-  background: #ffffff;
-}
-.pricing .item.price-3 {
-  background: #e6e6e6;
-}
-.pricing .item.price-4 {
-  background: #e6e6e6;
-}
 .pricing .item.best-buy {
   top: -15px;
   z-index: 11;
@@ -1026,6 +1014,7 @@ select {
   padding-bottom: 45px;
 }
 .pricing .item .item-inner {
+  background: #fff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
