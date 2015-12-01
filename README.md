@@ -41,7 +41,7 @@ $ sudo npm install -g http-server
 Then run http-server from the repository root directory with:
 
 ```
-$ http-server app --proxy http://alzcare-stage.cloudapp.net
+$ http-server app --proxy https://stage.alz.care
 ```
 
 This serves the files in the `app` folder and proxies REST service calls to the
