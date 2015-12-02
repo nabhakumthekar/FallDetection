@@ -24,23 +24,8 @@ $(document).ready(function() {
 
   $.preloadImages("assets/images/figures/titanium.jpg","assets/images/figures/black_chrome.jpg", "assets/images/figures/rose_gold.jpg", "assets/images/figures/silver.jpg");
 
-  /* Determined which plan people choose by the 'Pre-order now' button */
-  $('.plan1').on('click', function(){
-    $('#plan').val('1');
-    $('.preOrder-form').fadeIn('slow');
-    $('html,body').animate({
-      scrollTop: $(".preOrder-form").offset().top - $('#header').height()
-    });
-  });
-  $('.plan2').on('click', function(){
-    $('#plan').val('2');
-    $('.preOrder-form').fadeIn('slow');
-    $('html,body').animate({
-      scrollTop: $(".preOrder-form").offset().top - $('#header').height()
-    });
-  });
-  $('.plan3').on('click', function(){
-    $('#plan').val('3');
+  /* Show Pre-order when the 'Pre-order' button is clicked */
+  $('.plan').on('click', function(){
     $('.preOrder-form').fadeIn('slow');
     $('html,body').animate({
       scrollTop: $(".preOrder-form").offset().top - $('#header').height()
@@ -143,7 +128,6 @@ $(document).ready(function() {
                               'stateProvince': $('input#state').val(),
                               'postalCode': $('input#zip').val(),
                               'country': $('select#country').val(),
-                              'plan': $('select#plan').val(),
                               'color': color_selected,
                               'promoCode': $('input#promoCode').val()
                             }),
