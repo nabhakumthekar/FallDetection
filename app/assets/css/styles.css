@@ -2155,9 +2155,15 @@ select {
   color: #000;
   font-size: 14px;
 }
+.story-section .team .member .profile .education {
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+  font-size: 14px;
+}
 .story-section .team .member .social {
   width: 100%;
-  top: 50%;
+  top: 40%;
   position: absolute;
   visibility: hidden;
 }
@@ -3212,6 +3218,9 @@ select {
   }
   .story-section {
     padding-top: 170px;
+  }
+  .story-section .team .member.john {
+    margin-bottom: 52px;
   }
   .contact-section {
     padding-top: 170px;
