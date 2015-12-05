@@ -135,19 +135,19 @@ $(document).ready(function() {
         contentType: "application/json; charset=utf-8",
         success: function(result){
           $('p#preOrderModalLabel').text("We received your order. Thank you and we'll keep you updated.");
-          $('#modal-preorder').modal({backdrop: false});
+          $('#modal-preorder').modal('show');
         },
         error: function(result){
           if(result.status == 409){
             $('p#preOrderModalLabel').text("We found an order with the same email address in our system. This order has been cancelled.");
-            $('#modal-preorder').modal({backdrop: false});
+            $('#modal-preorder').modal('show');
           }else if (result.status == 400) {
             $('p#preOrderModalLabel').text("The promotion code is invalid. Please make sure you have the right code.");
-            $('#modal-preorder').modal({backdrop: false});
+            $('#modal-preorder').modal('show');
           }
           else{
             $('p#preOrderModalLabel').text("Some problem has occurred. Please try again later.");
-            $('#modal-preorder').modal({backdrop: false});
+            $('#modal-preorder').modal('show');
           }
         }
       });
@@ -168,6 +168,7 @@ $(document).ready(function() {
   $('#modal-preorder').on('show.bs.modal', function(event){
     var modal = $(this);
     modal.find('.modal-header h4').val('Thank you!');
+    $('body').css('overflow', 'auto');
   });
 
 });
