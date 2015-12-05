@@ -2244,9 +2244,9 @@ select {
 }
 #modal-subscribe .modal-dialog {
   background-color: #243340;
-  -webkit-opacity: 0.8;
-  -moz-opacity: 0.8;
-  opacity: 0.8;
+  -webkit-opacity: 0.95;
+  -moz-opacity: 0.95;
+  opacity: 0.95;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -2296,9 +2296,9 @@ select {
 }
 #modal-preorder .modal-dialog {
   background-color: #243340;
-  -webkit-opacity: 0.8;
-  -moz-opacity: 0.8;
-  opacity: 0.8;
+  -webkit-opacity: 0.95;
+  -moz-opacity: 0.95;
+  opacity: 0.95;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -2324,7 +2324,6 @@ select {
   font-size: 25px;
   margin: auto;
   width: 140px;
-  
 }
 #modal-preorder .modal-content h1.logo img {
   height: 40px;
