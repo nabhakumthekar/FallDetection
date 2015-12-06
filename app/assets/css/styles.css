@@ -96,8 +96,11 @@ a.btn-ghost .text,
   position: relative;
   top: -2px;
 }
-.highlight {
+.highlight-1 {
   color: #28a5a8;
+}
+.highlight-2 {
+  color: #17d060;
 }
 .form-control {
   -webkit-box-shadow: none;
@@ -127,9 +130,6 @@ a.btn-ghost .text,
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-}
-.text-highlight {
-  color: #0b2c2c;
 }
 input[type="password"],
 input[type="submit"],
@@ -862,14 +862,9 @@ select {
   font-weight: bold;
   margin-bottom: 30px;
 }
-.features-tabbed .tab-content .figure {
-  margin-bottom: 60px;
-}
-.features-tabbed .tab-content .figure img {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
+.features-tabbed .tab-content .apps-section {
+  padding:0;
+  min-height:0;
 }
 .nav-tabs {
   border: none;
@@ -1184,7 +1179,7 @@ select {
 .preOrder-form .device-preview {
   width: 80%;
 }
-.preOrder-form .color-options button{
+.preOrder-form .color-options button {
   width: 40%;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -1192,9 +1187,27 @@ select {
   font-size: 14px;
   font-weight: 300;
 }
+.preOrder-form .color-options .gunmetal-color #circle {
+  background-color:#567898;
+}
+.preOrder-form .color-options .titanium-color #circle {
+  background-color:#938c76;
+}
+.preOrder-form .color-options .black-chrome #circle {
+  background-color:#050506;
+}
+.preOrder-form .color-options .rose-gold #circle {
+  background-color:#e58f64;
+}
+.preOrder-form .color-options .silver-color #circle {
+  background-color:#c9c0bb;
+}
 .preOrder-form .color-options {
   margin: auto;
   position: relative;
+}
+.preOrder-form fieldset {
+  border:0;
 }
 .white-popup-block .error {
   color: #28a5a8;
@@ -1462,7 +1475,7 @@ select {
 }
 .contact-other-section .other-info li .fa.fa-map-marker {
   font-size: 22px;
-  padding-top: 45px;
+  padding-top: 25px;
 }
 /* ======= Map section ======= */
 .map-section {
@@ -2046,7 +2059,7 @@ select {
 }
 /* ======= About Page ======= */
 .story-section {
-  padding-top: 90px;
+  padding-top: 0px;
   position: relative;
   z-index: 10;
 }
@@ -3021,9 +3034,6 @@ select {
   .apps-section {
     padding-top: 80px;
   }
-  .story-section {
-    padding-top: 90px;
-  }
   .contact-section {
     padding-top: 170px;
   }
@@ -3238,9 +3248,6 @@ select {
   }
   .apps-section {
     padding-top: 160px;
-  }
-  .story-section {
-    padding-top: 170px;
   }
   .story-section .team .member.john {
     margin-bottom: 52px;
