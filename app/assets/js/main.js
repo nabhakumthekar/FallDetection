@@ -63,6 +63,7 @@ $(document).ready(function() {
     $('#modal-subscribe').on('show.bs.modal', function(event){
       var modal = $(this);
       modal.find('.modal-header h4').val('Thank you!');
+      $('body').css('overflow', 'auto');
   });
 
     $('.signup-form').validate({
@@ -75,16 +76,16 @@ $(document).ready(function() {
           contentType: "application/json; charset=utf-8",
           success: function(result){
             $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
-            $('#modal-subscribe').modal({backdrop: false});
+            $('#modal-subscribe').modal('show');
             $('#email').val('');
           },
           error: function(result){
             if(result.status == 409){
               $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
-              $('#modal-subscribe').modal({backdrop: false});
+              $('#modal-subscribe').modal('show');
             }else{
               $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
-              $('#modal-subscribe').modal({backdrop: false});
+              $('#modal-subscribe').modal('show');
             }
             $('#email').val('');
           }

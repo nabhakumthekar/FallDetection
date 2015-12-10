@@ -2248,9 +2248,9 @@ select {
   opacity: 1;
 }
 .modal-backdrop.in {
-  -webkit-opacity: 0.9;
-  -moz-opacity: 0.9;
-  opacity: 0.9;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
 }
 #modal-subscribe {
   padding-top: 90px;
@@ -2306,7 +2306,6 @@ select {
 }
 #modal-preorder {
   padding-top: 90px;
-  
 }
 #modal-preorder .modal-dialog {
   background-color: #243340;
