@@ -402,40 +402,40 @@ select {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.bg-slider-wrapper .flexslider .slide {
+.bg-slider-wrapper .slide {
   display: block;
   height: 780px;
 }
-.bg-slider-wrapper .flexslider .slide.slide-1 {
+.bg-slider-wrapper .slide.slide-1 {
   background: #253340 url('../images/background/bg-header-1.jpg') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-.bg-slider-wrapper .flexslider .slide.slide-2 {
+.bg-slider-wrapper .slide.slide-2 {
   background: #253340 url('../images/background/bg-header-2.jpg') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-.bg-slider-wrapper .flexslider .slide.slide-3 {
+.bg-slider-wrapper .slide.slide-3 {
   background: #253340 url('../images/background/bg-header-3.jpg') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-.bg-slider-wrapper .flexslider .flex-control-nav {
+.bg-slider-wrapper .flex-control-nav {
   z-index: 30;
   bottom: 30px;
   position: relative;
 }
-.bg-slider-wrapper .flexslider .flex-control-nav li a {
+.bg-slider-wrapper .flex-control-nav li a {
   background: #999999;
 }
-.bg-slider-wrapper .flexslider .flex-control-nav li a.flex-active {
+.bg-slider-wrapper .flex-control-nav li a.flex-active {
   background: #bfbfbf;
 }
 .headline-bg {
