@@ -406,27 +406,6 @@ select {
     display: block;
     height: 780px;
 }
-.bg-slider-wrapper .slide.slide-1 {
-    background: #253340 url('../images/background/bg-header-1.jpg') no-repeat 50% top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.bg-slider-wrapper .slide.slide-2 {
-    background: #253340 url('../images/background/bg-header-2.jpg') no-repeat 50% top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.bg-slider-wrapper .slide.slide-3 {
-    background: #253340 url('../images/background/bg-header-3.jpg') no-repeat 50% top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 .bg-slider-wrapper .flex-control-nav {
     z-index: 30;
     bottom: 30px;
@@ -437,27 +416,6 @@ select {
 }
 .bg-slider-wrapper .flex-control-nav li a.flex-active {
     background: #bfbfbf;
-}
-.headline-bg {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 500px;
-    background: #253340 url('../images/background/bg-header-small-1.jpg') no-repeat 50% top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.headline-bg.pricing-headline-bg {
-    background-image: url('../images/background/bg-header-small-2.jpg');
-}
-.headline-bg.contact-headline-bg {
-    background-image: url('../images/background/bg-header-small-4.jpg');
-}
-.headline-bg.about-headline-bg {
-    background-image: url('../images/background/bg-header-small-3.jpg');
 }
 /* ======= Promo ======= */
 .promo {
@@ -773,20 +731,6 @@ select {
     opacity: 1;
 }
 /* ======= cta-section ======= */
-.cta-section {
-    background: #253340 url('../images/background/bg-footer-1.jpg') no-repeat left top;
-    background-size: cover;
-    min-height: 420px;
-    color: #fff;
-    padding-top: 80px;
-    border: none;
-}
-.cta-section.pricing-cta-section {
-    background-image: url('../images/background/bg-footer-2.jpg');
-}
-.cta-section.contact-cta-section {
-    background-image: url('../images/background/bg-footer-3.jpg');
-}
 .cta-section .title {
     font-size: 36px;
     font-weight: 300;
@@ -1224,14 +1168,6 @@ select {
     opacity: 0.8;
 }
 /* ======= Download Apps ======= */
-.download-page .headline-bg {
-    height: 1200px;
-    background: #253340 url('../images/background/bg-mobile-headline.jpg') no-repeat 50% top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 .apps-section {
     min-height: 900px;
     padding-top: 160px;
@@ -2663,6 +2599,55 @@ select {
     .navbar-fixed-bottom .navbar-collapse {
         max-height: inherit;
     }
+    .bg-slider-wrapper .slide.slide-1 {
+        background: #253340 url('../images/background/phone/bg-header-1.jpg') no-repeat 50% top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }.headline-bg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 500px;
+        background: #253340 url('../images/background/phone/bg-header-small-1.jpg') no-repeat 50% top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .headline-bg.pricing-headline-bg {
+        background-image: url('../images/background/phone/bg-header-small-2.jpg');
+    }
+    .headline-bg.contact-headline-bg {
+        background-image: url('../images/background/phone/bg-header-small-4.jpg');
+    }
+    .headline-bg.about-headline-bg {
+        background-image: url('../images/background/phone/bg-header-small-3.jpg');
+    }
+    .cta-section {
+        background: #253340 url('../images/background/phone/bg-footer-1.jpg') no-repeat left top;
+        background-size: cover;
+        min-height: 420px;
+        color: #fff;
+        padding-top: 80px;
+        border: none;
+    }
+    .cta-section.pricing-cta-section {
+        background-image: url('../images/background/phone/bg-footer-2.jpg');
+    }
+    .cta-section.contact-cta-section {
+        background-image: url('../images/background/phone/bg-footer-3.jpg');
+    }
+    .download-page .headline-bg {
+        height: 1200px;
+        background: #253340 url('../images/background/phone/bg-mobile-headline.jpg') no-repeat 50% top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
     .has-full-screen-bg.access-page .upper-wrapper {
         background: #384d60;
     }
@@ -2959,6 +2944,55 @@ select {
         margin: 0 auto;
         display: inline-block;
     }
+    .bg-slider-wrapper .slide.slide-1 {
+        background: #253340 url('../images/background/tablet/bg-header-1.jpg') no-repeat 50% top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }.headline-bg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 500px;
+        background: #253340 url('../images/background/tablet/bg-header-small-1.jpg') no-repeat 50% top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .headline-bg.pricing-headline-bg {
+        background-image: url('../images/background/tablet/bg-header-small-2.jpg');
+    }
+    .headline-bg.contact-headline-bg {
+        background-image: url('../images/background/tablet/bg-header-small-4.jpg');
+    }
+    .headline-bg.about-headline-bg {
+        background-image: url('../images/background/tablet/bg-header-small-3.jpg');
+    }
+    .cta-section {
+        background: #253340 url('../images/background/tablet/bg-footer-1.jpg') no-repeat left top;
+        background-size: cover;
+        min-height: 420px;
+        color: #fff;
+        padding-top: 80px;
+        border: none;
+    }
+    .cta-section.pricing-cta-section {
+        background-image: url('../images/background/tablet/bg-footer-2.jpg');
+    }
+    .cta-section.contact-cta-section {
+        background-image: url('../images/background/tablet/bg-footer-3.jpg');
+    }
+    .download-page .headline-bg {
+        height: 1200px;
+        background: #253340 url('../images/background/tablet/bg-mobile-headline.jpg') no-repeat 50% top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
     .blog-page .header-blog {
         position: relative;
     }
@@ -3123,6 +3157,56 @@ select {
     }
     .main-nav.navbar-right {
         float: right !important;
+    }
+    .bg-slider-wrapper .slide.slide-1 {
+        background: #253340 url('../images/background/bg-header-1.jpg') no-repeat 50% top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .headline-bg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 500px;
+        background: #253340 url('../images/background/bg-header-small-1.jpg') no-repeat 50% top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .headline-bg.pricing-headline-bg {
+        background-image: url('../images/background/bg-header-small-2.jpg');
+    }
+    .headline-bg.contact-headline-bg {
+        background-image: url('../images/background/bg-header-small-4.jpg');
+    }
+    .headline-bg.about-headline-bg {
+        background-image: url('../images/background/bg-header-small-3.jpg');
+    }
+    .cta-section {
+        background: #253340 url('../images/background/bg-footer-1.jpg') no-repeat left top;
+        background-size: cover;
+        min-height: 420px;
+        color: #fff;
+        padding-top: 80px;
+        border: none;
+    }
+    .cta-section.pricing-cta-section {
+        background-image: url('../images/background/bg-footer-2.jpg');
+    }
+    .cta-section.contact-cta-section {
+        background-image: url('../images/background/bg-footer-3.jpg');
+    }
+    .download-page .headline-bg {
+        height: 1200px;
+        background: #253340 url('../images/background/bg-mobile-headline.jpg') no-repeat 50% top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
     .promo {
         height: 620px;
