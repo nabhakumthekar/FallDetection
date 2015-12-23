@@ -48,7 +48,7 @@ $(document).ready(function() {
                 success: function(result){
                     $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
                     $('#modal-subscribe').modal('show');
-                    $('#email').val('');
+                    $('.signup-form input#cemail').val('');
                 },
                 error: function(result){
                     if(result.status == 409){
@@ -58,7 +58,7 @@ $(document).ready(function() {
                         $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
                         $('#modal-subscribe').modal('show');
                     }
-                    $('#email').val('');
+                    $('.signup-form input#cemail').val('');
                 }
             });
         },
