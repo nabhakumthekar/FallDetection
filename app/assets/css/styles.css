@@ -1483,28 +1483,28 @@ select {
     z-index: 10;
 }
 .blog-slider .slide.slide-1 {
-    background: #253340 url('../images/blog/post-1.jpg') no-repeat 50% top;
+    background: #253340 url('../images/blog/post-6.jpg') no-repeat 50% top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .blog-slider .slide.slide-2 {
-    background: #253340 url('../images/blog/post-2.jpg') no-repeat 50% top;
+    background: #253340 url('../images/blog/post-1.jpg') no-repeat 50% top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .blog-slider .slide.slide-3 {
-    background: #253340 url('../images/blog/post-3.jpg') no-repeat 50% top;
+    background: #253340 url('../images/blog/post-2.jpg') no-repeat 50% top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .blog-slider .slide.slide-4 {
-    background: #253340 url('../images/blog/post-4.jpg') no-repeat 50% top;
+    background: #253340 url('../images/blog/post-3.jpg') no-repeat 50% top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
