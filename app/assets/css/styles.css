@@ -751,6 +751,62 @@ select {
     -moz-opacity: 1;
     opacity: 1;
 }
+/* ============ News ============ */
+.latest-news {
+    background-color: #253340;
+    margin-bottom: 60px;
+    margin-top: 80px;
+    border: none;
+    height: 400px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.latest-news .bg-news {
+    background: url('http://tinyurl.com/hj3fn8g') no-repeat 50% 20%;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    float: left;
+    z-index: 2;
+    position: absolute;
+    opacity: 0.7;
+}
+.latest-news .flex-caption {
+    padding-top: 250px;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    color: #fff;
+}
+.latest-news .flex-caption a {
+    color: #fff;
+}
+.latest-news .flex-caption .title {
+    font-size: 42px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+.latest-news .flex-caption .title a:hover {
+    text-decoration: none;
+}
+.latest-news .flex-caption .meta {
+    -webkit-opacity: 0.6;
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
 /* ======= Features video ======= */
 .features-video {
     padding-top: 170px;
@@ -2552,6 +2608,38 @@ select {
     animation-name: fadeInRight;
 }
 
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
     body {
@@ -2605,7 +2693,8 @@ select {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-    }.headline-bg {
+    }
+    .headline-bg {
         position: absolute;
         width: 100%;
         top: 0;
@@ -2928,7 +3017,7 @@ select {
         margin: 0 auto;
     }
     .header .main-nav .nav .nav-item {
-        margin-right: 10px;
+        margin-right: 5px;
     }
     .main-nav.navbar-right {
         float: none !important;
@@ -3153,7 +3242,7 @@ select {
         margin: inherit;
     }
     .header .main-nav .nav .nav-item {
-        margin-right: 15px;
+        margin-right: 10px;
     }
     .main-nav.navbar-right {
         float: right !important;
