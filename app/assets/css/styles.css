@@ -489,6 +489,21 @@ select {
     -moz-opacity: 0.8;
     opacity: 0.8;
 }
+/* ===== Glance ====== */
+.at-glance {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.at-glance .title {
+    font-size: 36px;
+    font-weight: 300;
+    margin-top: 0;
+}
+.at-glance .intro {
+    color: #999999;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
 /* ======= Why ======= */
 .why {
     padding-top: 80px;
@@ -961,7 +976,6 @@ select {
 }
 /* ======= Features tabs ======= */
 .features-tabbed {
-    padding-top: 80px;
     padding-bottom: 80px;
 }
 .features-tabbed .title {
