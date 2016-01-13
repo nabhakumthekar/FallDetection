@@ -344,7 +344,7 @@ select {
     margin: 0;
     border: none;
     text-transform: none;
-    min-width: 180px;
+    min-width: 80px;
     background: #253340;
 }
 .header .main-nav .nav .dropdown-menu:before {
@@ -757,7 +757,7 @@ select {
     margin-bottom: 60px;
     margin-top: 80px;
     border: none;
-    height: 400px;
+    height: 450px;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -774,14 +774,14 @@ select {
     background: url('http://tinyurl.com/hj3fn8g') no-repeat 50% 20%;
     background-size: cover;
     width: 100%;
-    height: 400px;
+    height: 450px;
     float: left;
     z-index: 2;
     position: absolute;
     opacity: 0.7;
 }
 .latest-news .flex-caption {
-    padding-top: 250px;
+    padding-top: 300px;
     position: relative;
     z-index: 20;
     text-align: center;
@@ -806,6 +806,125 @@ select {
     -moz-opacity: 0.6;
     opacity: 0.6;
     margin-bottom: 30px;
+}
+.news-list {
+    padding: 0;
+}
+.news-list .post {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.news-list .post .post-inner {
+    padding: 0px;
+    position: relative;
+    border: 1px solid #efefef;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
+}
+.news-list .post .post-thumb {
+    background: #fff;
+    overflow: hidden;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.news-list .post .post-thumb img {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin: 0 auto;
+    text-align: center;
+}
+.news-list .post .post-thumb img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-opacity: 0.6;
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.news-list .post .content {
+    padding: 20px;
+    padding-bottom: 10px;
+    color: #666666;
+}
+.news-list .post .content .post-title {
+    margin-top: 0;
+    font-size: 18px;
+}
+.news-list .post .content .post-title a {
+    color: #253340;
+}
+.news-list .post .content .meta {
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 0;
+}
+.news-list .post .content .meta ul {
+    margin-left: 0;
+    border-top: 1px solid #efefef;
+    padding-top: 15px;
+}
+.news-list .post .content .meta li:first-child {
+    padding-left: 0;
+}
+.news-list .post .content .meta li:last-child {
+    padding-right: 0;
+    float: right;
+}
+.news-list .post .content .meta li .fa {
+    margin-right: 5px;
+}
+.news-list .post .content .meta li a {
+    color: #999999;
+}
+.news-list .post .content .meta li a:hover {
+    color: #28a5a8;
 }
 /* ======= Features video ======= */
 .features-video {
