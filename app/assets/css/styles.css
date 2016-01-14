@@ -386,6 +386,10 @@ select {
     left: 0;
     height: 780px;
     background: #373737;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .bg-slider-wrapper .flexslider {
     margin: 0;
@@ -422,8 +426,8 @@ select {
     padding-top: 120px;
     position: relative;
     color: #fff;
-    margin-bottom: 80px;
-    height: 620px;
+    margin-bottom: 60px;
+    height: 560px;
     z-index: 10;
 }
 .promo .title {
@@ -437,6 +441,10 @@ select {
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 30px;
+}
+.promo.section .video-container {
+    max-width: 720px;
+    margin: 0 auto;
 }
 .promo .btn-cta {
     font-size: 18px;
@@ -494,15 +502,9 @@ select {
     padding-top: 80px;
     padding-bottom: 80px;
 }
-.at-glance .title {
-    font-size: 36px;
-    font-weight: 300;
-    margin-top: 0;
-}
-.at-glance .intro {
-    color: #999999;
-    margin-bottom: 30px;
-    font-size: 18px;
+.at-glance img {
+    width: 800px;
+    margin: auto;
 }
 /* ======= Why ======= */
 .why {
@@ -3431,8 +3433,8 @@ select {
         background-size: cover;
     }
     .promo {
-        height: 620px;
-        padding-top: 200px;
+        height: 400px;
+        padding-top: 150px;
     }
     .promo.section .intro {
         margin-bottom: 45px;
