@@ -426,8 +426,8 @@ select {
     padding-top: 120px;
     position: relative;
     color: #fff;
-    margin-bottom: 60px;
-    height: 560px;
+    margin-bottom: 80px;
+    height: 620px;
     z-index: 10;
 }
 .promo .title {
@@ -474,6 +474,21 @@ select {
     position: relative;
     top: 2px;
 }
+.promo.section .get-updates {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+.promo.section .email {
+    max-width: 300px;
+}
+.promo.section .email input {
+    height: 45px;
+}
+.promo.section .signup-form .submit {
+    vertical-align: top;
+}
 /* ======= sections-wrapper ======= */
 .sections-wrapper {
     background: #fff;
@@ -485,8 +500,7 @@ select {
     margin: 0 auto;
     margin-bottom: 60px;
     text-align: center;
-    color: #999999;
-    font-size: 18px;
+    font-size: 24px;
 }
 .section-on-bg .title {
     color: #fff;
@@ -501,10 +515,40 @@ select {
 .at-glance {
     padding-top: 80px;
     padding-bottom: 80px;
+    text-align: center;
 }
 .at-glance img {
     width: 800px;
     margin: auto;
+    padding-bottom: 20px;
+}
+.at-glance .btn-cta {
+    font-size: 18px;
+}
+.at-glance .btn-link {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    -webkit-opacity: 0.7;
+    -moz-opacity: 0.7;
+    opacity: 0.7;
+    text-decoration: none;
+}
+.at-glance .btn-link:hover {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    text-decoration: none;
+}
+.at-glance .btn-link:focus {
+    outline: none;
+}
+.at-glance .btn-link .fa {
+    margin-right: 5px;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
 }
 /* ======= Why ======= */
 .why {
@@ -3228,9 +3272,6 @@ select {
         height: 420px;
         padding-top: 180px;
     }
-    .promo.section .intro {
-        margin-bottom: 30px;
-    }
     .promo .btn-link {
         margin-top: 15px;
     }
@@ -3433,11 +3474,11 @@ select {
         background-size: cover;
     }
     .promo {
-        height: 440px;
-        padding-top: 150px;
+        height: 620px;
+        padding-top: 200px;
     }
     .promo.section .intro {
-        margin-bottom: 45px;
+        margin-bottom: 60px;
     }
     .promo .btn-link {
         margin-top: 15px;

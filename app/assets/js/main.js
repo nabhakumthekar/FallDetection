@@ -11,18 +11,6 @@ $(document).ready(function() {
         }
     });
 
-    /* ======= FAQ accordion ======= */
-    function toggleIcon(e) {
-        $(e.target)
-        .prev('.panel-heading')
-        .find('.panel-title a')
-        .toggleClass('active')
-        .find("i.fa")
-        .toggleClass('fa-plus-square fa-minus-square');
-    }
-    $('.panel').on('hidden.bs.collapse', toggleIcon);
-    $('.panel').on('shown.bs.collapse', toggleIcon);
-
     /* ======= Testimonial Bootstrap Carousel ======= */
     /* Ref: http://getbootstrap.com/javascript/#carousel */
     $('#testimonials-carousel').carousel({
@@ -37,18 +25,18 @@ $(document).ready(function() {
         $('body').css('overflow', 'auto');
     });
 
-    $('.signup-form').validate({
+    $('.footer .signup-form').validate({
         submitHandler: function() {
             $.ajax({
                 url: "/api/v1/subscribers",
                 type: "POST",
-                data: JSON.stringify({'email': $('.signup-form input#cemail').val()}),
+                data: JSON.stringify({'email': $('.footer .signup-form input#cemail').val()}),
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function(result){
                     $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
                     $('#modal-subscribe').modal('show');
-                    $('.signup-form input#cemail').val('');
+                    $('.footer .signup-form input#cemail').val('');
                 },
                 error: function(result){
                     if(result.status == 409){
@@ -58,7 +46,7 @@ $(document).ready(function() {
                         $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
                         $('#modal-subscribe').modal('show');
                     }
-                    $('.signup-form input#cemail').val('');
+                    $('.footer .signup-form input#cemail').val('');
                 }
             });
         },
