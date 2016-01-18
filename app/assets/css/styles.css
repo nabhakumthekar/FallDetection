@@ -1207,15 +1207,33 @@ select {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
     margin: auto;
-    width: 120px;
+    width: 160px;
 }
 .pricing .item.best-buy .heading h3.title img {
     height: 35px;
 }
 .pricing .item.best-buy .content {
     padding-bottom: 45px;
+}
+.pricing .item.best-buy .intro {
+    color: #555;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+.pricing .item.best-buy .navbar-form .form-control {
+    -webkit-opacity: 0.9;
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+    border: 2px solid #ccc;
+    max-width: 250px;
+}
+.pricing .item.best-buy .navbar-form .form-control:focus {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
 }
 .pricing .item .item-inner {
     -webkit-border-radius: 4px;

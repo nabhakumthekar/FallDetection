@@ -25,12 +25,12 @@ $(document).ready(function() {
     $.preloadImages("assets/images/figures/titanium.jpg","assets/images/figures/black_chrome.jpg", "assets/images/figures/rose_gold.jpg", "assets/images/figures/silver.jpg");
 
     /* Show Pre-order when the 'Pre-order' button is clicked */
-    $('.plan').on('click', function(){
+    /*$('.plan').on('click', function(){
         $('.preOrder-form').fadeIn('slow');
         $('html,body').animate({
             scrollTop: $(".preOrder-form").offset().top - $('#header').height()
         });
-    });
+    });*/
 
     /* Change preview image to the desired color when mouse over that button */
     $('.gunmetal-color').hover(
@@ -124,7 +124,7 @@ $(document).ready(function() {
     $('.panel').on('shown.bs.collapse', toggleIcon);
 
     /* Form validation */
-    $('#preorder-form').validate({
+    /*$('#preorder-form').validate({
         submitHandler: function() {
             $.ajax({
                 url: "/api/v1/pre-orders",
@@ -174,6 +174,37 @@ $(document).ready(function() {
             lastName: {
                 required: 'Please enter your Last Name'
             },
+        }
+    });*/
+    $('.pricing .item.best-buy .signup-form').validate({
+        submitHandler: function() {
+            $.ajax({
+                url: "/api/v1/subscribers",
+                type: "POST",
+                data: JSON.stringify({'email': $('.pricing .item.best-buy .signup-form input#cemail').val()}),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function(result){
+                    $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
+                    $('#modal-subscribe').modal('show');
+                    $('.pricing .item.best-buy .signup-form input#cemail').val('');
+                },
+                error: function(result){
+                    if(result.status == 409){
+                        $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
+                        $('#modal-subscribe').modal('show');
+                    }else{
+                        $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
+                        $('#modal-subscribe').modal('show');
+                    }
+                    $('.pricing .item.best-buy .signup-form input#cemail').val('');
+                }
+            });
+        },
+        messages: {
+            email: {
+                required: 'Please enter your email'
+            }
         }
     });
 
