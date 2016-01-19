@@ -998,7 +998,7 @@ select {
     margin-bottom: 60px;
     margin-top: 0;
     color: #fff;
-    font-weight: 300;
+    font-weight: bold;
 }
 .features-video .video-container {
     max-width: 800px;
@@ -1147,10 +1147,11 @@ select {
 }
 .pricing .title {
     font-size: 36px;
-    font-weight: 300;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 30px;
     color: #fff;
+    padding-bottom: 80px;
 }
 .pricing .intro {
     color: #fff;
@@ -1553,7 +1554,7 @@ select {
 }
 .contact-section .title {
     font-size: 36px;
-    font-weight: 300;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 60px;
 }
