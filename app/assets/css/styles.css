@@ -97,7 +97,7 @@ a.btn-ghost .text,
     top: -2px;
 }
 .highlight {
-    color: #28a5a8;
+    color: #00B0AA;
 }
 .form-control {
     -webkit-box-shadow: none;
@@ -430,8 +430,11 @@ select {
     height: 620px;
     z-index: 10;
 }
+.promo .title.brand {
+    font-size: 56px;
+}
 .promo .title {
-    font-size: 46px;
+    font-size: 48px;
     margin-bottom: 20px;
     margin-top: 0;
     font-weight: 700;
