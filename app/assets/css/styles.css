@@ -430,15 +430,15 @@ select {
     height: 620px;
     z-index: 10;
 }
-.promo .title.brand {
-    font-size: 56px;
-}
 .promo .title {
     font-size: 48px;
     margin-bottom: 20px;
     margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 700;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
 }
 .promo.section .intro {
     max-width: 600px;
