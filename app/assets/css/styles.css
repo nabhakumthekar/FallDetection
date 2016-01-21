@@ -2594,6 +2594,9 @@ select {
 .footer .footer-col p {
     color: #fff;
 }
+.footer .footer-col p.intro {
+    font-size: 16px;
+}
 .footer .footer-col a {
     color: #6d8dab;
 }
