@@ -572,6 +572,11 @@ select {
     padding: 90px 0;
     border-bottom: 1px solid #efefef;
 }
+
+.why .item figure img {
+    max-height: 400px;
+}
+
 .why .item.last-item {
     border-bottom: none;
 }
