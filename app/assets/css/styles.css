@@ -5,9 +5,36 @@
  * Website: http://findme.alz.care
  * Twitter: @alzfindme
 */
+/* ====== For font Gibson ====== */
+@font-face {
+    font-family: Gibson;
+    src: url(gibson/Gibson-Regular.otf);
+}
+@font-face {
+    font-family: Gibson;
+    src: url(gibson/Gibson-Bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Gibson;
+    src: url(gibson/Gibson-SemiBold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Gibson;
+    src: url(gibson/Gibson-Light.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Gibson;
+    src: url(gibson/Gibson-LightItalic.otf);
+    font-weight: 100;
+    font-style: italic;
+}
 /* ======= Base ======= */
 body {
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: Gibson, arial, sans-serif;
     color: #444444;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
@@ -37,7 +64,6 @@ a.btn {
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
-    font-weight: bold;
 }
 .btn .fa,
 a.btn .fa {
@@ -204,11 +230,11 @@ select {
     color: #fff;
 }
 .header h1.logo {
-    font-family: "Roboto Slab", arial, sans-serif;
+    font-family: Gibson, arial, sans-serif;
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 24px;
     float: left;
 }
 .header h1.logo img {
@@ -245,7 +271,7 @@ select {
     -ms-transition: color 0.4s ease-in-out;
     -o-transition: color 0.4s ease-in-out;
     position: relative;
-    font-size: 25px;
+    font-size: 28px;
 }
 .header h1.logo a:hover {
     text-decoration: none;
@@ -436,7 +462,7 @@ select {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    font-weight: 700;
+    font-weight: 600;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     max-width: 900px;
 }
@@ -1005,7 +1031,6 @@ select {
     margin-bottom: 60px;
     margin-top: 0;
     color: #fff;
-    font-weight: bold;
 }
 .features-video .video-container {
     max-width: 800px;
@@ -1561,7 +1586,6 @@ select {
 }
 .contact-section .title {
     font-size: 36px;
-    font-weight: bold;
     margin-top: 0;
     margin-bottom: 60px;
 }
