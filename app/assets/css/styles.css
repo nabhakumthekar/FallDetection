@@ -8,27 +8,27 @@
 /* ====== For font Gibson ====== */
 @font-face {
     font-family: Gibson;
-    src: url(gibson/Gibson-Regular.otf);
+    src: url('../fonts/gibson/Gibson-Regular.otf');
 }
 @font-face {
     font-family: Gibson;
-    src: url(gibson/Gibson-Bold.otf);
+    src: url('../fonts/gibson/Gibson-Bold.otf');
     font-weight: bold;
 }
 @font-face {
     font-family: Gibson;
-    src: url(gibson/Gibson-SemiBold.otf);
+    src: url('../fonts/gibson/Gibson-SemiBold.otf');
     font-weight: 600;
 }
 @font-face {
     font-family: Gibson;
-    src: url(gibson/Gibson-Light.otf);
+    src: url('../fonts/gibson/Gibson-Light.otf');
     font-weight: 100;
 }
 
 @font-face {
     font-family: Gibson;
-    src: url(gibson/Gibson-LightItalic.otf);
+    src: url('../fonts/gibson/Gibson-LightItalic.otf');
     font-weight: 100;
     font-style: italic;
 }
