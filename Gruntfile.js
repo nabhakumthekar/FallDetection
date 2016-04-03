@@ -14,6 +14,12 @@ module.exports = function (grunt) {
             },
             fonts: {
                 expand: true,
+                cwd: 'app/assets/fonts',
+                src: ['**'],
+                dest: 'dist/assets/fonts/'
+            },
+            plugin_fonts: {
+                expand: true,
                 flatten: true,
                 filter: 'isFile',
                 cwd: 'app',
@@ -99,6 +105,7 @@ module.exports = function (grunt) {
         'clean',
         'copy:html',
         'copy:fonts',
+        'copy:plugin_fonts',
         'copy:images',
         'jshint',
         'useminPrepare',
