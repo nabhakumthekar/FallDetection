@@ -45,7 +45,7 @@ p {
     line-height: 1.5;
 }
 a {
-    color: #28a5a8;
+    color: #7645AD;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
@@ -76,8 +76,8 @@ a.btn-cta,
 }
 a.btn-cta-primary,
 .btn-cta-primary {
-    background: #28a5a8;
-    border: 2px solid #28a5a8;
+    background: #7645AD;
+    border: 2px solid #7645AD;
     color: #fff;
 }
 a.btn-cta-primary:hover,
@@ -89,13 +89,13 @@ a.btn-cta-primary:hover,
 a.btn-cta-secondary,
 .btn-cta-secondary {
     background: none;
-    border: 2px solid #28a5a8;
-    color: #28a5a8;
+    border: 2px solid #7645AD;
+    color: #7645AD;
 }
 a.btn-cta-secondary:hover,
 .btn-cta-secondary:hover {
-    background: #28a5a8;
-    border: 2px solid #28a5a8;
+    background: #7645AD;
+    border: 2px solid #7645AD;
     color: #fff;
 }
 a.btn-ghost,
@@ -308,7 +308,7 @@ select {
     margin-right: 15px;
 }
 .header .main-nav .nav .nav-item.active a {
-    color: #28a5a8;
+    color: #7645AD;
     background: none;
     font-weight: bold;
 }
@@ -316,7 +316,7 @@ select {
     color: #fff;
 }
 .header .main-nav .nav .nav-item a:hover {
-    color: #28a5a8;
+    color: #7645AD;
     background: none;
 }
 .header .main-nav .nav .nav-item a:focus {
@@ -328,7 +328,7 @@ select {
     background: none;
 }
 .header .main-nav .nav .nav-item.active {
-    color: #28a5a8;
+    color: #7645AD;
 }
 .header .main-nav .nav .nav-item.last {
     margin-right: 0;
@@ -469,7 +469,7 @@ select {
 .promo.section .intro {
     max-width: 600px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 .promo.section .video-container {
     max-width: 720px;
@@ -754,7 +754,7 @@ select {
     margin: 1px;
 }
 .testimonials .carousel-indicators li.active {
-    background: #34cbcf;
+    background: #7645AD;
     border: none;
     width: 10px;
     height: 10px;
@@ -782,12 +782,12 @@ select {
 }
 .testimonials .item blockquote .fa {
     position: absolute;
-    color: #2db9bd;
+    color: #7645AD;
     font-size: 22px;
     left: -45px;
 }
 .testimonials .item .source {
-    color: #28a5a8;
+    color: #7645AD;
 }
 .testimonials .item .source .title {
     font-size: 16px;
@@ -1018,7 +1018,7 @@ select {
     color: #999999;
 }
 .news-list .post .content .meta li a:hover {
-    color: #28a5a8;
+    color: #7645AD;
 }
 /* ======= Features video ======= */
 .features-video {
@@ -1147,15 +1147,15 @@ select {
     background: #f5f5f5;
 }
 .nav-tabs > li.active {
-    border-top-color: #28a5a8;
+    border-top-color: #7645AD;
     border-bottom-color: #fff;
 }
 .nav-tabs > li.active > a {
-    color: #28a5a8;
+    color: #7645AD;
     background: #fff;
-    -webkit-box-shadow: inset 0 3px 0 #28a5a8;
-    -moz-box-shadow: inset 0 3px 0 #28a5a8;
-    box-shadow: inset 0 3px 0 #28a5a8;
+    -webkit-box-shadow: inset 0 3px 0 #7645AD;
+    -moz-box-shadow: inset 0 3px 0 #7645AD;
+    box-shadow: inset 0 3px 0 #7645AD;
     border: none;
 }
 .nav-tabs > li.active > a:hover,
@@ -1165,7 +1165,7 @@ select {
 .nav-tabs > li.active:hover > a {
     border-top: 0;
     border: none;
-    color: #28a5a8;
+    color: #7645AD;
 }
 .nav-tabs > li.last {
     border-right: 1px solid #efefef;
@@ -1179,7 +1179,6 @@ select {
 }
 .pricing .title {
     font-size: 36px;
-    font-weight: bold;
     margin-top: 0;
     margin-bottom: 30px;
     color: #fff;
@@ -1236,7 +1235,7 @@ select {
 }
 .pricing .item.best-buy .heading h3.title {
     font-family: "Roboto Slab", arial, sans-serif;
-    color: #28a5a8;
+    color: #7645AD;
     margin-top: 0;
     margin-bottom: 0;
     font-weight: bold;
@@ -1427,7 +1426,7 @@ select {
     position: relative;
 }
 .white-popup-block .error {
-    color: #28a5a8;
+    color: #7645AD;
     font-family: arial, sans-serif;
     display: block;
     font-size: 14px;
@@ -1559,14 +1558,14 @@ select {
     text-decoration: none;
 }
 .faq .panel .panel-title .active {
-    color: #28a5a8;
+    color: #7645AD;
 }
 .faq .panel .panel-title .panel-toggle .fa {
     margin-right: 10px;
     color: #34cbcf;
 }
 .faq .panel .panel-title:hover .fa {
-    color: #28a5a8;
+    color: #7645AD;
 }
 .faq .contact-lead {
     margin-top: 60px;
@@ -1606,7 +1605,7 @@ select {
     box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
 }
 .contact-section .contact-form .error {
-    color: #28a5a8;
+    color: #7645AD;
     font-family: arial, sans-serif;
     display: block;
     font-size: 14px;
@@ -1646,13 +1645,13 @@ select {
     color: #666666;
 }
 .contact-other-section .other-info li a:hover {
-    color: #28a5a8;
+    color: #7645AD;
 }
 .contact-other-section .other-info li .fa {
     position: absolute;
     left: 0;
     top: 0;
-    background: #28a5a8;
+    background: #7645AD;
     color: #fff;
     width: 60px;
     height: 100%;
@@ -1875,7 +1874,7 @@ select {
     color: #fff;
 }
 .blog-slider .flex-caption a.more-link:hover {
-    color: #28a5a8;
+    color: #7645AD;
 }
 /* Blog homepage */
 .blog-list .post {
@@ -1991,7 +1990,7 @@ select {
     color: #999999;
 }
 .blog-list .post .content .meta li a:hover {
-    color: #28a5a8;
+    color: #7645AD;
 }
 /* Single blog post */
 .blog-entry-wrapper {
@@ -2112,7 +2111,7 @@ select {
 }
 .blog-entry-wrapper .blog-entry .blog-entry-content .custom-list-style li .fa {
     margin-right: 10px;
-    color: #28a5a8;
+    color: #7645AD;
 }
 .blog-entry-wrapper .blog-entry .post-nav {
     margin-bottom: 60px;
@@ -2140,7 +2139,7 @@ select {
     line-height: 1.6;
 }
 .blog-entry-wrapper .custom-quote .fa {
-    color: #28a5a8;
+    color: #7645AD;
     margin-right: 10px;
 }
 .blog-entry-wrapper .custom-quote .source {
@@ -2178,7 +2177,7 @@ select {
     color: #666666;
 }
 .blog-page .header-blog .main-nav .nav .nav-item a:hover {
-    color: #28a5a8;
+    color: #7645AD;
 }
 .blog-page .header-blog .main-nav .nav .dropdown-menu a {
     color: #fff;
@@ -2186,7 +2185,7 @@ select {
 .blog-page .header-blog h1.logo a {
     max-width: inherit;
     background: none;
-    color: #28a5a8;
+    color: #7645AD;
     padding-left: 0;
     padding-top: 25px;
 }
@@ -2412,7 +2411,7 @@ select {
     font-size: 18px;
 }
 .story-section .team .member .social-list a:hover {
-    background: #28a5a8;
+    background: #7645AD;
 }
 /* ======= Modal ======= */
 .modal.modal-video .modal-dialog {
@@ -2450,7 +2449,7 @@ select {
     z-index: 10;
 }
 .modal.modal-video button.close:hover {
-    color: #28a5a8;
+    color: #7645AD;
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1;
@@ -2487,11 +2486,11 @@ select {
     background: none;
 }
 #modal-subscribe .modal-content h1.logo {
-    font-family: "Roboto Slab", arial, sans-serif;
+    font-family: Gibson, arial, sans-serif;
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: bold;
-    font-size: 25px;
+    font-weight: 600;
+    font-size: 28px;
     margin: auto;
     width: 140px;
 }
@@ -2599,7 +2598,7 @@ select {
     font-size: 22px;
 }
 .footer .footer-col.connect .social li a:hover .fa {
-    color: #28a5a8;
+    color: #7645AD;
 }
 .footer .footer-col.connect .btn-cta-primary {
     background: #5d80a1;
@@ -2710,7 +2709,7 @@ select {
     background-clip: padding-box;
     border: none;
     margin-right: 5px;
-    color: #28a5a8;
+    color: #7645AD;
 }
 .pagination li a:hover {
     color: #19686a;
@@ -2721,7 +2720,7 @@ select {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-    background-color: #28a5a8;
+    background-color: #7645AD;
     border: none;
 }
 .pagination > li > a:hover,
@@ -2977,7 +2976,7 @@ select {
     }
     .headline-bg + .section,
     .bg-slider-wrapper + .section {
-        padding-top: 45px;
+        padding-top: 80px;
     }
     .pricing .intro {
         margin-bottom: 45px;
@@ -3072,7 +3071,7 @@ select {
     }
     .searchbox-icon,
     .searchbox-submit {
-        background: #28a5a8;
+        background: #7645AD;
         color: #fff;
         -webkit-border-top-right-radius: 4px;
         -webkit-border-bottom-right-radius: 4px;
@@ -3235,7 +3234,7 @@ select {
         -moz-background-clip: padding;
         -webkit-background-clip: padding-box;
         background-clip: padding-box;
-        color: #28a5a8;
+        color: #7645AD;
         background: #fff;
         padding-left: 20px;
     }
@@ -3448,7 +3447,7 @@ select {
         -moz-background-clip: padding;
         -webkit-background-clip: padding-box;
         background-clip: padding-box;
-        color: #28a5a8;
+        color: #7645AD;
         background: #fff;
         padding-left: 20px;
     }
@@ -3538,7 +3537,7 @@ select {
         padding-top: 200px;
     }
     .promo.section .intro {
-        margin-bottom: 60px;
+        margin-bottom: 180px;
     }
     .promo .btn-link {
         margin-top: 15px;
