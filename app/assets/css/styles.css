@@ -2985,6 +2985,13 @@ select {
     .promo {
         height: 420px;
     }
+    .promo .signup-form {
+        box-shadow: none;
+    }
+    .promo .signup-form .email {
+        margin: auto;
+        margin-bottom: 10px;
+    }
     .why .item .content {
         margin-bottom: 60px;
     }
