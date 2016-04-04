@@ -1234,12 +1234,12 @@ select {
     padding-top: 45px;
 }
 .pricing .item.best-buy .heading h3.title {
-    font-family: "Roboto Slab", arial, sans-serif;
+    font-family: Gibson, arial, sans-serif;
     color: #7645AD;
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: bold;
-    font-size: 28px;
+    font-weight: 600;
+    font-size: 32px;
     margin: auto;
     width: 160px;
 }
