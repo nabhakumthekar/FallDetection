@@ -310,7 +310,7 @@ select {
 .header .main-nav .nav .nav-item.active a {
     color: #7645AD;
     background: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 .header .main-nav .nav .nav-item a {
     color: #fff;
