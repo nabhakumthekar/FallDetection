@@ -865,7 +865,7 @@ select {
     box-shadow: none;
 }
 .latest-news .bg-news {
-    background: url('http://tinyurl.com/h6hpyde') no-repeat 50% 20%;
+    background: url('http://tinyurl.com/hhgrl3o') no-repeat 50% 20%;
     background-size: cover;
     width: 100%;
     height: 450px;
@@ -1480,6 +1480,28 @@ select {
     max-width: 70%;
     height: auto;
     padding-bottom: 30px;
+}
+.apps-section .ribbon {
+    position: absolute;
+    right: 94px;
+    width: 150px;
+    height: 141px;
+    z-index: 1;
+    overflow: hidden;
+}
+.apps-section .ribbon .text {
+    position: relative;
+    left: -10px;
+    top: 18px;
+    width: 217px;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFF;
+    background-color: #7645AD;
+    transform: rotate(45deg) translate3d(0px, 0px, 0px);
 }
 .apps-section .phone-holder {
     width: 324px;
@@ -3162,7 +3184,7 @@ select {
         padding-right: 15px;
     }
     .download-page .headline-bg {
-        height: 1600px;
+        height: 2000px;
     }
     .story-section .about {
         padding: 0;
@@ -3324,6 +3346,9 @@ select {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    }
+    .apps-section .ribbon {
+        right: 28px;
     }
     .blog-page .header-blog {
         position: relative;
@@ -3536,6 +3561,9 @@ select {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    }
+    .apps-section .ribbon {
+        right: 94px;
     }
     .promo {
         height: 620px;
