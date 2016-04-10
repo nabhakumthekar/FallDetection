@@ -208,6 +208,11 @@ select {
     background: black;
     margin: 0 auto;
 }
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 /* ======= Header ======= */
 .header {
     color: #fff;
@@ -449,27 +454,30 @@ select {
 }
 /* ======= Promo ======= */
 .promo {
-    padding-top: 120px;
     position: relative;
     color: #fff;
     margin-bottom: 80px;
     height: 620px;
     z-index: 10;
 }
+.promo .container {
+    height: 700px;
+}
+.promo .signup-form {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
 .promo .title {
     font-size: 48px;
-    margin-bottom: 20px;
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     font-weight: 600;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     max-width: 900px;
-}
-.promo.section .intro {
-    max-width: 600px;
-    margin: 0 auto;
-    margin-bottom: 80px;
 }
 .promo.section .video-container {
     max-width: 720px;
@@ -2898,6 +2906,7 @@ select {
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
     body {
+        width: 100%;
         overflow-x: hidden;
     }
     .config-wrapper {
@@ -2961,6 +2970,9 @@ select {
         -o-background-size: cover;
         background-size: cover;
     }
+    .promo .container {
+        height: 420px;
+    }
     .headline-bg.pricing-headline-bg {
         background-image: url('../images/background/phone/bg-header-small-2.jpg');
     }
@@ -2998,8 +3010,7 @@ select {
     .access-section {
         padding-top: 15px;
     }
-    .headline-bg + .section,
-    .bg-slider-wrapper + .section {
+    .headline-bg + .section {
         padding-top: 80px;
     }
     .pricing .intro {
@@ -3032,7 +3043,8 @@ select {
         font-size: 16px;
     }
     .promo {
-        height: 420px;
+        height: 500px;
+        margin-bottom: 0px;
     }
     .promo .signup-form {
         box-shadow: none;
@@ -3051,6 +3063,9 @@ select {
     .why .item .title {
         margin-bottom: 30px;
         text-align: center;
+    }
+    .latest-news {
+        margin-top: 0;
     }
     .testimonials .item .profile {
         position: static;
@@ -3359,7 +3374,9 @@ select {
     }
     .promo {
         height: 420px;
-        padding-top: 180px;
+    }
+    .promo .container {
+        height: 500px;
     }
     .promo .btn-link {
         margin-top: 15px;
@@ -3567,10 +3584,9 @@ select {
     }
     .promo {
         height: 620px;
-        padding-top: 200px;
     }
-    .promo.section .intro {
-        margin-bottom: 180px;
+    .promo .container {
+        height: 700px;
     }
     .promo .btn-link {
         margin-top: 15px;
