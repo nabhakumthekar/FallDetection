@@ -19,14 +19,15 @@ jQuery(document).ready(function(){
                     $('#modal-subscribe').modal('show');
                     $('.promo .signup-form input#cemail').val('');
                 },
-                error: function(result){
-                    if(result.status == 409){
+                error: function(result) {
+                    if (result.status == 409) {
                         $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
                         $('#modal-subscribe').modal('show');
-                    }else{
+                    } else {
                         $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
                         $('#modal-subscribe').modal('show');
                     }
+
                     $('.promo .signup-form input#cemail').val('');
                 }
             });
@@ -37,4 +38,5 @@ jQuery(document).ready(function(){
             }
         }
     });
+
 });

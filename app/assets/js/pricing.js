@@ -1,20 +1,6 @@
 $(document).ready(function() {
     var color_selected = "gunmetal";
 
-    /* Get countries list when loading the page */
-    $.ajax({
-        url: "/api/v1/data/countries",
-        type: "GET",
-        dataType: "json",
-        success: function(data){
-            var countries = [];
-            $.each( data, function() {
-                countries.push( "<option value='" + this.countryCode + "'>" + this.countryName + "</option>" );
-            });
-            $('#country').append(countries + "</select>");
-        }
-    });
-
     /* Preload the colors images to prevent delay when choosing colors */
     $.preloadImages = function() {
         for (var i = 0; i < arguments.length; i++) {
@@ -150,14 +136,13 @@ $(document).ready(function() {
                     $('#modal-preorder').modal('show');
                 },
                 error: function(result){
-                    if(result.status == 409){
+                    if (result.status == 409) {
                         $('p#preOrderModalLabel').text("We found an order with the same email address in our system. This order has been cancelled.");
                         $('#modal-preorder').modal('show');
-                    }else if (result.status == 400) {
+                    } else if (result.status == 400) {
                         $('p#preOrderModalLabel').text("The promotion code is invalid. Please make sure you have the right code.");
                         $('#modal-preorder').modal('show');
-                    }
-                    else{
+                    } else {
                         $('p#preOrderModalLabel').text("Some problem has occurred. Please try again later.");
                         $('#modal-preorder').modal('show');
                     }
@@ -176,6 +161,7 @@ $(document).ready(function() {
             },
         }
     });*/
+
     $('.pricing .item.best-buy .signup-form').validate({
         submitHandler: function() {
             $.ajax({
@@ -190,13 +176,14 @@ $(document).ready(function() {
                     $('.pricing .item.best-buy .signup-form input#cemail').val('');
                 },
                 error: function(result){
-                    if(result.status == 409){
+                    if (result.status == 409) {
                         $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
                         $('#modal-subscribe').modal('show');
-                    }else{
+                    } else {
                         $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
                         $('#modal-subscribe').modal('show');
                     }
+
                     $('.pricing .item.best-buy .signup-form input#cemail').val('');
                 }
             });

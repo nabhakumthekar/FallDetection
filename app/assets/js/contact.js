@@ -7,6 +7,7 @@ $(document).ready(function() {
         lat: 37.423816,
         lng: -122.197141
     });
+
     map.addMarker({
         lat: 37.423816,
         lng: -122.197141,
@@ -14,7 +15,6 @@ $(document).ready(function() {
         infoWindow: {
             content: '<h5 class="title">FindMe</h5><p><span class="address">325 Sharon Park Dr, Ste. 456</span><br><span class="region">Menlo Park, CA</span><br><span class="postal-code">94025</span></p>'
         }
-
     });
 
     /* ======= jQuery form validator ======= */
@@ -30,7 +30,7 @@ $(document).ready(function() {
                 }),
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
-                success: function(result){
+                success: function(result) {
                     console.log("Success.");
                     $('#cemail').val('');
                     $('#cname').val('');
@@ -38,9 +38,6 @@ $(document).ready(function() {
                     $('.input-form').append("<p>Thank you for your feedback :)</p>");
                 },
                 error: function(result){
-                    if(result.status == 409){
-                        console.log("Conflict.");
-                    }
                 }
             });
         },
@@ -56,4 +53,5 @@ $(document).ready(function() {
             }
         }
     });
+
 });
