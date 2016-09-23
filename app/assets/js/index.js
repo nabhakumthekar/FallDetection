@@ -6,29 +6,29 @@ jQuery(document).ready(function(){
 
     new WOW().init();
 
-    $('.promo .signup-form').validate({
+    $('.preorder-form').validate({
         submitHandler: function() {
             $.ajax({
-                url: "/api/v1/subscribers",
+                url: "/api/v1/preorders",
                 type: "POST",
-                data: JSON.stringify({'email': $('.promo .signup-form input#cemail').val()}),
+                data: JSON.stringify({'email': $('.preorder-form input#cemail').val()}),
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function(result){
-                    $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
+                    $('p#subscribeModalLabel').text('Thank you! Please check your email for your coupon code.');
                     $('#modal-subscribe').modal('show');
-                    $('.promo .signup-form input#cemail').val('');
+                    $('.preorder-form input#cemail').val('');
                 },
-                error: function(result) {
+                error: function(result){
                     if (result.status == 409) {
-                        $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
+                        $('p#subscribeModalLabel').text("Your email is already registered. Your coupon code has been resent.");
                         $('#modal-subscribe').modal('show');
                     } else {
-                        $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
+                        $('p#subscribeModalLabel').text("Some problem has occurred. Please try again later.");
                         $('#modal-subscribe').modal('show');
                     }
 
-                    $('.promo .signup-form input#cemail').val('');
+                    $('.preorder-form input#cemail').val('');
                 }
             });
         },

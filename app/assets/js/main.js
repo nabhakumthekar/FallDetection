@@ -22,18 +22,18 @@ $(document).ready(function() {
         $('body').css('overflow', 'auto');
     });
 
-    $('.footer .signup-form').validate({
+    $('.signup-form').validate({
         submitHandler: function() {
             $.ajax({
                 url: "/api/v1/subscribers",
                 type: "POST",
-                data: JSON.stringify({'email': $('.footer .signup-form input#cemail').val()}),
+                data: JSON.stringify({'email': $('.signup-form input#cemail').val()}),
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function(result){
                     $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
                     $('#modal-subscribe').modal('show');
-                    $('.footer .signup-form input#cemail').val('');
+                    $('.signup-form input#cemail').val('');
                 },
                 error: function(result){
                     if (result.status == 409) {
@@ -44,7 +44,7 @@ $(document).ready(function() {
                         $('#modal-subscribe').modal('show');
                     }
 
-                    $('.footer .signup-form input#cemail').val('');
+                    $('.signup-form input#cemail').val('');
                 }
             });
         },
