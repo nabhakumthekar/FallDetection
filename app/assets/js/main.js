@@ -40,7 +40,7 @@ $(document).ready(function() {
                         $('p#subscribeModalLabel').text('Thank you for signing up. Please stay tuned for our launch.');
                         $('#modal-subscribe').modal('show');
                     } else {
-                        $('p#subscribeModalLabel').text('Some problem has occurred. Please try again later.');
+                        $('p#subscribeModalLabel').text('A problem has occurred. Please try again later.');
                         $('#modal-subscribe').modal('show');
                     }
 

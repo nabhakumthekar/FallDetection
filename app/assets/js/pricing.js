@@ -143,7 +143,7 @@ $(document).ready(function() {
                         $('p#preOrderModalLabel').text("The promotion code is invalid. Please make sure you have the right code.");
                         $('#modal-preorder').modal('show');
                     } else {
-                        $('p#preOrderModalLabel').text("Some problem has occurred. Please try again later.");
+                        $('p#preOrderModalLabel').text("A problem has occurred. Please try again later.");
                         $('#modal-preorder').modal('show');
                     }
                 }

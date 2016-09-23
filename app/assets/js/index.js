@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
     $('.preorder-form').validate({
         submitHandler: function() {
             $.ajax({
-                url: "/api/v1/preorders",
+                url: "/api/v1/pre-orders",
                 type: "POST",
                 data: JSON.stringify({'email': $('.preorder-form input#cemail').val()}),
                 dataType: "json",
@@ -24,7 +24,7 @@ jQuery(document).ready(function(){
                         $('p#subscribeModalLabel').text("Your email is already registered. Your coupon code has been resent.");
                         $('#modal-subscribe').modal('show');
                     } else {
-                        $('p#subscribeModalLabel').text("Some problem has occurred. Please try again later.");
+                        $('p#subscribeModalLabel').text("A problem has occurred. Please try again later.");
                         $('#modal-subscribe').modal('show');
                     }
 
