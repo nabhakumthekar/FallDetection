@@ -4,16 +4,16 @@ $(document).ready(function() {
     /* ======== Google Map =========== */
     map = new GMaps({
         div: '#map',
-        lat: 37.423816,
-        lng: -122.197141
+        lat: 37.4534427,
+        lng: -122.1872244
     });
 
     map.addMarker({
-        lat: 37.423816,
-        lng: -122.197141,
+        lat: 37.4534427,
+        lng: -122.1872244,
         title: 'Address',
         infoWindow: {
-            content: '<h5 class="title">FindMe</h5><p><span class="address">325 Sharon Park Dr, Ste. 456</span><br><span class="region">Menlo Park, CA</span><br><span class="postal-code">94025</span></p>'
+            content: '<h5 class="title">FindMe</h5><p><span class="address">1259 El Camino Real, #157</span><br><span class="region">Menlo Park, CA</span><br><span class="postal-code">94025</span></p>'
         }
     });
 
