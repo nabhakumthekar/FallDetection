@@ -80,6 +80,11 @@ a.btn-cta-primary,
     border: 2px solid #7645AD;
     color: #fff;
 }
+.btn-coupon {
+    background: #68EFAD;
+    border: 2px solid #68EFAD;
+    color: #fff;
+}
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
     background: #239193;
@@ -464,6 +469,13 @@ select {
     height: 700px;
 }
 .promo .signup-form {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.promo .preorder-form {
     position: absolute;
     bottom: 0px;
     left: 0;
