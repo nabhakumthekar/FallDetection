@@ -22,12 +22,12 @@ $(document).ready(function() {
         $('body').css('overflow', 'auto');
     });
 
-    $('.preorder-form').validate({
+    $('.signup-form').validate({
         submitHandler: function() {
             $.ajax({
                 url: "/api/v1/pre-orders",
                 type: "POST",
-                data: JSON.stringify({'email': $('.preorder-form input#cemail').val()}),
+                data: JSON.stringify({'email': $('.signup-form input#cemail').val()}),
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function(result){
