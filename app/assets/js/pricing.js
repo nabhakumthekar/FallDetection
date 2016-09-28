@@ -1,20 +1,25 @@
 $(document).ready(function() {
-    var color_selected = "gunmetal";
+    var color_selected = 'gunmetal';
 
     /* Preload the colors images to prevent delay when choosing colors */
     $.preloadImages = function() {
         for (var i = 0; i < arguments.length; i++) {
-            $("<img />").attr("src", arguments[i]);
+            $('<img />').attr('src', arguments[i]);
         }
     };
 
-    $.preloadImages("assets/images/figures/titanium.jpg","assets/images/figures/black_chrome.jpg", "assets/images/figures/rose_gold.jpg", "assets/images/figures/silver.jpg");
+    $.preloadImages(
+        'assets/images/figures/titanium.jpg',
+        'assets/images/figures/black_chrome.jpg',
+        'assets/images/figures/rose_gold.jpg',
+        'assets/images/figures/silver.jpg'
+    );
 
     /* Show Pre-order when the 'Pre-order' button is clicked */
     /*$('.plan').on('click', function(){
         $('.preOrder-form').fadeIn('slow');
         $('html,body').animate({
-            scrollTop: $(".preOrder-form").offset().top - $('#header').height()
+            scrollTop: $('.preOrder-form').offset().top - $('#header').height()
         });
     });*/
 
@@ -53,7 +58,7 @@ $(document).ready(function() {
             $('.black-chrome').removeClass('active');
             $('.rose-gold').removeClass('active');
             $('.silver-color').removeClass('active');
-            color_selected = "gunmetal";
+            color_selected = 'gunmetal';
         }
     );
     $('.titanium-color').click(
@@ -63,7 +68,7 @@ $(document).ready(function() {
             $('.black-chrome').removeClass('active');
             $('.rose-gold').removeClass('active');
             $('.silver-color').removeClass('active');
-            color_selected = "titanium";
+            color_selected = 'titanium';
         }
     );
     $('.black-chrome').click(
@@ -73,7 +78,7 @@ $(document).ready(function() {
             $('.titanium-color').removeClass('active');
             $('.rose-gold').removeClass('active');
             $('.silver-color').removeClass('active');
-            color_selected = "black_chrome";
+            color_selected = 'black_chrome';
         }
     );
     $('.rose-gold').click(
@@ -83,7 +88,7 @@ $(document).ready(function() {
             $('.black-chrome').removeClass('active');
             $('.titanium-color').removeClass('active');
             $('.silver-color').removeClass('active');
-            color_selected = "rose_gold";
+            color_selected = 'rose_gold';
         }
     );
     $('.silver-color').click(
@@ -93,7 +98,7 @@ $(document).ready(function() {
             $('.black-chrome').removeClass('active');
             $('.rose-gold').removeClass('active');
             $('.titanium-color').removeClass('active');
-            color_selected = "silver";
+            color_selected = 'silver';
         }
     );
 
@@ -103,7 +108,7 @@ $(document).ready(function() {
         .prev('.panel-heading')
         .find('.panel-title a')
         .toggleClass('active')
-        .find("i.fa")
+        .find('i.fa')
         .toggleClass('fa-plus-square fa-minus-square');
     }
     $('.panel').on('hidden.bs.collapse', toggleIcon);
@@ -112,8 +117,8 @@ $(document).ready(function() {
     /*$('#preorder-form').validate({
         submitHandler: function() {
             $.ajax({
-                url: "/api/v1/pre-orders",
-                type: "POST",
+                url: '/api/v1/pre-orders',
+                type: 'POST',
                 data: JSON.stringify({'email': $('input#email').val(),
                     'firstName': $('input#firstName').val(),
                     'lastName': $('input#lastName').val(),
@@ -128,21 +133,26 @@ $(document).ready(function() {
                     'color': color_selected,
                     'promoCode': $('input#promoCode').val()
                 }),
-                dataType: "json",
-                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
                 success: function(result){
-                    $('p#preOrderModalLabel').text("We received your order. Thank you and we'll keep you updated.");
+                    $('p#preOrderModalLabel').text(
+                        'We received your order. Thank you and we'll keep you updated.');
+
                     $('#modal-preorder').modal('show');
                 },
                 error: function(result){
                     if (result.status == 409) {
-                        $('p#preOrderModalLabel').text("We found an order with the same email address in our system. This order has been cancelled.");
+                        $('p#preOrderModalLabel').text('Your email is already registered.');
+
                         $('#modal-preorder').modal('show');
                     } else if (result.status == 400) {
-                        $('p#preOrderModalLabel').text("The promotion code is invalid. Please make sure you have the right code.");
+                        $('p#preOrderModalLabel').text('The promotion code is invalid. ' +
+                            'Please make sure you have the right code and try again.');
+
                         $('#modal-preorder').modal('show');
                     } else {
-                        $('p#preOrderModalLabel').text("A problem has occurred. Please try again later.");
+                        $('p#preOrderModalLabel').text('A problem has occurred. Please try again later.');
                         $('#modal-preorder').modal('show');
                     }
                 }
@@ -170,11 +180,11 @@ $(document).ready(function() {
     $('.preorder-form').validate({
         submitHandler: function() {
             $.ajax({
-                url: "/api/v1/pre-orders",
-                type: "POST",
+                url: '/api/v1/pre-orders',
+                type: 'POST',
                 data: JSON.stringify({'email': $('.preorder-form input#cemail').val()}),
-                dataType: "json",
-                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
                 success: function(result){
                     $('p#subscribeModalLabel').text('Thank you! Please check your email for your coupon code.');
                     $('#modal-subscribe').modal('show');
@@ -182,10 +192,12 @@ $(document).ready(function() {
                 },
                 error: function(result){
                     if (result.status == 409) {
-                        $('p#subscribeModalLabel').text("Your email is already registered. Your coupon code has been resent.");
+                        $('p#subscribeModalLabel').text(
+                            'Your email is already registered. Your coupon code has been resent.');
+
                         $('#modal-subscribe').modal('show');
                     } else {
-                        $('p#subscribeModalLabel').text("A problem has occurred. Please try again later.");
+                        $('p#subscribeModalLabel').text('A problem has occurred. Please try again later.');
                         $('#modal-subscribe').modal('show');
                     }
 

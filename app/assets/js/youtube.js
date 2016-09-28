@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     /* ======= jQuery FitVids - Responsive Video ======= */
     /* Ref: https://github.com/davatron5000/FitVids.js/blob/master/README.md */
-    $(".video-container").fitVids();
+    $('.video-container').fitVids();
 
     /* ======= Auto play Youtube in Bootstrpa Modal ======= */
     $('#modal-video').on('hidden.bs.modal', function () {

@@ -25,11 +25,11 @@ $(document).ready(function() {
     $('.signup-form').validate({
         submitHandler: function() {
             $.ajax({
-                url: "/api/v1/pre-orders",
-                type: "POST",
+                url: '/api/v1/pre-orders',
+                type: 'POST',
                 data: JSON.stringify({'email': $('.signup-form input#cemail').val()}),
-                dataType: "json",
-                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
                 success: function(result){
                     $('p#subscribeModalLabel').text('Thank you! Please check your email for your coupon code.');
                     $('#modal-subscribe').modal('show');
@@ -37,10 +37,12 @@ $(document).ready(function() {
                 },
                 error: function(result){
                     if (result.status == 409) {
-                        $('p#subscribeModalLabel').text("Your email is already registered. Your coupon code has been resent.");
+                        $('p#subscribeModalLabel').text(
+                            'Your email is already registered. Your coupon code has been resent.');
+
                         $('#modal-subscribe').modal('show');
                     } else {
-                        $('p#subscribeModalLabel').text("A problem has occurred. Please try again later.");
+                        $('p#subscribeModalLabel').text('A problem has occurred. Please try again later.');
                         $('#modal-subscribe').modal('show');
                     }
 

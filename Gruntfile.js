@@ -1,5 +1,7 @@
 module.exports = function (grunt) {
 
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -23,7 +25,10 @@ module.exports = function (grunt) {
                 flatten: true,
                 filter: 'isFile',
                 cwd: 'app',
-                src: ['assets/plugins/bootstrap/fonts/**', 'assets/plugins/font-awesome/fonts/**'],
+                src: [
+                    'assets/plugins/bootstrap/fonts/**',
+                    'assets/plugins/font-awesome/fonts/**'
+                ],
                 dest: 'dist/assets/fonts/'
             },
             images: {
@@ -41,7 +46,20 @@ module.exports = function (grunt) {
         },
 
         jshint: {
-            use_defaults: ['Gruntfile.js', 'app/assets/js/*.js']
+            use_defaults: [
+                'Gruntfile.js',
+                'app/assets/js/*.js'
+            ]
+        },
+
+        eslint: {
+            options: {
+                configFile: 'eslint.json'
+            },
+            target: [
+                'Gruntfile.js',
+                'app/assets/js/*.js'
+            ]
         },
 
         useminPrepare: {
@@ -91,16 +109,6 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-filerev');
-    grunt.loadNpmTasks('grunt-usemin');
-
     grunt.registerTask('build', [
         'clean',
         'copy:html',
@@ -108,6 +116,7 @@ module.exports = function (grunt) {
         'copy:plugin_fonts',
         'copy:images',
         'jshint',
+        'eslint',
         'useminPrepare',
         'concat',
         'uglify',

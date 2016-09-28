@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     /* ======= Blog Featured Post Slideshow - Flexslider ======= */
     $('.blog-slider').flexslider({
-        animation: "fade",
+        animation: 'fade',
         slideshowSpeed: 8000
     });
 
