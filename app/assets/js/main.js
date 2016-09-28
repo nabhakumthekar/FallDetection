@@ -33,7 +33,7 @@ $(document).ready(function() {
                 success: function(result){
                     $('p#subscribeModalLabel').text('Thank you! Please check your email for your coupon code.');
                     $('#modal-subscribe').modal('show');
-                    $('.preorder-form input#cemail').val('');
+                    $('.signup-form input#cemail').val('');
                 },
                 error: function(result){
                     if (result.status == 409) {
@@ -44,7 +44,7 @@ $(document).ready(function() {
                         $('#modal-subscribe').modal('show');
                     }
 
-                    $('.preorder-form input#cemail').val('');
+                    $('.signup-form input#cemail').val('');
                 }
             });
         },

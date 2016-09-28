@@ -109,7 +109,6 @@ $(document).ready(function() {
     $('.panel').on('hidden.bs.collapse', toggleIcon);
     $('.panel').on('shown.bs.collapse', toggleIcon);
 
-    /* Form validation */
     /*$('#preorder-form').validate({
         submitHandler: function() {
             $.ajax({
@@ -160,12 +159,45 @@ $(document).ready(function() {
                 required: 'Please enter your Last Name'
             }
         }
-    });*/
+    });
 
     $('#modal-preorder').on('show.bs.modal', function(event){
         var modal = $(this);
         modal.find('.modal-header h4').val('Thank you!');
         $('body').css('overflow', 'auto');
+    });*/
+
+    $('.preorder-form').validate({
+        submitHandler: function() {
+            $.ajax({
+                url: "/api/v1/pre-orders",
+                type: "POST",
+                data: JSON.stringify({'email': $('.preorder-form input#cemail').val()}),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function(result){
+                    $('p#subscribeModalLabel').text('Thank you! Please check your email for your coupon code.');
+                    $('#modal-subscribe').modal('show');
+                    $('.preorder-form input#cemail').val('');
+                },
+                error: function(result){
+                    if (result.status == 409) {
+                        $('p#subscribeModalLabel').text("Your email is already registered. Your coupon code has been resent.");
+                        $('#modal-subscribe').modal('show');
+                    } else {
+                        $('p#subscribeModalLabel').text("A problem has occurred. Please try again later.");
+                        $('#modal-subscribe').modal('show');
+                    }
+
+                    $('.preorder-form input#cemail').val('');
+                }
+            });
+        },
+        messages: {
+            email: {
+                required: 'Please enter your email'
+            }
+        }
     });
 
 });
