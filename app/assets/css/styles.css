@@ -72,17 +72,12 @@ a.btn .fa {
 }
 a.btn-cta,
 .btn-cta {
-    padding: 8px 30px;
+    padding: 8px 20px;
 }
 a.btn-cta-primary,
 .btn-cta-primary {
     background: #7645AD;
     border: 2px solid #7645AD;
-    color: #fff;
-}
-.btn-coupon {
-    background: #68EFAD;
-    border: 2px solid #68EFAD;
     color: #fff;
 }
 a.btn-cta-primary:hover,
