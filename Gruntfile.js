@@ -45,21 +45,35 @@ module.exports = function (grunt) {
             }
         },
 
-        jshint: {
-            use_defaults: [
-                'Gruntfile.js',
-                'app/assets/js/*.js'
+        stylelint: {
+            options: {
+                configFile: 'check/stylelint.json',
+                format: 'scss'
+            },
+            target: [
+                'app/assets/css/*.css'
             ]
         },
 
         eslint: {
-            options: {
-                configFile: 'eslint.json'
+            development: {
+                options: {
+                    configFile: 'check/eslint.json'
+                },
+                src: [
+                    'Gruntfile.js',
+                    'app/assets/js/*.js'
+                ]
             },
-            target: [
-                'Gruntfile.js',
-                'app/assets/js/*.js'
-            ]
+            build: {
+                options: {
+                    configFile: 'check/eslint-build.json'
+                },
+                src: [
+                    'Gruntfile.js',
+                    'app/assets/js/*.js'
+                ]
+            }
         },
 
         useminPrepare: {
@@ -115,8 +129,8 @@ module.exports = function (grunt) {
         'copy:fonts',
         'copy:plugin_fonts',
         'copy:images',
-        'jshint',
-        'eslint',
+        'stylelint',
+        'eslint:build',
         'useminPrepare',
         'concat',
         'uglify',
@@ -125,6 +139,11 @@ module.exports = function (grunt) {
         'usemin',
         'htmlmin',
         'copy:htmlmin'
+    ]);
+
+    grunt.registerTask('check', [
+        'stylelint',
+        'eslint:development'
     ]);
 
     // Tell Grunt what to do when we type "grunt" into the terminal
