@@ -29,6 +29,7 @@
     "no-unused-expressions": ["error"],
     "no-unused-vars": ["error", {"vars": "all", "args": "none"}],
     "no-whitespace-before-property": ["error"],
+    "object-curly-spacing": ["error", "never"],
     "operator-assignment": ["error", "always"],
     "padded-blocks": ["error", "never"],
     "quotes": ["error", "single"],
