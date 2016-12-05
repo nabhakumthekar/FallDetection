@@ -1,6 +1,5 @@
 var map;
 $(document).ready(function() {
-
     /* ======== Google Map =========== */
     map = new GMaps({
         div: '#map',
@@ -37,7 +36,7 @@ $(document).ready(function() {
                     $('#cmessage').val('');
                     $('.input-form').append('<p>Thank you for your feedback :)</p>');
                 },
-                error: function(result){
+                error: function(result) {
                 }
             });
         },
@@ -53,5 +52,4 @@ $(document).ready(function() {
             }
         }
     });
-
 });

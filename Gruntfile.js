@@ -1,5 +1,4 @@
-module.exports = function (grunt) {
-
+module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
@@ -20,7 +19,7 @@ module.exports = function (grunt) {
                 src: ['**'],
                 dest: 'dist/assets/fonts/'
             },
-            plugin_fonts: {
+            plugins: {
                 expand: true,
                 flatten: true,
                 filter: 'isFile',
@@ -127,7 +126,7 @@ module.exports = function (grunt) {
         'clean',
         'copy:html',
         'copy:fonts',
-        'copy:plugin_fonts',
+        'copy:plugins',
         'copy:images',
         'stylelint',
         'eslint:build',

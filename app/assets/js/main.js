@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     /* ======= Fixed header when scrolled ======= */
     $(window).on('scroll load', function() {
         if ($(window).scrollTop() > 0) {
@@ -30,13 +29,13 @@ $(document).ready(function() {
                 data: JSON.stringify({'email': $('.signup-form input#cemail').val()}),
                 dataType: 'json',
                 contentType: 'application/json; charset=utf-8',
-                success: function(result){
+                success: function(result) {
                     $('p#subscribeModalLabel').text('Thank you! Please check your email for your coupon code.');
                     $('#modal-subscribe').modal('show');
                     $('.signup-form input#cemail').val('');
                 },
-                error: function(result){
-                    if (result.status == 409) {
+                error: function(result) {
+                    if (result.status === 409) {
                         $('p#subscribeModalLabel').text(
                             'Your email is already registered. Your coupon code has been resent.');
 
@@ -56,5 +55,4 @@ $(document).ready(function() {
             }
         }
     });
-
 });
