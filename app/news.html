@@ -3541,101 +3541,11 @@
     </div><!--//blog-->
 
     <!-- ******FOOTER****** -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col links col-md-3 col-sm-3 col-xs-12">
-                        <div class="footer-col-inner">
-                            <h3 class="title">About us</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="team.html"><i class="fa fa-caret-right"></i>Who we are</a></li>
-                                <li><a href="blog.html"><i class="fa fa-caret-right"></i>Blog</a></li>
-                                <li><a href="contact.html"><i class="fa fa-caret-right"></i>Contact us</a></li>
-                            </ul>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->
-                    <div class="footer-col links col-md-3 col-sm-3 col-xs-12">
-                        <div class="footer-col-inner">
-                            <h3 class="title">Product</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="concept.html"><i class="fa fa-caret-right"></i>Why FindMe</a></li>
-                                <li><a href="download.html"><i class="fa fa-caret-right"></i>Download Apps</a></li>
-                                <li><a href="pricing.html"><i class="fa fa-caret-right"></i>Pricing</a></li>
-                            </ul>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->
-                    <div class="footer-col connect col-md-6 col-sm-6 col-xs-12">
-                        <div class="footer-col-inner">
-                            <ul class="social list-inline">
-                                <li><a href="https://twitter.com/AlzFindMe" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/AlzCareLabs" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            </ul>
-                            <div class="form-container">
-                                <form role="form" class="signup-form navbar-form" action="javascript:void(0);">
-                                    <div class="row">
-                                        <div class="email form-group col-md-8 col-sm-7">
-                                            <input type="email" id="cemail" name="email" class="form-control" placeholder="Enter email for coupon code" required>
-                                        </div>
-                                        <div class="submit form-group col-md-4 col-sm-5">
-                                            <button type="submit" class="btn btn-cta btn-cta-primary">Get Coupon</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div><!--//subscription-form-->
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->
-                    <div class="clearfix"></div>
-                </div><!--//row-->
-                <div class="row has-divider">
-                    <div class="footer-col download col-sm-6 col-xs-12">
-                        <div class="footer-col-inner">
-                            <h3 class="title">Mobile apps</h3>
-                            <ul class="list-unstyled download-list">
-                                <li><a class="btn btn-ghost disabled" href="#"><i class="fa fa-apple"></i><span class="text">iOS coming soon...</span> </a></li>
-                                <li><a class="btn btn-ghost disabled" href="#"><i class="fa fa-android"></i><span class="text">Android coming soon...</span> </a></li>
-                            </ul>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//download-->
-                    <div class="footer-col contact col-sm-6 col-xs-12">
-                        <div class="footer-col-inner">
-                            <h3 class="title">Contact us</h3>
-                            <p class="adr clearfix">
-                                <i class="fa fa-map-marker pull-left"></i>
-                                <span class="adr-group pull-left">
-                                    <span class="street-address">1259 El Camino Real, #157</span><br>
-                                    <span class="region">Menlo Park, CA</span><br>
-                                    <span class="postal-code">94025</span><br>
-                                </span>
-                            </p>
-                            <p class="tel"><i class="fa fa-phone"></i>650-308-4141</p>
-                            <p class="email"><i class="fa fa-envelope-o"></i><a href="mailto:FindMe@alz.care">FindMe@alz.care</a></p>
-                            <a href="https://twitter.com/AlzFindMe" class="twitter-follow-button" data-show-count="false">Follow @AlzFindMe</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//contact-->
-                </div>
-            </div><!--//container-->
-        </div><!--//footer-content-->
-        <div class="bottom-bar">
-            <div class="container">
-                <small class="copyright">Copyright @ 2016 FindMe</small>
-            </div><!--//container-->
-        </div><!--//bottom-bar-->
+    <footer class="footer" id="footerContainer">
     </footer><!--//footer-->
 
     <!-- Subscribe Modal -->
-    <div class="modal fade" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <h1 class="logo">
-                    <img src="assets/images/findme-logo.png"><span class="text">FindMe</span>
-                </h1>
-                <p id="subscribeModalLabel" class="modal-title"></p>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div><!--//modal-content-->
-        </div><!--//modal-dialog-->
-    </div><!--//modal-->
+    <div id="subscribeDialogContainer"></div>
 
     <!-- build:js assets/js/news.min.js -->
     <!-- Javascript -->

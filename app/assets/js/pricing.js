@@ -16,12 +16,14 @@ $(document).ready(function() {
     );
 
     /* Show Pre-order when the 'Pre-order' button is clicked */
-    /*$('.plan').on('click', function(){
-        $('.preOrder-form').fadeIn('slow');
+    /*
+    $('.plan').on('click', function(){
+        $('.preorder-form').fadeIn('slow');
         $('html,body').animate({
-            scrollTop: $('.preOrder-form').offset().top - $('#header').height()
+            scrollTop: $('.preorder-form').offset().top - $('#header').height()
         });
-    });*/
+    });
+    */
 
     /* Change preview image to the desired color when mouse over that button */
     $('.gunmetal-color').hover(
@@ -114,7 +116,8 @@ $(document).ready(function() {
     $('.panel').on('hidden.bs.collapse', toggleIcon);
     $('.panel').on('shown.bs.collapse', toggleIcon);
 
-    /*$('#preorder-form').validate({
+    /*
+    $('#preorder-form').validate({
         submitHandler: function() {
             $.ajax({
                 url: '/api/v1/pre-orders',
@@ -136,23 +139,23 @@ $(document).ready(function() {
                 dataType: 'json',
                 contentType: 'application/json; charset=utf-8',
                 success: function(result){
-                    $('p#preOrderModalLabel').text(
+                    $('p#preorder-modal-label').text(
                         'We received your order. Thank you and we'll keep you updated.');
 
                     $('#modal-preorder').modal('show');
                 },
                 error: function(result){
                     if (result.status == 409) {
-                        $('p#preOrderModalLabel').text('Your email is already registered.');
+                        $('p#prerderModalLabel').text('Your email is already registered.');
 
                         $('#modal-preorder').modal('show');
                     } else if (result.status == 400) {
-                        $('p#preOrderModalLabel').text('The promotion code is invalid. ' +
+                        $('p#preorder-modal-label').text('The promotion code is invalid. ' +
                             'Please make sure you have the right code and try again.');
 
                         $('#modal-preorder').modal('show');
                     } else {
-                        $('p#preOrderModalLabel').text('A problem has occurred. Please try again later.');
+                        $('p#preorder-modal-label').text('A problem has occurred. Please try again later.');
                         $('#modal-preorder').modal('show');
                     }
                 }
@@ -175,33 +178,36 @@ $(document).ready(function() {
         var modal = $(this);
         modal.find('.modal-header h4').val('Thank you!');
         $('body').css('overflow', 'auto');
-    });*/
+    });
+    */
 
-    $('.preorder-form').validate({
+    $('.signup-form-top').validate({
         submitHandler: function() {
             $.ajax({
-                url: '/api/v1/pre-orders',
+                url: '/api/v1/subscribers',
                 type: 'POST',
-                data: JSON.stringify({'email': $('.preorder-form input#cemail').val()}),
+                data: JSON.stringify({'email': $('.signup-form-top input#signup-email-top').val()}),
                 dataType: 'json',
                 contentType: 'application/json; charset=utf-8',
                 success: function(result) {
-                    $('p#subscribeModalLabel').text('Thank you! Please check your email for your coupon code.');
+                    $('p#subscribe-modal-label').text(
+                        'Thank you for signing up. Please stay tuned for our launch.');
+
                     $('#modal-subscribe').modal('show');
-                    $('.preorder-form input#cemail').val('');
+                    $('.signup-form-top input#signup-email-top').val('');
                 },
                 error: function(result) {
                     if (result.status === 409) {
-                        $('p#subscribeModalLabel').text(
-                            'Your email is already registered. Your coupon code has been resent.');
+                        $('p#subscribe-modal-label').text(
+                            'Thank you for signing up. Please stay tuned for our launch.');
 
                         $('#modal-subscribe').modal('show');
                     } else {
-                        $('p#subscribeModalLabel').text('A problem has occurred. Please try again later.');
+                        $('p#subscribe-modal-label').text('A problem has occurred. Please try again later.');
                         $('#modal-subscribe').modal('show');
                     }
 
-                    $('.preorder-form input#cemail').val('');
+                    $('.signup-form-top input#signup-email-top').val('');
                 }
             });
         },
@@ -211,4 +217,41 @@ $(document).ready(function() {
             }
         }
     });
+
+    /*
+    $('.coupon-form-top').validate({
+        submitHandler: function() {
+            $.ajax({
+                url: '/api/v1/pre-orders',
+                type: 'POST',
+                data: JSON.stringify({'email': $('.coupon-form-top input#coupon-email-top').val()}),
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                success: function(result) {
+                    $('p#subscribe-modal-label').text('Thank you! Please check your email for your coupon code.');
+                    $('#modal-subscribe').modal('show');
+                    $('.coupon-form-top input#coupon-email-top').val('');
+                },
+                error: function(result) {
+                    if (result.status === 409) {
+                        $('p#subscribe-modal-label').text(
+                            'Your email is already registered. Your coupon code has been resent.');
+
+                        $('#modal-subscribe').modal('show');
+                    } else {
+                        $('p#subscribe-modal-label').text('A problem has occurred. Please try again later.');
+                        $('#modal-subscribe').modal('show');
+                    }
+
+                    $('.coupon-form-top input#coupon-email-top').val('');
+                }
+            });
+        },
+        messages: {
+            email: {
+                required: 'Please enter your email'
+            }
+        }
+    });
+    */
 });

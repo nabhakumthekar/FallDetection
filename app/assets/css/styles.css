@@ -535,22 +535,6 @@ select {
     height: 700px;
 }
 
-.promo .signup-form {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-.promo .preorder-form {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
 .promo .title {
     font-size: 48px;
     margin-top: 0;
@@ -605,22 +589,23 @@ select {
     top: 2px;
 }
 
-.promo.section .get-updates {
-    font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 0;
-    margin-top: 8px;
+.promo.section .navbar-form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
-.promo.section .email {
+.promo.section .navbar-form .email {
     max-width: 300px;
 }
 
-.promo.section .email input {
+.promo.section .navbar-form .email input {
     height: 45px;
 }
 
-.promo.section .signup-form .submit {
+.promo.section .navbar-form .submit {
     vertical-align: top;
 }
 
@@ -1632,16 +1617,16 @@ select {
     margin: auto;
 }
 
-.preOrder-form {
+.preorder-form {
     margin-bottom: 30px;
     display: none;
 }
 
-.preOrder-form .device-preview {
+.preorder-form .device-preview {
     width: 80%;
 }
 
-.preOrder-form .color-options button {
+.preorder-form .color-options button {
     width: 40%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1650,7 +1635,7 @@ select {
     font-weight: 300;
 }
 
-.preOrder-form .color-options {
+.preorder-form .color-options {
     margin: auto;
     position: relative;
 }
@@ -3406,11 +3391,11 @@ select {
         margin-bottom: 0;
     }
 
-    .promo .signup-form {
+    .promo.section .navbar-form {
         box-shadow: none;
     }
 
-    .promo .signup-form .email {
+    .promo.sion .navbar-form .email {
         margin: auto;
         margin-bottom: 10px;
     }
