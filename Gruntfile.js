@@ -125,6 +125,16 @@ module.exports = function(grunt) {
                     dest: '.tmp/'
                 }]
             }
+        },
+
+        inline: {
+            dist: {
+                options: {
+                    cssmin: true
+                },
+                src: 'app/503.off.html',
+                dest: 'dist/503.off.html'
+            }
         }
     });
 
@@ -142,6 +152,7 @@ module.exports = function(grunt) {
         'cssmin',
         'filerev',
         'usemin',
+        'inline',
         'htmlmin',
         'copy:htmlmin',
         'copy:js'
