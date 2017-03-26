@@ -1,0 +1,6 @@
+{
+  "extends": "./eslint.json",
+  "rules": {
+    "linebreak-style": ["error", "unix"]
+  }
+}
