@@ -1,6 +1,6 @@
 /* ======= Animations ======= */
 $(document).ready(function() {
-    //Only animate elements when using non-mobile devices
+    // Only animate elements when using non-mobile devices
     if (isMobile.any === false) { 
         /* Animate elements in #promo (homepage) */
         $('#promo .intro .title').css('opacity', 0).one('inview', function(isInView) {
