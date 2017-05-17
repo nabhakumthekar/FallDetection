@@ -2376,7 +2376,6 @@ h1.title-mdt {
     font-size: x-large;
 }
 
-
 /* ============ News ============ */
 .latest-news {
     background-color: #253340;
@@ -2727,9 +2726,9 @@ h1.title-mdt {
 
 .map-section .gmap-wrapper {
     border: 1px solid #efefef;
-    -webkit-box-shadow: 0 4px 1px rgba(0,0,0,.05);
-    -moz-box-shadow: 0 4px 1px rgba(0,0,0,.05);
-    box-shadow: 0 4px 1px rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
