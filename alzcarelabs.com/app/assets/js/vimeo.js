@@ -1,6 +1,6 @@
 /* ======= Vimo ======= */
 $(document).ready(function() {
-    /* ======= Auto play Vimeo in Bootstrpa Modal ======= */
+    /* ======= Auto play Vimeo in Bootstrap Modal ======= */
     
     /* Vimeo API: http://developer.vimeo.com/player/js-api */
     // http://stackoverflow.com/questions/24952984/play-and-stop-vimeo-video-placed-in-bootstrap-modal
@@ -9,12 +9,11 @@ $(document).ready(function() {
     // $f == Froogaloop
     var player = $f(iframe);
     
-    $('#tour-video').on('hidden.bs.modal', function () {
+    $('#tour-video').on('hidden.bs.modal', function() {
         player.api('pause');
     });
     
-    $('#tour-video').on('shown.bs.modal', function () {
+    $('#tour-video').on('shown.bs.modal', function() {
         player.api('play');
     });
-            
 });

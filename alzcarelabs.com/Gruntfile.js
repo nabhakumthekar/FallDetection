@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         copy: {
             html: {
                 expand: true,
-                cwd: 'app.',
+                cwd: 'app/',
                 src: ['**/*.html', 'favicon.ico'],
                 dest: 'dist/'
             },
