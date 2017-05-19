@@ -538,6 +538,11 @@ select {
     -moz-osx-font-smoothing: grayscale;
 }
 
+input#signup-email-top {
+    width: 110%;
+    padding-left: 17px;
+}
+
 .header .main-nav .nav .nav-item .btn-link:focus {
     outline: none;
 }
@@ -2124,7 +2129,11 @@ h2.partners {
     -o-background-size: cover;
     background-size: cover;
     z-index: -1;
-    max-height: 428px;
+    max-height: 465px;
+}
+
+li.col-md-2.col-sm-4.col-xs-6.xs-break {
+    width: 20vw;
 }
 
 #promo {
@@ -2975,7 +2984,7 @@ a.btn-ghost {
     }
 
     .navbar-fixed-top {
-        position: static;
+        position: fixed;
     }
 
     .promo .intro .title {
@@ -3100,6 +3109,14 @@ a.btn-ghost {
     #modal-preorder .modal-dialog {
         width: 60%;
     }
+
+    .promo .signup.home {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 16px 0 !important;
+        padding-bottom: 45px;
+        color: #fff;
+        height: 155px;
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -3176,7 +3193,7 @@ a.btn-ghost {
     }
 
     .navbar-fixed-top {
-        position: static;
+        position: fixed;
     }
 
     .logo {
@@ -3380,13 +3397,64 @@ a.btn-ghost {
     #modal-preorder .modal-dialog {
         width: 40%;
     }
+
+
+        .promo .signup.home {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 48px 0;
+            padding-bottom: 45px;
+            color: #fff;
+            height: 155px;
+        }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 
 @media (max-width: 992px) {
+     h2.title.hero {
+        margin-top: 80px;
+    }
+
     .findme-container.intro {
         padding-left: 15px;
-        padding-top: 3px;
+        padding-top: 105px;
+    }
+
+    .promo .fixed-container.home {
+        position: absolute;
+        z-index: 10;
+        bottom: 52px;
+        width: 100%;
+    }
+
+    .promo .signup.home {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 48px 0;
+        padding-bottom: 45px;
+        color: #fff;
+        height: 155px;
+    }
+
+    .promo .fixed-container.findme {
+        position: absolute;
+        z-index: 10;
+        bottom: 4px;
+        width: 100%;
+    }
+
+    .item.row.demo {
+        display: flex;
+        padding: 25px 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content.col-md-5.col-sm-5.col-xs-12.pull-right.col-md-offset-1.col-sm-offset-1.col-xs-offset-0.from-right.demo {
+        width: 61vw;
+        padding-bottom: 10px;
+    }
+
+    .figure.col-md-6.col-sm-6.col-xs-12.from-left.demo {
+        padding-left: 95px;
     }
 }
