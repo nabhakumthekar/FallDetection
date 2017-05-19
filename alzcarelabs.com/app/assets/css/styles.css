@@ -708,16 +708,6 @@ div#navbar-collapse {
     color: #7645ad;
 }
 
-.footer .footer-col.connect .btn-cta-primary {
-    background: #5d80a1;
-    border-color: #5d80a1;
-}
-
-.footer .footer-col.connect .btn-cta-primary:hover {
-    background: #4a6781;
-    border-color: #4a6781;
-}
-
 .footer .footer-col .title {
     color: #fff;
     font-weight: normal;
