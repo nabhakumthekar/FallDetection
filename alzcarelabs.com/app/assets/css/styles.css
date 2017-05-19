@@ -1718,6 +1718,8 @@ section.features-video.section.section-on-bg {
 
 .story-section .team .member .member-inner img {
     margin: 0 auto;
+    width: 200px;
+    height: 200px;
 }
 
 .story-section .team .member .member-inner:hover img {
@@ -1801,7 +1803,7 @@ section.features-video.section.section-on-bg {
 }
 
 .video-container {
-    margin: 200px auto 15px;
+    margin: 22% auto 15px;
     width: 63%;
 }
 
