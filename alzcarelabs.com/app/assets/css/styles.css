@@ -3398,20 +3398,19 @@ a.btn-ghost {
         width: 40%;
     }
 
-
-        .promo .signup.home {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 48px 0;
-            padding-bottom: 45px;
-            color: #fff;
-            height: 155px;
-        }
+    .promo .signup.home {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 48px 0;
+        padding-bottom: 45px;
+        color: #fff;
+        height: 155px;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 
 @media (max-width: 992px) {
-     h2.title.hero {
+    h2.title.hero {
         margin-top: 80px;
     }
 
