@@ -1604,6 +1604,7 @@ h2.about-title {
 }
 
 .fluid-width-video-wrapper {
+    width: 634px;
     background: #fff;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -3109,6 +3110,15 @@ a.btn-ghost {
         color: #fff;
         height: 155px;
     }
+
+    .fluid-width-video-wrapper {
+        width: 512px;
+        margin-left: 30px;
+    }
+
+    iframe {
+        width: 500px;
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -3447,5 +3457,9 @@ a.btn-ghost {
 
     .figure.col-md-6.col-sm-6.col-xs-12.from-left.demo {
         padding-left: 95px;
+    }
+
+    .video-container {
+        margin-left: 10vw;
     }
 }
