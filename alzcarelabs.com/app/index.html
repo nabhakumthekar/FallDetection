@@ -101,53 +101,32 @@
 
         <section id="promohome" class="promo section">
             <div class="container intro">
-                <h2 class="title">Dementia Friendly World of Tomorrow</h2>
+                <h2 class="title hero">Dementia Friendly World of Tomorrow</h2>
             </div>
 
-            <div class="fixed-container">
-                <div id="promo" class="signup">
+            <div class="fixed-container home">
+                <div class="signup home">
                     <div class="container text-center">
-                        <form class="signup-form">
-                            <div class="form-group">
-                                <label class="sr-only" for="semail1">Your email</label>
-                                <input type="email" id="semail1" name="semail1" class="form-control" placeholder="Enter your email address">
-                            </div>
-                            <button type="submit" class="btn btn-cta btn-cta-primary">SIGN UP</button>
-                        </form>
+                      <form role="form" class="signup-form-top navbar-form" action="javascript:void(0);">
+                          <div style="display: flex; flex-direction: row; justify-content: center">
+                              <div class="row">
+                                  <div class="email form-group col-md-8">
+                                      <input type="email" id="signup-email-top" name="email" class="form-control" placeholder="Enter email for updates" required>
+                                  </div>
+                                  <div class="submit form-group col-md-4">
+                                      <button type="submit" class="btn btn-cta btn-cta-primary">Sign Up</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
                         <!--//signup-form-->
                     </div>
                     <!--//contianer-->
                 </div>
                 <!--//signup-->
-                <div class="social text-center">
-                    <div class="container">
-                        <span class="line">Share with others:</span>
-
-                        <!--//twitter tweet button code starts -->
-                        <div class="twitter-tweet">
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-via="3rdwave_media" data-hashtags="bootstrap">Tweet</a>
-                            <script>
-                                ! function(d, s, id) {
-                                    var js, fjs = d.getElementsByTagName(s)[0],
-                                        p = /^http:/.test(d.location) ? 'http' : 'https';
-                                    if (!d.getElementById(id)) {
-                                        js = d.createElement(s);
-                                        js.id = id;
-                                        js.src = p + '://platform.twitter.com/widgets.js';
-                                        fjs.parentNode.insertBefore(js, fjs);
-                                    }
-                                }(document, 'script', 'twitter-wjs');
-                            </script>
-                        </div>
-                        <!--//twitter tweet button code ends -->
-
-                        <!--//facebook like button code starts-->
-                        <div class="fb-like" data-href="http://themes.3rdwavemedia.com/tempo/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <!--//facebook like button code ends-->
-                    </div>
-                </div>
-                <!--//social-->
             </div>
+          </section>
+            <section>
             <div class="bg-slider-wrapper home">
                 <div id="bg-slider" class="flexslider bg-slider">
                     <ul class="slides">
@@ -242,12 +221,21 @@
             </div><!--//modal-dialog-->
         </div><!--//modal-->
 
+        <!-- ******FOOTER****** -->
+        <footer class="footer" id="footerContainer">
+        </footer><!--//footer-->
+
+        <!-- Subscribe Modal -->
+        <div id="subscribeDialogContainer"></div>
+
+
         <!-- Vimeo video API -->
         <script src="https://secure-a.vimeocdn.com/js/froogaloop2.min.js"></script>
 
         <!-- build:js assets/js/index.min.js -->
         <!-- Javascript -->
         <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery-inview/jquery.inview.min.js"></script>
@@ -255,8 +243,11 @@
         <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
         <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery.validate.min.js"></script>
         <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+            <script type="text/javascript" src="assets/plugins/wow.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="assets/js/index.js"></script>
         <script type="text/javascript" src="assets/js/vimeo.js"></script>
         <!-- endbuild -->
 
