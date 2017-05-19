@@ -117,13 +117,18 @@
                       <p style="color: white;">
                         to learn more about our upcoming launch.
                       </p>
-                        <form class="signup-form">
-                            <div class="form-group">
-                                <label class="sr-only" for="semail1">Your email</label>
-                                <input type="email" id="semail1" name="semail1" class="form-control" placeholder="Enter your email address">
-                            </div>
-                            <button type="submit" class="btn btn-cta btn-cta-primary">SIGN UP</button>
-                        </form>
+                      <form role="form" class="signup-form-top navbar-form" action="javascript:void(0);">
+                          <div style="display: flex; flex-direction: row; justify-content: center">
+                              <div class="row">
+                                  <div class="email form-group col-md-8">
+                                      <input type="email" id="signup-email-top" name="email" class="form-control" placeholder="Enter email for launch updates" required>
+                                  </div>
+                                  <div class="submit form-group col-md-4">
+                                      <button type="submit" class="btn btn-cta btn-cta-primary">Get Updates</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
                         <!--//signup-form-->
                     </div>
                     <!--//contianer-->
@@ -276,12 +281,20 @@
             </div><!--//modal-dialog-->
         </div><!--//modal-->
 
+        <!-- ******FOOTER****** -->
+        <footer class="footer-contact" id="footerContainer">
+        </footer><!--//footer-->
+
+        <!-- Subscribe Modal -->
+        <div id="subscribeDialogContainer"></div>
+
         <!-- Vimeo video API -->
         <script src="https://secure-a.vimeocdn.com/js/froogaloop2.min.js"></script>
 
         <!-- build:js assets/js/findme.min.js -->
         <!-- Javascript -->
         <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery-inview/jquery.inview.min.js"></script>
@@ -289,8 +302,11 @@
         <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
         <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery.validate.min.js"></script>
         <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="assets/plugins/wow.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="assets/js/index.js"></script>
         <script type="text/javascript" src="assets/js/vimeo.js"></script>
         <!-- endbuild -->
 
