@@ -36,12 +36,6 @@ body {
     /* must be the same height as footer */
 }
 
-.footer {
-    height: 296px;
-
-    /* must be the same height as footer */
-}
-
 h1,
 h2,
 h3,
@@ -1578,6 +1572,7 @@ div#navbar-collapse {
 .product-image {
     width: 26vw;
     padding: 10px;
+    max-height: 219px;
 }
 
 .product-text {
@@ -2654,13 +2649,24 @@ h1.title-mdt {
     padding-top: 45px;
 }
 
-.footer-contact {
+.footer {
     background: #253340;
     color: #fff;
     padding-top: 40px;
     font-size: 14px;
     position: relative;
     z-index: 20;
+}
+
+.footer .footer-col .title {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    -webkit-opacity: 0.9;
+    -moz-opacity: 0.9;
+    opacity: 0.9;
 }
 
 /* ======= Map section ======= */
@@ -2738,6 +2744,15 @@ h1.title-mdt {
 
 .section-404 .btn-back-home {
     margin-top: 30px;
+}
+
+.btn-ghost,
+a.btn-ghost {
+    background: 0 0;
+    border: 1px solid #fff;
+    color: #fff !important;
+    padding: 8px 20px;
+    vertical-align: middle;
 }
 
 /* ======= Configure Style (REMOVE ON YOUR PRODUCTION SITE)  ======= */
@@ -2919,6 +2934,7 @@ h1.title-mdt {
     .product-image {
         width: 50vw;
         padding: 10px;
+        max-height: 219px;
     }
 
     /*
@@ -3346,12 +3362,6 @@ h1.title-mdt {
     .wrapper::after {
         content: "";
         display: block;
-        height: 296px;
-
-        /* must be the same height as footer */
-    }
-
-    .footer {
         height: 296px;
 
         /* must be the same height as footer */
