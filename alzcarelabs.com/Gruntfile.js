@@ -36,6 +36,12 @@ module.exports = function(grunt) {
                 src: ['assets/images/**'],
                 dest: 'dist/'
             },
+            js: {
+                expand: true,
+                cwd: 'app',
+                src: ['assets/js/footer.js'],
+                dest: 'dist'
+            },
             htmlmin: {
                 expand: true,
                 cwd: '.tmp',
@@ -148,7 +154,8 @@ module.exports = function(grunt) {
         'usemin',
         'inline',
         'htmlmin',
-        'copy:htmlmin'
+        'copy:htmlmin',
+        'copy:js'
     ]);
 
     grunt.registerTask('check', [
