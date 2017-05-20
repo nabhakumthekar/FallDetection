@@ -1652,6 +1652,7 @@ section.features-video.section.section-on-bg {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     text-align: left;
+    margin-top: 250px;
 }
 
 .story-section .about {
