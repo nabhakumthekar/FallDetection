@@ -1345,6 +1345,7 @@ h2.title.hero {
 }
 
 .product {
+    width: 100%;
     padding: 52px;
 }
 
@@ -1578,8 +1579,7 @@ h2.title.hero {
 
 .product-image {
     width: 26vw;
-    padding: 10px;
-    max-height: 219px;
+    max-height: 262px;
 }
 
 .product-text {
