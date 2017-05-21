@@ -129,6 +129,9 @@ a.btn-cta-secondary:hover .fa,
     padding: 30px;
 }
 
+.mission-margin{
+    margin-top: 15%;
+}
 .form-control {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -382,12 +385,13 @@ select {
 }
 
 .bg-slider-wrapper .flexslider .slide.slide-1 {
-    background: #fff url('../images/background/homepage.jpg') no-repeat 50% top;
+    background: #fff url('../images/background/homepage.jpg') no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 100% !important;
+   transform: scale(1,0.75);
 }
 
 /*
@@ -1062,14 +1066,17 @@ div#navbar-collapse {
 }
 
 .promo .intro .title {
-    color: #fff;
+    color: #004666;
     font-size: 38px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-    max-width: 720px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
+.title-padding{
+    padding-top: 0px !important;
+    margin-bottom: 25px !important;
+}
 .promo .intro .summary {
     color: #fff;
     font-size: 22px;
@@ -1077,6 +1084,10 @@ div#navbar-collapse {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     margin-bottom: 15px;
 }
+
+h2.title.hero {
+        margin-top: 80px !important;
+    }
 
 .promo .fixed-container {
     position: absolute;
@@ -1086,7 +1097,7 @@ div#navbar-collapse {
 }
 
 .promo .signup {
-    background: rgba(0, 0, 0, 0.2);
+   /* background: rgba(0, 0, 0, 0.2);*/
     padding: 10px 0;
     padding-bottom: 45px;
     color: #fff;
@@ -1094,7 +1105,8 @@ div#navbar-collapse {
 }
 
 .promo .signup .title {
-    font-size: 18px;
+    /*font-size: 18px;*/
+    font-size: 36px;
     margin-top: 0;
     margin-bottom: 15px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
@@ -2904,6 +2916,11 @@ a.btn-ghost {
 
 /* Extra small devices (phones, less than 768px) */
 
+@media(max-width: 768px){
+    .mission-margin {
+        margin-top: 30%;
+    }
+}
 @media (max-width: 767px) {
     .wrapper {
         min-height: inherit;
@@ -2915,12 +2932,13 @@ a.btn-ghost {
     }
 
     .bg-slider-wrapper .flexslider .slide.slide-1 {
-        background: #fff url('../images/background/homepage.jpg') no-repeat 50% top;
+        background: #fff url('../images/background/homepage.jpg') no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100% !important;
+        transform: scale(1,0.75);
     }
 
     .products {
@@ -2940,6 +2958,9 @@ a.btn-ghost {
         max-height: 206px;
     }
 
+    .mission-margin {
+        margin-top: 50%;
+    }
     /*
     .bg-slider-wrapper .flexslider .slide.slide-2 {
         background: #fff url('../images/background/phone/bg-header-small-2.jpg') no-repeat 50% top;
@@ -3105,7 +3126,7 @@ a.btn-ghost {
     }
 
     .promo .signup.home {
-        background: rgba(0, 0, 0, 0.2);
+       /* background: rgba(0, 0, 0, 0.2);*/
         padding: 16px 0 !important;
         padding-bottom: 45px;
         color: #fff;
@@ -3141,12 +3162,13 @@ a.btn-ghost {
     }
 
     .bg-slider-wrapper .flexslider .slide.slide-1 {
-        background: #fff url('../images/background/homepage.jpg') no-repeat 50% top;
+       background: #fff url('../images/background/homepage.jpg') no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100% !important;
+        transform: scale(1,0.75);
     }
 
     /*
@@ -3402,7 +3424,7 @@ a.btn-ghost {
     }
 
     .promo .signup.home {
-        background: rgba(0, 0, 0, 0.2);
+       /*background: rgba(0, 0, 0, 0.2);*/
         padding: 48px 0;
         padding-bottom: 45px;
         color: #fff;
@@ -3430,7 +3452,7 @@ a.btn-ghost {
     }
 
     .promo .signup.home {
-        background: rgba(0, 0, 0, 0.2);
+        /*background: rgba(0, 0, 0, 0.2);*/
         padding: 48px 0;
         padding-bottom: 45px;
         color: #fff;
