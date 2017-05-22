@@ -1599,6 +1599,11 @@ h2.about-title {
     font-size: 40px;
 }
 
+.headline-bg.about-headline-bg {
+    margin-top: 0px;
+    max-height: 477px;
+}
+
 .headline-bg {
     position: absolute;
     width: 100%;
