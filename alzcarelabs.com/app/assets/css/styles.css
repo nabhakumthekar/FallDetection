@@ -1600,8 +1600,9 @@ h2.about-title {
 }
 
 .headline-bg.about-headline-bg {
-    margin-top: 1px;
-    max-height: 477px;
+    margin-top: -92px;
+    max-height: 570px;
+    height: 570px;
 }
 
 .headline-bg {
