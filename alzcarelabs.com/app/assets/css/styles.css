@@ -129,6 +129,10 @@ a.btn-cta-secondary:hover .fa,
     padding: 30px;
 }
 
+.mission-margin {
+    margin-top: 15%;
+}
+
 .form-control {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -382,12 +386,13 @@ select {
 }
 
 .bg-slider-wrapper .flexslider .slide.slide-1 {
-    background: #fff url('../images/background/homepage.jpg') no-repeat 50% top;
+    background: #fff url('../images/background/homepage.jpg') no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 100% !important;
+    transform: scale(1, 0.75);
 }
 
 /*
@@ -1062,12 +1067,16 @@ div#navbar-collapse {
 }
 
 .promo .intro .title {
-    color: #fff;
+    color: #004666;
     font-size: 38px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-    max-width: 720px;
     font-weight: bold;
     margin-bottom: 15px;
+}
+
+.title-padding {
+    padding-top: 1px !important;
+    margin-bottom: 25px !important;
 }
 
 .promo .intro .summary {
@@ -1078,6 +1087,10 @@ div#navbar-collapse {
     margin-bottom: 15px;
 }
 
+h2.title.hero {
+    margin-top: 80px !important;
+}
+
 .promo .fixed-container {
     position: absolute;
     z-index: 10;
@@ -1086,7 +1099,6 @@ div#navbar-collapse {
 }
 
 .promo .signup {
-    background: rgba(0, 0, 0, 0.2);
     padding: 10px 0;
     padding-bottom: 45px;
     color: #fff;
@@ -1094,7 +1106,7 @@ div#navbar-collapse {
 }
 
 .promo .signup .title {
-    font-size: 18px;
+    font-size: 36px;
     margin-top: 0;
     margin-bottom: 15px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
@@ -1333,6 +1345,7 @@ div#navbar-collapse {
 }
 
 .product {
+    width: 100%;
     padding: 52px;
 }
 
@@ -1566,8 +1579,7 @@ div#navbar-collapse {
 
 .product-image {
     width: 26vw;
-    padding: 10px;
-    max-height: 219px;
+    max-height: 262px;
 }
 
 .product-text {
@@ -2904,6 +2916,12 @@ a.btn-ghost {
 
 /* Extra small devices (phones, less than 768px) */
 
+@media (max-width: 768px) {
+    .mission-margin {
+        margin-top: 30%;
+    }
+}
+
 @media (max-width: 767px) {
     .wrapper {
         min-height: inherit;
@@ -2915,12 +2933,13 @@ a.btn-ghost {
     }
 
     .bg-slider-wrapper .flexslider .slide.slide-1 {
-        background: #fff url('../images/background/homepage.jpg') no-repeat 50% top;
+        background: #fff url('../images/background/homepage.jpg') no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100% !important;
+        transform: scale(1, 0.75);
     }
 
     .products {
@@ -2937,7 +2956,11 @@ a.btn-ghost {
     .product-image {
         width: 50vw;
         padding: 10px;
-        max-height: 219px;
+        max-height: 206px;
+    }
+
+    .mission-margin {
+        margin-top: 50%;
     }
 
     /*
@@ -3105,7 +3128,6 @@ a.btn-ghost {
     }
 
     .promo .signup.home {
-        background: rgba(0, 0, 0, 0.2);
         padding: 16px 0 !important;
         padding-bottom: 45px;
         color: #fff;
@@ -3141,12 +3163,13 @@ a.btn-ghost {
     }
 
     .bg-slider-wrapper .flexslider .slide.slide-1 {
-        background: #fff url('../images/background/homepage.jpg') no-repeat 50% top;
+        background: #fff url('../images/background/homepage.jpg') no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100% !important;
+        transform: scale(1, 0.75);
     }
 
     /*
@@ -3402,7 +3425,6 @@ a.btn-ghost {
     }
 
     .promo .signup.home {
-        background: rgba(0, 0, 0, 0.2);
         padding: 48px 0;
         padding-bottom: 45px;
         color: #fff;
@@ -3430,7 +3452,6 @@ a.btn-ghost {
     }
 
     .promo .signup.home {
-        background: rgba(0, 0, 0, 0.2);
         padding: 48px 0;
         padding-bottom: 45px;
         color: #fff;
