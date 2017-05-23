@@ -382,7 +382,8 @@ select {
 
 .bg-slider-wrapper .flexslider .slide {
     display: block;
-    height: 568px;
+    height: 590px;
+    margin-top: 7px;
 }
 
 .bg-slider-wrapper .flexslider .slide.slide-1 {
