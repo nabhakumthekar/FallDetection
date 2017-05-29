@@ -382,7 +382,8 @@ select {
 
 .bg-slider-wrapper .flexslider .slide {
     display: block;
-    height: 568px;
+    height: 590px;
+    margin-top: 7px;
 }
 
 .bg-slider-wrapper .flexslider .slide.slide-1 {
@@ -1602,6 +1603,12 @@ h2.about-title {
     font-size: 40px;
 }
 
+.headline-bg.about-headline-bg {
+    margin-top: -92px;
+    max-height: 570px;
+    height: 570px;
+}
+
 .headline-bg {
     position: absolute;
     width: 100%;
@@ -2360,7 +2367,7 @@ h1.title-mdt {
 }
 
 .latest-news .bg-news {
-    background: url('http:// tinyurl.com/hzmhexr') no-repeat 50% 20%;
+    background: url("https://www.alzheimers.org.uk/images/DF_awards_photograph_1.jpg") no-repeat 50% 20%;
     background-size: cover;
     width: 100%;
     height: 450px;
