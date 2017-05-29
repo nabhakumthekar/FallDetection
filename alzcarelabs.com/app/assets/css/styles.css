@@ -130,7 +130,7 @@ a.btn-cta-secondary:hover .fa,
 }
 
 .mission-margin {
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 .form-control {
@@ -546,6 +546,9 @@ select {
 input#signup-email-top {
     width: 110%;
     padding-left: 17px;
+}
+.email-address-alignment{
+  margin-top:6%
 }
 
 .header .main-nav .nav .nav-item .btn-link:focus {
@@ -1579,7 +1582,7 @@ h2.title.hero {
 
 .product-image {
     width: 26vw;
-    max-height: 262px;
+    max-height: 239px;
 }
 
 .product-text {
