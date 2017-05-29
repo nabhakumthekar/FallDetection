@@ -548,8 +548,9 @@ input#signup-email-top {
     width: 110%;
     padding-left: 17px;
 }
-.email-address-alignment{
-  margin-top:6%
+
+.email-address-alignment {
+    margin-top: 6%;
 }
 
 .header .main-nav .nav .nav-item .btn-link:focus {
