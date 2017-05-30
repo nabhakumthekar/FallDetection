@@ -2328,6 +2328,21 @@ a.login {
     max-height: 1000px;
 }
 
+.dfgrader-headline-bg {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    background: #253340 url('../images/background/dfgraderimage.png') no-repeat 50% top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+    max-height: 1000px;
+}
+
 .row.mdt {
     font-size: xx-large;
     color: #4749b6;
@@ -2344,6 +2359,11 @@ h1.title-mdt {
     border-bottom: 1px solid #4749b6;
     height: 46px;
     font-size: x-large;
+}
+
+h1.title-dfg {
+    border-bottom: 1px solid #4749b6;
+    font-size: large;
 }
 
 /* ============ News ============ */
