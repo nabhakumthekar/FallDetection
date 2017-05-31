@@ -130,7 +130,7 @@ a.btn-cta-secondary:hover .fa,
 }
 
 .mission-margin {
-    margin-top: 5%;
+    margin-top: 19%;
 }
 
 .form-control {
@@ -344,6 +344,41 @@ select {
 
 /* ======= Homepage Headline Background & Slideshow ======= */
 
+.alzcare-labs-heading {
+    font-family: Didot;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+}
+
+.alzcare-labs {
+    font-size: 64px;
+    left: 29.5px;
+    text-align: left;
+    padding-top: 8%;
+}
+
+.alzcare-labs-bottom {
+    font-size: 36px;
+    text-align: right;
+}
+
+.bottom-heading1 {
+    right: 206px;
+    padding-top: 27%;
+}
+
+.bottom-heading2 {
+    right: 54px;
+}
+
+.horse-img-display {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
 .bg-slider-wrapper {
     content: "";
     position: absolute;
@@ -382,18 +417,15 @@ select {
 
 .bg-slider-wrapper .flexslider .slide {
     display: block;
-    height: 590px;
-    margin-top: 7px;
 }
 
 .bg-slider-wrapper .flexslider .slide.slide-1 {
-    background: #fff url('../images/background/homepage.jpg') no-repeat;
+    background: #fff url('../images/background/wild-horses.jpg') no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100% !important;
-    transform: scale(1, 0.75);
+    height: 720px;
 }
 
 /*
@@ -550,7 +582,7 @@ input#signup-email-top {
 }
 
 .email-address-alignment {
-    margin-top: 6%;
+    margin-top: 20%;
 }
 
 .header .main-nav .nav .nav-item .btn-link:focus {
@@ -2947,12 +2979,6 @@ a.btn-ghost {
 
 /* Extra small devices (phones, less than 768px) */
 
-@media (max-width: 768px) {
-    .mission-margin {
-        margin-top: 30%;
-    }
-}
-
 @media (max-width: 767px) {
     .wrapper {
         min-height: inherit;
@@ -2964,13 +2990,28 @@ a.btn-ghost {
     }
 
     .bg-slider-wrapper .flexslider .slide.slide-1 {
-        background: #fff url('../images/background/homepage.jpg') no-repeat;
+        background: #fff url('../images/background/wild-horses.jpg') no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        width: 100% !important;
-        transform: scale(1, 0.75);
+    }
+
+    .horse-img-display {
+        margin-top: 10%;
+    }
+
+    .alzcare-labs {
+        font-size: 40px;
+        padding-top: 17%;
+    }
+
+    .bottom-heading1 {
+        padding-top: 28%;
+    }
+
+    .alzcare-labs-bottom {
+        font-size: 28px;
     }
 
     .products {
@@ -2991,7 +3032,11 @@ a.btn-ghost {
     }
 
     .mission-margin {
-        margin-top: 50%;
+        margin-top: 15%;
+    }
+
+    .email-address-alignment {
+        margin-top: 10%;
     }
 
     /*
@@ -3162,7 +3207,6 @@ a.btn-ghost {
         padding: 16px 0 !important;
         padding-bottom: 45px;
         color: #fff;
-        height: 155px;
     }
 
     .fluid-width-video-wrapper {
@@ -3178,6 +3222,10 @@ a.btn-ghost {
 /* Small devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
+    .mission-margin {
+        margin-top: 19%;
+    }
+
     .header div.container {
         display: flex;
         flex-direction: column;
@@ -3194,13 +3242,11 @@ a.btn-ghost {
     }
 
     .bg-slider-wrapper .flexslider .slide.slide-1 {
-        background: #fff url('../images/background/homepage.jpg') no-repeat;
+        background: #fff url('../images/background/wild-horses.jpg') no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        width: 100% !important;
-        transform: scale(1, 0.75);
     }
 
     /*
@@ -3459,7 +3505,6 @@ a.btn-ghost {
         padding: 48px 0;
         padding-bottom: 45px;
         color: #fff;
-        height: 155px;
     }
 }
 
@@ -3486,7 +3531,6 @@ a.btn-ghost {
         padding: 48px 0;
         padding-bottom: 45px;
         color: #fff;
-        height: 155px;
     }
 
     .promo .fixed-container.findme {
@@ -3514,5 +3558,36 @@ a.btn-ghost {
 
     .video-container {
         margin-left: 10vw;
+    }
+
+    .email-address-alignment {
+        margin-top: 7%;
+    }
+
+    .mission-margin {
+        margin-top: 7%;
+    }
+
+    .bottom-heading1 {
+        padding-top: 21%;
+    }
+
+    .alzcare-labs {
+        padding-top: 12%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .alzcare-labs {
+        padding-top: 15%;
+        font-size: 45px;
+    }
+
+    .bottom-heading1 {
+        padding-top: 27%;
+    }
+
+    .horse-img-display {
+        margin-top: 9%;
     }
 }
