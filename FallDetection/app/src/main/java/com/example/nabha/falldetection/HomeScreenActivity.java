@@ -13,7 +13,6 @@ public class HomeScreenActivity extends AppCompatActivity {
     private static final int CONTACT_RESULT = 100;
     TextView contact_number;
 
-    //nabha
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
