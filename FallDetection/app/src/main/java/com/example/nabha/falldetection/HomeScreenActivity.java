@@ -1,18 +1,19 @@
 package com.example.nabha.falldetection;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.TextView;
-import android.view.View;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
 public class HomeScreenActivity extends AppCompatActivity {
     private static final int CONTACT_RESULT = 100;
     TextView contact_number;
+
+    //nabha
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
