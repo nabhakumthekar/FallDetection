@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="28dp"
         android:paddingLeft="10dp"
-        android:text=" select or enter phone number of care taker"
+        android:text="Please select or enter phone number of care taker"
         android:textAlignment="viewStart"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
