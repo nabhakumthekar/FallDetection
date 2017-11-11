@@ -6,23 +6,44 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.util.Log;
 import android.widget.TextView;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorEvent;
 
-public class HomeScreenActivity extends AppCompatActivity {
+public class HomeScreenActivity extends AppCompatActivity implements SensorEventListener {
+
     private static final int CONTACT_RESULT = 100;
     TextView contact_number;
-
+    private Sensor accelerometer;
+    private SensorManager accelerometerManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
         contact_number = (TextView) findViewById(R.id.select_contact_text);
+        accelerometerManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        accelerometer = accelerometerManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        accelerometerManager.registerListener(this,accelerometer,SensorManager.SENSOR_DELAY_NORMAL);
     }
 
-    public void selectContact(View v) {
-        Intent selectContactIntent = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
-        startActivityForResult(selectContactIntent, CONTACT_RESULT);
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+
+        double xVal = event.values[0];
+        double yVal = event.values[1];
+        double zVal = event.values[2];
+
+        double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
+
+        Log.d("acVector", String.valueOf(acVector));
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        //nothing to do
     }
 
     @Override
