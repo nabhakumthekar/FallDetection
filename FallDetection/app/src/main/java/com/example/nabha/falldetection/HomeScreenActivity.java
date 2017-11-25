@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
@@ -17,8 +18,13 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
 
     private static final int CONTACT_RESULT = 100;
     TextView contact_number;
+
     private Sensor accelerometer;
     private SensorManager accelerometerManager;
+    long time1 = 0;
+    long time2 = 0;
+    boolean lessThan = false;
+    boolean greaterThan = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +44,25 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
 
         double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
 
-        Log.d("acVector", String.valueOf(acVector));
+        if(acVector > 30){
+            greaterThan = true;
+            time1 = System.currentTimeMillis();
+            Log.i("acVector",String.valueOf(acVector));
+        }else if(acVector < 3){
+            lessThan = true;
+            Log.i("acVector",String.valueOf(acVector));
+            time2 = System.currentTimeMillis();
+        }
+
+        if(greaterThan && lessThan) {
+            if(time2 - time1 <= 10000 && time2 - time1 > 0 ){
+                Log.i("fall detected","fall detected");
+            }
+            greaterThan = false;
+            lessThan = false;
+            time1 = 0;
+            time2 = 0;
+        }
     }
 
     @Override
