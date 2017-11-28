@@ -2,11 +2,13 @@ package com.example.nabha.falldetection;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.hardware.Sensor;
@@ -14,10 +16,20 @@ import android.hardware.SensorManager;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorEvent;
 
+import org.w3c.dom.Text;
+
+import java.text.DecimalFormat;
+
 public class HomeScreenActivity extends AppCompatActivity implements SensorEventListener {
 
     private static final int CONTACT_RESULT = 100;
     TextView contact_number;
+    double sigma=0.5,th=10,th1=5,th2=2;
+    public double xVal,yVal,zVal;
+    static int BUFF_SIZE=50;
+    static public double[] window = new double[BUFF_SIZE];
+    Button lets_go_button=(Button)findViewById(R.id.lets_go_button);
+    TextView testing=(TextView)findViewById(R.id.testing_textview);
 
     private Sensor accelerometer;
     private SensorManager accelerometerManager;
@@ -33,17 +45,32 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         accelerometerManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         accelerometer = accelerometerManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         accelerometerManager.registerListener(this,accelerometer,SensorManager.SENSOR_DELAY_NORMAL);
+        start();
+    }
+
+    private void start() {
+
+        for(int i=0;i<BUFF_SIZE;i++){
+            window[i]=0;
+        }
+        lets_go_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //getValue();
+
+            }
+        });
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
 
-        double xVal = event.values[0];
-        double yVal = event.values[1];
-        double zVal = event.values[2];
+        xVal = event.values[0];
+        yVal = event.values[1];
+        zVal = event.values[2];
 
         double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
-
+/*
         if(acVector > 30){
             greaterThan = true;
             time1 = System.currentTimeMillis();
@@ -62,6 +89,11 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
             lessThan = false;
             time1 = 0;
             time2 = 0;
+        }*/
+        DecimalFormat precision = new DecimalFormat("0.00");
+        double ldAccRound = Double.parseDouble(precision.format(acVector));
+        if (ldAccRound > 0.3d && ldAccRound < 0.5d) {
+            testing.setText("Fall Detected");
         }
     }
 
