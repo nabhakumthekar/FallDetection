@@ -24,6 +24,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
 
     private static final int CONTACT_RESULT = 100;
     TextView contact_number;
+    MediaPlayer mp;
     double sigma=0.5,th=10,th1=5,th2=2;
     public double xVal,yVal,zVal;
     static int BUFF_SIZE=50;
@@ -41,6 +42,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        mp = MediaPlayer.create(this, R.raw.Loud_Alarm);
         contact_number = (TextView) findViewById(R.id.select_contact_text);
         accelerometerManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         accelerometer = accelerometerManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -94,6 +96,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         double ldAccRound = Double.parseDouble(precision.format(acVector));
         if (ldAccRound > 0.3d && ldAccRound < 0.5d) {
             testing.setText("Fall Detected");
+            mp.start();
         }
     }
 
