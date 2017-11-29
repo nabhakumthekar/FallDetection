@@ -1,11 +1,14 @@
 package com.example.nabha.falldetection;
 
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -20,7 +23,9 @@ import org.w3c.dom.Text;
 
 import java.text.DecimalFormat;
 
-public class HomeScreenActivity extends AppCompatActivity implements SensorEventListener {
+import static android.app.PendingIntent.getActivity;
+
+public class HomeScreenActivity extends AppCompatActivity  implements SensorEventListener {
 
     private static final int CONTACT_RESULT = 100;
     TextView contact_number;
@@ -31,6 +36,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     static public double[] window = new double[BUFF_SIZE];
     Button lets_go_button=(Button)findViewById(R.id.lets_go_button);
     TextView testing=(TextView)findViewById(R.id.testing_textview);
+    AlertDialog.Builder builder;
 
     private Sensor accelerometer;
     private SensorManager accelerometerManager;
@@ -42,7 +48,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
-        mp = MediaPlayer.create(this, R.raw.Loud_Alarm);
+        mp = MediaPlayer.create(this, R.raw.alarm_trigger);
         contact_number = (TextView) findViewById(R.id.select_contact_text);
         accelerometerManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         accelerometer = accelerometerManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -97,12 +103,16 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         if (ldAccRound > 0.3d && ldAccRound < 0.5d) {
             testing.setText("Fall Detected");
             mp.start();
+           Userok obj=new Userok();
         }
     }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
         //nothing to do
+    }
+
+    public void selectContact(View view) {
     }
 
     @Override
