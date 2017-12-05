@@ -38,14 +38,13 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     @Override
     public void onSensorChanged(SensorEvent event) {
 
-
         double xVal = event.values[0];
         double yVal = event.values[1];
         double zVal = event.values[2];
 
         double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
 
-        if(acVector > 30){
+        if(acVector > 25){
             greaterThan = true;
             time1 = System.currentTimeMillis();
             Log.i("acVector",String.valueOf(acVector));
@@ -54,6 +53,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
             Log.i("acVector",String.valueOf(acVector));
             time2 = System.currentTimeMillis();
         }
+
 
         if(greaterThan && lessThan) {
             if(time2 - time1 <= 10000 && time2 - time1 > 0 ){
