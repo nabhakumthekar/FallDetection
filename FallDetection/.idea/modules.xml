@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FallDetection.iml" filepath="$PROJECT_DIR$/FallDetection.iml" />
-      <module fileurl="file://C:\Users\ABHIJIT\AndroidStudioProjects\6-fall-detection-for-patients-cs580\FallDetection\FallDetection.iml" filepath="C:\Users\ABHIJIT\AndroidStudioProjects\6-fall-detection-for-patients-cs580\FallDetection\FallDetection.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\ABHIJIT\AndroidStudioProjects\6-fall-detection-for-patients-cs580\FallDetection\app\app.iml" filepath="C:\Users\ABHIJIT\AndroidStudioProjects\6-fall-detection-for-patients-cs580\FallDetection\app\app.iml" />
     </modules>
   </component>
 </project>
