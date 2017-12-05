@@ -118,7 +118,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
 
         double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
 
-        if(acVector > 15){
+        if(acVector > 25){
             greaterThan = true;
             time1 = System.currentTimeMillis();
             Log.i("acVector",String.valueOf(acVector));
