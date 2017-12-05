@@ -4,9 +4,6 @@ import android.*;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-//import android.media.MediaPlayer;
-//import android.media.MediaPlayer;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -38,7 +35,6 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     private SensorManager accelerometerManager;
     Context context;
 
-    //MediaPlayer mp;
     long time1 = 0;
     long time2 = 0;
     boolean lessThan = false;
@@ -53,7 +49,6 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         save = findViewById(R.id.save_button);
         name = (TextView) findViewById(R.id.name_text);
         context = getApplicationContext();
-       // mp = MediaPlayer.create(this, R.raw.alarm_sound);
         accelerometerManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         accelerometer = accelerometerManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         accelerometerManager.registerListener(this,accelerometer,SensorManager.SENSOR_DELAY_NORMAL);
@@ -118,7 +113,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
 
         double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
 
-        if(acVector > 25){
+        if(acVector > 10){
             greaterThan = true;
             time1 = System.currentTimeMillis();
             Log.i("acVector",String.valueOf(acVector));
@@ -129,9 +124,8 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         }
 
         if(greaterThan && lessThan) {
-            if(time2 - time1 <= 1000 && time2 - time1 > 0 ){
+            if(time2 - time1 <= 2000 && time2 - time1 > 0 ){
                 Log.i("fall detected","fall detected");
-                // mp.start();
                 Intent intent = new Intent();
                 intent.putExtra("contactNumber", contact_number.getText().toString());
                 intent.putExtra("contactName", name.getText().toString());
