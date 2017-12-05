@@ -1,24 +1,32 @@
 package com.example.nabha.falldetection;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorEvent;
+import android.view.View.OnClickListener;
+import android.provider.ContactsContract;
+
 
 public class HomeScreenActivity extends AppCompatActivity implements SensorEventListener {
 
-    private static final int CONTACT_RESULT = 100;
+    private static final int CONTACT_RESULT = 1;
     TextView contact_number;
-
+    TextView select_contact_text;
+    private static final String TAG = HomeScreenActivity.class.getSimpleName();
+    private String contact;
     private Sensor accelerometer;
     private SensorManager accelerometerManager;
     long time1 = 0;
@@ -30,9 +38,22 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
         contact_number = (TextView) findViewById(R.id.select_contact_text);
+        select_contact_text = (TextView) findViewById(R.id.select_contact_text);
         accelerometerManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         accelerometer = accelerometerManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         accelerometerManager.registerListener(this,accelerometer,SensorManager.SENSOR_DELAY_NORMAL);
+        ActivityCompat.requestPermissions(HomeScreenActivity.this,
+                new String[]{android.Manifest.permission.READ_CONTACTS},
+                1);
+
+        select_contact_text.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(intent, CONTACT_RESULT);
+
+            }
+        });
     }
 
     @Override
@@ -74,14 +95,34 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         try{
             if (requestCode == CONTACT_RESULT && resultCode == RESULT_OK) {
-                Uri uri = data.getData();
-                Cursor cursor = getContentResolver().query(uri, null, null, null, null);
-                cursor.moveToFirst();
-                int phoneNumberColumn = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
-                contact_number.setText(cursor.getString(phoneNumberColumn));
+                Uri uriContact;
+                uriContact = data.getData();
+                String contactNumber = null;
+                Cursor cursor = getContentResolver().query(uriContact, new String[]{ContactsContract.Contacts._ID},
+                        null, null, null);
+
+                if (cursor.moveToFirst()) {
+                    contact = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
+                }
+                cursor.close();
+                Cursor phoneNumber = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                        new String[]{ContactsContract.CommonDataKinds.Phone.NUMBER},
+                        ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ? AND " +
+                                ContactsContract.CommonDataKinds.Phone.TYPE + " = " +
+                                ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE,
+                        new String[]{contact},
+                        null);
+
+                if (phoneNumber.moveToFirst()) {
+                    contactNumber = phoneNumber.getString(phoneNumber.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                }
+                phoneNumber.close();
+                select_contact_text.setText(contactNumber);
             }
-        }catch(Exception e){
-            e.printStackTrace();
+        }catch (Exception e){
+            Log.d(TAG, "error " + e);
         }
+
+
     }
 }
