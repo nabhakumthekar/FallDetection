@@ -2,6 +2,7 @@ package com.example.nabha.falldetection;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -18,6 +19,8 @@ import android.hardware.SensorEvent;
 import android.view.View.OnClickListener;
 
 
+import java.text.DecimalFormat;
+
 public class HomeScreenActivity extends AppCompatActivity implements SensorEventListener {
 
     private static final int CONTACT_RESULT = 1;
@@ -27,6 +30,8 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     private String contact;
     private Sensor accelerometer;
     private SensorManager accelerometerManager;
+
+    MediaPlayer mp;
     long time1 = 0;
     long time2 = 0;
     boolean lessThan = false;
@@ -37,6 +42,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         setContentView(R.layout.activity_home_screen);
         contact_number = (TextView) findViewById(R.id.select_contact_text);
         select_contact_text = (TextView) findViewById(R.id.select_contact_text);
+        mp = MediaPlayer.create(this, R.raw.alarm_sound);
         accelerometerManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         accelerometer = accelerometerManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         accelerometerManager.registerListener(this,accelerometer,SensorManager.SENSOR_DELAY_NORMAL);
@@ -74,14 +80,29 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         }
 
         if(greaterThan && lessThan) {
-            if(time2 - time1 <= 10000 && time2 - time1 > 0 ){
+            if(time2 - time1 <= 1000 && time2 - time1 > 0 ){
                 Log.i("fall detected","fall detected");
+                 mp.start();
+            Intent intent = new Intent();
+            intent.setClass(this,falldetection.class);
+            startActivity(intent);
             }
             greaterThan = false;
             lessThan = false;
             time1 = 0;
             time2 = 0;
         }
+        /*DecimalFormat precision = new DecimalFormat("0.00");
+        double ldAccRound = Double.parseDouble(precision.format(acVector));
+        if (ldAccRound > 0.3d && ldAccRound < 0.5d) {
+            //text.setText("Fall Detected");
+            mp.start();
+            Intent intent = new Intent();
+            intent.setClass(this,falldetection.class);
+            startActivity(intent);
+        }*/
+
+
     }
 
     @Override
