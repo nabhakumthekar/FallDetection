@@ -44,7 +44,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
 
         double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
 
-        if(acVector > 25){
+        if(acVector > 30){
             greaterThan = true;
             time1 = System.currentTimeMillis();
             Log.i("acVector",String.valueOf(acVector));
@@ -53,7 +53,6 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
             Log.i("acVector",String.valueOf(acVector));
             time2 = System.currentTimeMillis();
         }
-
 
         if(greaterThan && lessThan) {
             if(time2 - time1 <= 10000 && time2 - time1 > 0 ){
@@ -74,13 +73,13 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         try{
-        if (requestCode == CONTACT_RESULT && resultCode == RESULT_OK) {
-            Uri uri = data.getData();
-            Cursor cursor = getContentResolver().query(uri, null, null, null, null);
-            cursor.moveToFirst();
-            int phoneNumberColumn = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
-            contact_number.setText(cursor.getString(phoneNumberColumn));
-        }
+            if (requestCode == CONTACT_RESULT && resultCode == RESULT_OK) {
+                Uri uri = data.getData();
+                Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+                cursor.moveToFirst();
+                int phoneNumberColumn = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+                contact_number.setText(cursor.getString(phoneNumberColumn));
+            }
         }catch(Exception e){
             e.printStackTrace();
         }
