@@ -38,6 +38,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     @Override
     public void onSensorChanged(SensorEvent event) {
 
+
         double xVal = event.values[0];
         double yVal = event.values[1];
         double zVal = event.values[2];
