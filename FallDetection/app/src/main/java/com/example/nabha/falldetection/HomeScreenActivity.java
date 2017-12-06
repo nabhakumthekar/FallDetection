@@ -3,8 +3,10 @@ package com.example.nabha.falldetection;
 import android.*;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v4.app.ActivityCompat;
@@ -21,6 +23,7 @@ import android.hardware.SensorEvent;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+
 public class HomeScreenActivity extends AppCompatActivity implements SensorEventListener {
 
     private static final int CONTACT_RESULT = 1;
@@ -34,7 +37,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     private Sensor accelerometer;
     private SensorManager accelerometerManager;
     Context context;
-
+    GPSTracker gps;
     long time1 = 0;
     long time2 = 0;
     boolean lessThan = false;
@@ -53,17 +56,26 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         accelerometer = accelerometerManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         accelerometerManager.registerListener(this,accelerometer,SensorManager.SENSOR_DELAY_NORMAL);
 
+
         // Get user permissions
 
-        ActivityCompat.requestPermissions(HomeScreenActivity.this,
-                new String[]{android.Manifest.permission.READ_CONTACTS},
-                1);
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                    ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{
+                        android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.ACCESS_COARSE_LOCATION,
+                        android.Manifest.permission.INTERNET
+                }, 10);
+            }
+        }
 
 
         select.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                ActivityCompat.requestPermissions(HomeScreenActivity.this,
+                        new String[]{android.Manifest.permission.READ_CONTACTS},
+                        1);
                 Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
                 startActivityForResult(intent, CONTACT_RESULT);
 
@@ -78,13 +90,6 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
                             new String[]{android.Manifest.permission.SEND_SMS},
                             2);
                     if(!contact_number.getText().toString().isEmpty()){
-//                        if(Integer.parseInt(contact_number.getText().toString()) < 10){
-//                            Toast errorToast =  Toast.makeText(context, "Please enter 10 digit phone number", Toast.LENGTH_SHORT);
-//                            errorToast.setGravity(Gravity.CENTER, 0, 0);
-//                            errorToast.show();
-//                        }else {
-//                            phone_number = contact_number.getText().toString();
-//                        }
                         phone_number = contact_number.getText().toString();
                     }else {
                         Toast errorToast =  Toast.makeText(context, "Please enter phone number", Toast.LENGTH_SHORT);
@@ -113,24 +118,43 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
 
         double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
 
-        if(acVector > 10){
+        if(acVector > 25){
             greaterThan = true;
             time1 = System.currentTimeMillis();
-            Log.i("acVector",String.valueOf(acVector));
         }else if(acVector < 3){
             lessThan = true;
-            Log.i("acVector",String.valueOf(acVector));
             time2 = System.currentTimeMillis();
         }
 
         if(greaterThan && lessThan) {
-            if(time2 - time1 <= 2000 && time2 - time1 > 0 ){
+            if(time2 - time1 <= 1000 && time2 - time1 > 0 ){
+                double  latitude;
+                double  longitude;
+                String  address;
+                String strLat;
+                String strLong;
                 Log.i("fall detected","fall detected");
+                gps = new GPSTracker(HomeScreenActivity.this);
                 Intent intent = new Intent();
+                if(gps.canGetLocation()){
+                    latitude = gps.getLatitude();
+                    longitude = gps.getLongitude();
+                    strLat=Double.toString(latitude);
+                    strLong=Double.toString(longitude);
+                    address=gps.getAddress();
+                    intent.putExtra("latitude", strLat);
+                    intent.putExtra("longitude", strLong);
+                    intent.putExtra("address", address);
+                    Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Address: "+address, Toast.LENGTH_LONG).show();
+                }else{
+                    gps.showSettingsAlert();
+                }
+
                 intent.putExtra("contactNumber", contact_number.getText().toString());
                 intent.putExtra("contactName", name.getText().toString());
-            intent.setClass(this,falldetection.class);
-            startActivity(intent);
+                intent.setClass(this,FallDetection.class);
+                startActivity(intent);
             }
             greaterThan = false;
             lessThan = false;
