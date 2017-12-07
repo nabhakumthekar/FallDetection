@@ -57,8 +57,6 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         accelerometerManager.registerListener(this,accelerometer,SensorManager.SENSOR_DELAY_NORMAL);
 
 
-        // Get user permissions
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                     ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -91,6 +89,8 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
                             2);
                     if(!contact_number.getText().toString().isEmpty()){
                         phone_number = contact_number.getText().toString();
+                        Toast saveToast =  Toast.makeText(context, "Saved", Toast.LENGTH_SHORT);
+                        saveToast.show();
                     }else {
                         Toast errorToast =  Toast.makeText(context, "Please enter phone number", Toast.LENGTH_SHORT);
                         errorToast.setGravity(Gravity.CENTER, 0, 0);
@@ -118,7 +118,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
 
         double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
 
-        if(acVector > 25){
+        if(acVector > 10){
             greaterThan = true;
             time1 = System.currentTimeMillis();
         }else if(acVector < 3){
@@ -127,30 +127,18 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
         }
 
         if(greaterThan && lessThan) {
-            if(time2 - time1 <= 1000 && time2 - time1 > 0 ){
+            if(time2 - time1 <= 2000 && time2 - time1 > 0 ){
                 double  latitude;
                 double  longitude;
                 String  address;
                 String strLat;
                 String strLong;
-                Log.i("fall detected","fall detected");
                 gps = new GPSTracker(HomeScreenActivity.this);
                 Intent intent = new Intent();
                 if(gps.canGetLocation()){
-                    latitude = gps.getLatitude();
-                    longitude = gps.getLongitude();
-                    strLat=Double.toString(latitude);
-                    strLong=Double.toString(longitude);
                     address=gps.getAddress();
-                    intent.putExtra("latitude", strLat);
-                    intent.putExtra("longitude", strLong);
                     intent.putExtra("address", address);
-                    Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
-                    Toast.makeText(getApplicationContext(), "Address: "+address, Toast.LENGTH_LONG).show();
-                }else{
-                    gps.showSettingsAlert();
                 }
-
                 intent.putExtra("contactNumber", contact_number.getText().toString());
                 intent.putExtra("contactName", name.getText().toString());
                 intent.setClass(this,FallDetection.class);
