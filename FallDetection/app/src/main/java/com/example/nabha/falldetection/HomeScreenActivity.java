@@ -1,6 +1,5 @@
 package com.example.nabha.falldetection;
 
-import android.*;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -37,7 +36,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
     private Sensor accelerometer;
     private SensorManager accelerometerManager;
     Context context;
-    GPSTracker gps;
+    GPSLocation gps;
     long time1 = 0;
     long time2 = 0;
     boolean lessThan = false;
@@ -118,7 +117,7 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
 
         double acVector = Math.sqrt(xVal*xVal + yVal*yVal + zVal*zVal );
 
-        if(acVector > 10){
+        if(acVector > 30){
             greaterThan = true;
             time1 = System.currentTimeMillis();
         }else if(acVector < 3){
@@ -126,17 +125,14 @@ public class HomeScreenActivity extends AppCompatActivity implements SensorEvent
             time2 = System.currentTimeMillis();
         }
 
+
         if(greaterThan && lessThan) {
-            if(time2 - time1 <= 2000 && time2 - time1 > 0 ){
-                double  latitude;
-                double  longitude;
+            if(time2 - time1 <= 1000 && time2 - time1 > 0 ){
                 String  address;
-                String strLat;
-                String strLong;
-                gps = new GPSTracker(HomeScreenActivity.this);
+                gps = new GPSLocation(HomeScreenActivity.this);
                 Intent intent = new Intent();
                 if(gps.canGetLocation()){
-                    address=gps.getAddress();
+                    address = gps.getAddress();
                     intent.putExtra("address", address);
                 }
                 intent.putExtra("contactNumber", contact_number.getText().toString());
