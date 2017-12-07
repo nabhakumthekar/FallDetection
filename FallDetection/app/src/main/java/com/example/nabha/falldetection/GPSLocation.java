@@ -12,19 +12,19 @@ import android.os.IBinder;
 import android.util.Log;
 import android.location.Geocoder;
 import android.location.Address;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-public class GPSTracker extends Service implements LocationListener {
+public class GPSLocation extends Service implements LocationListener {
 
     private final Context mContext;
 
-    boolean isGPSEnabled = false;
-    boolean isNetworkEnabled = false;
+    boolean GPSEnabled = false;
+    boolean NetworkEnabled = false;
     boolean canGetLocation = false;
-    private static final String TAG = GPSTracker.class.getSimpleName();
+
+    private static final String TAG = GPSLocation.class.getSimpleName();
     Location location;
     double latitude;
     double longitude;
@@ -35,7 +35,7 @@ public class GPSTracker extends Service implements LocationListener {
 
     protected LocationManager locationManager;
 
-    public GPSTracker(Context context) {
+    public GPSLocation(Context context) {
         this.mContext = context;
         getLocation();
     }
@@ -45,14 +45,14 @@ public class GPSTracker extends Service implements LocationListener {
 
             locationManager = (LocationManager) mContext
                     .getSystemService(LOCATION_SERVICE);
-            isGPSEnabled = locationManager
+            GPSEnabled = locationManager
                     .isProviderEnabled(LocationManager.GPS_PROVIDER);
-            isNetworkEnabled = locationManager
+            NetworkEnabled = locationManager
                     .isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
-            if (isGPSEnabled && isNetworkEnabled)  {
+            if (GPSEnabled && NetworkEnabled)  {
                 this.canGetLocation = true;
-                if (isNetworkEnabled) {
+                if (NetworkEnabled) {
                     locationManager.requestLocationUpdates(
                             LocationManager.NETWORK_PROVIDER,
                             MIN_TIME_BW_UPDATES,
@@ -66,7 +66,7 @@ public class GPSTracker extends Service implements LocationListener {
                         }
                     }
                 }
-                if (isGPSEnabled) {
+                if (GPSEnabled) {
                     if (location == null) {
                         locationManager.requestLocationUpdates(
                                 LocationManager.GPS_PROVIDER,
@@ -124,11 +124,7 @@ public class GPSTracker extends Service implements LocationListener {
                 Geocoder geocoder = new Geocoder(this.mContext, Locale.getDefault());
                 addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
                 String address = addresses.get(0).getAddressLine(0);
-                String area = addresses.get(0).getLocality();
-                String city = addresses.get(0).getAdminArea();
-                String country = addresses.get(0).getCountryName();
-                String postalCode = addresses.get(0).getPostalCode();
-                fullAddress = address + "," + area + "," + city + "," + postalCode + "," + country;
+                fullAddress = address;
             }else{
                 Log.d(TAG,"location is null");
             }
