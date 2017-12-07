@@ -15,23 +15,17 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import android.location.Address;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 
-public class FallDetection extends AppCompatActivity implements LocationListener {
+public class FallDetection extends AppCompatActivity {
 
     MediaPlayer mp;
     Button stop_button;
-    private FusedLocationProviderClient mFusedLocationClient;
-    protected Location mLastLocation;
-    private static final String TAG = FallDetection.class.getSimpleName();
-    Geocoder geocoder;
-    List<Address> addresses;
     private TextView location_textview;
+    private TextView name_text;
+    private TextView number_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,22 +36,23 @@ public class FallDetection extends AppCompatActivity implements LocationListener
 
         mp = MediaPlayer.create(this, R.raw.alarm_sound);
         location_textview = (TextView) findViewById(R.id.location);
+        name_text = (TextView) findViewById(R.id.name_text);
+        //number_text = (TextView) findViewById(R.id.number_text);
         mp.start();
 
         String phoneNumber= getIntent().getStringExtra("contactNumber");
+      //  number_text.setText(phoneNumber );
         String name = getIntent().getStringExtra("contactName");
-        String latitude=getIntent().getStringExtra("latitude");
-        String longitude=getIntent().getStringExtra("longitude");
+        name_text.setText(name + "\n" + phoneNumber );
         String address=getIntent().getStringExtra("address");
+        location_textview.setText(address);
+
         ArrayList<String> message=new ArrayList<String>();
-        message.add("Hi "+name+"your patient may have fallen.\nHis address is: ");
+        message.add("Hi "+name+" your patient may have fallen.\nHis/her address is: ");
         message.add(address);
         message.add(" \nPlease check on him/her");
-        location_textview.setText(address);
-        //String textBody = "Hi " + name + " your patient may have fallen. \nHis address is: "+address+" \nPlease check on him/her";
-        String textBody = "Hi " + name + " your patient may have fallen. Lat: "+latitude+" Long:"+longitude+" \nPlease check on him/her";
+
         SmsManager smsManager = SmsManager.getDefault();
-        //smsManager.sendTextMessage(phoneNumber, null, textBody, null, null);
         smsManager.sendMultipartTextMessage(phoneNumber,null,message,null,null);
         Toast.makeText(getApplicationContext(), "SMS Sent!",Toast.LENGTH_LONG).show();
 
@@ -68,26 +63,5 @@ public class FallDetection extends AppCompatActivity implements LocationListener
             }
         });
 
-    }
-
-    @Override
-    public void onProviderDisabled(String provider) {
-    }
-
-    @Override
-    public void onProviderEnabled(String provider) {
-    }
-
-    @Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {
-    }
-
-    @Override
-    public void onLocationChanged(Location location) {
-
-    }
-
-    public IBinder onBind(Intent arg0) {
-        return null;
     }
 }
